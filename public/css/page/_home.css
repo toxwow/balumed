@@ -1,0 +1,115 @@
+.header-wrapper {
+  background-image: url(/images/bg-header.png?037a47fb5900a9104d0e214ac4c2eca6);
+  background-size: contain;
+  z-index: 2;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: top right;
+  padding: 70px 0 140px;
+}
+
+.header-wrapper h1 {
+  font-size: 32px;
+  color: #3f3f3f;
+  font-weight: 700;
+  line-height: 38px;
+}
+
+.header-wrapper h2 {
+  font-size: 18px;
+  margin-top: 25px;
+  color: #3f3f3f;
+  font-weight: 400;
+}
+
+.header-wrapper p.description {
+  font-size: 14px;
+  font-weight: 300;
+  color: #929396;
+}
+
+.header-wrapper .btn-wrapper > a:last-of-type {
+  margin-left: 20px;
+  transition: all 0.25s ease-in;
+}
+
+.header-wrapper .btn-wrapper > a:last-of-type img {
+  height: 15px;
+  margin-right: 10px;
+}
+
+.header-wrapper .btn-wrapper > a:last-of-type:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.services-wrapper {
+  padding: 70px 0;
+  margin-top: -70px;
+  background-image: linear-gradient(180deg, #f6fbff 0%, #ffffff 100%);
+}
+
+.profits-wrapper {
+  background-image: linear-gradient(180deg, #ffffff 0%, #f2f9fe 100%);
+  padding: 70px 0;
+}
+
+.profits-wrapper .img-wrapper {
+  margin-right: 80px;
+  height: 100%;
+  width: 80%;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(/images/profit-woman.png?395e0b32ec5823a24e605d439a65d0ca);
+}
+
+.profits-wrapper h5.text {
+  color: #3f3f3f;
+  font-size: 18px;
+  margin: 20px 0 30px;
+}
+
+.specialist-wrapper {
+  padding: 70px 0;
+  background-image: linear-gradient(180deg, #f2f9fe 0%, #ffffff 100%);
+}
+
+.promotion-wrapper {
+  padding: 70px 0;
+  background-color: #f6fbfe;
+  background-image: url(/images/promotion-bg.png?89bcbe8fc6ce3b791b3ce6a184eca81d);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.promotion-wrapper p.description {
+  color: #9f9d9d;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.news-wrapper {
+  padding: 70px 0;
+  background-color: #fff;
+}
+
+@media (max-width: 991.98px) {
+  .header-wrapper,
+  .promotion-wrapper {
+    background-image: none;
+  }
+
+  .profits-wrapper .img-wrapper {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .header-wrapper,
+  .promotion-wrapper {
+    background-position: 150%;
+  }
+}
+
