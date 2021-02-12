@@ -1,4 +1,8 @@
-@extends('layouts.page')
+@extends('layouts.page',
+[
+    'seo'=> '',
+    'footerStatus' => false
+])
 @push('script')
 
     <script>
@@ -183,6 +187,11 @@
 @endpush
 @push('css')
     <link href="{{ asset('css/page/_sub_page.css') }}" rel="stylesheet">
+    <style>
+        div.footer{
+            display: none;
+        }
+    </style>
 @endpush
 @section('content')
 
@@ -190,7 +199,7 @@
         <div class="container">
             <div class="wrapper-title">
                 <div>
-                    <p class="title">Kontakt</p>
+                    <h1 class="title">Kontakt</h1>
                     <p class="description">Nasze najnowsze wpisy</p>
                 </div>
             </div>
@@ -199,7 +208,7 @@
             <div class="row">
                 <div class="col-6 col-lg-4 mt-4  d-lg-flex justify-content-lg-start">
                     <div class="link-footer">
-                        <div class="title">Adres</div>
+                        <h2 class="title">Adres</h2>
                         <div class="info">
                             ul. Sarmacka 18 lok 93<br>
                             02-972 Warszawa, Wiladnów <br>
@@ -210,7 +219,7 @@
                 </div>
                 <div class="col-6 col-lg-4 mt-4  d-lg-flex  justify-content-lg-center">
                     <div class="link-footer">
-                        <div class="title">Godziny otwarcia</div>
+                        <h2 class="title">Godziny otwarcia</h2>
                         <div class="info">
                             <b>Pon - Pt:</b> {{$info->working_days}}<br>
                             <b>Sb: </b> {{$info->holiday_days}}<br>
@@ -220,7 +229,7 @@
 
                 <div class="col-6 col-lg-4 mt-4 d-lg-flex justify-content-lg-end">
                     <div class="link-footer">
-                        <div class="title">Kontakt</div>
+                        <h2 class="title">Kontakt</h2>
                         <div class="info">
                             tel: {{$info->phone_one}}<br>
                             tel: {{$info->phone_two}}<br>

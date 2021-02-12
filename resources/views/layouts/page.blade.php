@@ -28,7 +28,7 @@
             <div class="contact-wrapper">
                 <div class="phone">
 
-                    <span>{{$info->phone_one}}</span>, <span>{{$info->phone_two}}</span>
+                    <span>{{$info->phone_one}}</span><span>, {{$info->phone_two}}</span>
                 </div>
                 <div class="email">
                     <span>balumed@balumed.pl</span>
@@ -55,11 +55,12 @@
                     <div class="item dropdown">
                         Nasze usługi
                     </div>
-                    <a href="{{route('uslugi.index')}}" class="item link mobile">Nasze usługi</a>
-                    <a href="{{route('specjalisci.index')}}" class="item link">Nasi specjaliści</a>
-                    <a href="{{route('aktualnosci.index')}}" class="item link">Aktualności</a>
-                    <a href="{{route('blog.index')}}" class="item link">Blog</a>
-                    <a href="{{route('contact')}}" class="item link">Kontakt</a>
+                    <a href="{{route('home')}}" class="item link mobile {{ (request()->is('/')) ? 'active' : '' }}" >Strona główna</a>
+                    <a href="{{route('uslugi.index')}}" class="item link mobile ">Nasze usługi</a>
+                    <a href="{{route('specjalisci.index')}}" class="item link {{ (request()->is('specjalisci')) ? 'active' : '' }}">Nasi specjaliści</a>
+                    <a href="{{route('aktualnosci.index')}}" class="item link {{ (request()->is('aktualnosci*')) ? 'active' : '' }}">Aktualności</a>
+                    <a href="{{route('blog.index')}}" class="item link {{ (request()->is('blog*')) ? 'active' : '' }}">Blog</a>
+                    <a href="{{route('contact')}}" class="item link {{ (request()->is('kontakt')) ? 'active' : '' }}">Kontakt</a>
                     <a href="{{route('contact')}}" class="item btn btn-primary btn-outline"><img src="{{url('images/icons/calendar.png')}}">Umów wizytę</a>
                 </div>
             </nav>
@@ -103,13 +104,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-3 mt-4">
-                    <div class="link-footer">
-                        <div class="title">O nas</div>
-                        <div class="info text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum vehicula vehicula. Etiam id velit vitae enim ultrices convallis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-3 mt-4  d-lg-flex justify-content-lg-center">
+                @if($footerStatus === true)
+                <div class="col-12 col-md-4 mt-4 d-lg-flex justify-content-lg-start">
                     <div class="link-footer">
                         <div class="title">Adres</div>
                         <div class="info">
@@ -120,7 +116,7 @@
                         <a href="https://goo.gl/maps/cRBA1K8QbMAcj45c9" class="link primary-link arrow">prowadź</a>
                     </div>
                 </div>
-                <div class="col-6 col-lg-3 mt-4 d-lg-flex justify-content-lg-center">
+                <div class="col-12 col-md-4 mt-4 d-lg-flex justify-content-lg-center">
                     <div class="link-footer">
                         <div class="title">Godziny otwarcia</div>
                         <div class="info">
@@ -130,7 +126,7 @@
                     </div>
                 </div>
 
-                <div class="col-6 col-lg-3 mt-4 d-lg-flex justify-content-lg-end">
+                <div class="col-12 col-md-4 mt-4 d-lg-flex justify-content-lg-end">
                     <div class="link-footer">
                         <div class="title">Kontakt</div>
                         <div class="info">
@@ -140,6 +136,12 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-12">
+                    <div class="seo-text">
+                        <p>{{$seo}}</p>
+                    </div>
+                </div>
+                @endif
             </div>
         </div>
     </div>

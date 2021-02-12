@@ -1,4 +1,8 @@
-@extends('layouts.page')
+@extends('layouts.page',
+[
+    'seo'=> '',
+    'footerStatus' => true
+])
 @push('css')
     <link href="{{ asset('css/page/_sub_page.css') }}" rel="stylesheet">
 @endpush

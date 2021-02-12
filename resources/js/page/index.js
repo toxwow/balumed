@@ -20,10 +20,33 @@ $('.hamburger').click(function () {
     $( "nav" ).slideToggle( "slow" );
 })
 
-$('.item.dropdown').click(function () {
+$('.item.dropdown').click(function (e) {
     $( '.second-nav' ).toggleClass( "is-active" );
     $( ".second-nav" ).slideToggle( "slow" );
 })
+
+var stickyNavTop = $('.menu-wrapper').offset().top;
+var heightParent = $('.top-bar').height;
+// our function that decides weather the navigation bar should have "fixed" css position or not.
+var stickyNav = function(){
+    var scrollTop = $(window).scrollTop(); // our current vertical position from the top
+
+    // if we've scrolled more than the navigation, change its position to fixed to stick to top,
+    // otherwise change it back to relative
+    if (scrollTop > stickyNavTop) {
+        $('.top-bar').addClass('stickyHelper');
+        $('.menu-wrapper').addClass('sticky');
+    } else {
+        $('.top-bar').removeClass('stickyHelper');
+        $('.menu-wrapper').removeClass('sticky');
+    }
+};
+
+stickyNav();
+// and run it again every time you scroll
+$(window).scroll(function() {
+    stickyNav();
+});
 
 AOS.init({
     // Global settings:

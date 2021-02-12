@@ -16,6 +16,10 @@
   margin-top: 20px;
 }
 
+.content-wrapper .service-wrapper .nav-service {
+  border-right: 1px solid #e2e2e2;
+}
+
 .content-wrapper .service-wrapper .nav-service ul {
   list-style: none;
   margin: 0;
@@ -53,6 +57,10 @@
   background-image: url(/images/right-arrow.png?dca0094…);
 }
 
+.content-wrapper .service-wrapper .nav-service ul li a.active {
+  font-weight: 600;
+}
+
 .list-post a.link-post {
   text-decoration: none !important;
   display: block;
@@ -87,6 +95,11 @@
 
 .list-post a.link-post .article-wrapper .info-wrapper p.description {
   margin-bottom: 5px;
+  text-align: justify;
+}
+
+.list-post a.link-post .article-wrapper .info-wrapper .title {
+  font-size: 1.35rem;
 }
 
 .list-post a.link-post .article-wrapper .info-wrapper p.date {

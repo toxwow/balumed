@@ -1,4 +1,8 @@
-@extends('layouts.page')
+@extends('layouts.page',
+[
+    'seo'=> '',
+    'footerStatus' => true
+])
 @push('css')
     <link href="{{ asset('css/page/_home.css') }}" rel="stylesheet">
 @endpush
@@ -34,7 +38,7 @@
                     <div class="col-12 col-sm-6 col-md-4 mt-4">
                         <div class="card">
                             <img class="icon" src="{{asset('storage/files/shares/uslugi/icon/'.$service->icon)}}" alt="" class="icon">
-                            <h4 class="name">{{$service->name}}</h4>
+                            <h2 class="name">{{$service->name}}</h2>
                             <p class="description">{{$service->intro}}</p>
                             <a href="{{route('uslugi.show', $service->slug)}}" class="link primary-link arrow">dowiedz się więcej</a>
                         </div>
@@ -98,12 +102,12 @@
                             <div class="img-wrapper" style="background-image: url({{asset('storage/files/shares/specjalisci/'.$specialist->photo)}})"></div>
                             <div class="person-name">
                                 <p class="titles">{{$specialist->titlePerson}}</p>
-                                <p class="name">{{$specialist->name}}</p>
+                                <h3 class="name">{{$specialist->name}}</h3>
                                 @if((!$specialist->services->isEmpty()))
                                     @foreach($specialist->services as $key => $service)
                                         <span class="services">
                                         @if($key != '0'),@endif
-                                            {{$service->name}}
+                                            <a href="{{route('uslugi.show', $service->slug)}}">{{$service->name}}</a>
                                     </span>
                                     @endforeach
                                 @else
