@@ -1,30 +1,33 @@
 //Axios change select
+var token = $("input[name='_token']").attr("value");
 
 $( "select.change" ).change(function() {
     var id = $(this).attr('data-id');
     var status = $(this).find(':selected').attr('data-status');
     var slug = $(this).attr('data-slug');
 
-    axios.put('/uslugi/'+slug, {
-        status: status,
-        id: id,
-        api: 'statusChange'
-    })
-        .then(response => {
+    $.ajax({
+        url: "/uslugi/" + slug,
+        type: 'POST',
+        data: {
+            "id": id,
+            '_method': 'PUT',
+            'status': status,
+            "_token": token,
+            api: 'statusChange'
+        },
+        success: function (){
             bootbox.alert({
                 message: "Status zaktualizowany",
                 centerVertical: true,
             })
-        })
-        .catch(error => {
-            console.log(error);
-        });
+        }
+    });
 });
 
 
 
 $("a[data-type='delete']").click(function() {
-    var token = $("input[name='_token']").attr("value");
     var slug = $(this).attr('data-slug');
     var id = $(this).attr('data-id');
     bootbox.confirm({
