@@ -130,11 +130,11 @@ $("a[data-type='delete']").click(function () {
     },
     callback: function callback(result) {
       if (result) {
-        axios["delete"]('/uslugi/' + slug, {
-          headers: {},
+        axios["delete"]('/uslugi/' + id, {
           data: {
+            '_method': 'DELETE',
             id: id,
-            "_token": token,
+            '_token': token,
             api: 'deleteService'
           }
         }).then(function (response) {
