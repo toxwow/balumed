@@ -48,6 +48,7 @@
                     <i class="lni lni-more-alt" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" >
                         <a class="dropdown-item" href="{{route('uslugi.show', $service->slug)}}">Zobacz</a>
+                        @csrf
                         <a class="dropdown-item" href="#" data-type="delete" data-id="{{$service->id}}" data-slug="{{$service->slug}}">Usuń</a>
                     </div>
                 </td>
