@@ -25,6 +25,7 @@ $( "select.change" ).change(function() {
 
 $("a[data-type='delete']").click(function() {
     var slug = $(this).attr('data-slug');
+    var token = $("input[name='_token']").attr("value");
     var id = $(this).attr('data-id');
     bootbox.confirm({
         size: "small",
@@ -41,28 +42,27 @@ $("a[data-type='delete']").click(function() {
         },
         callback: function(result){
             if(result){
-                axios.delete('/blog/'+slug, {
-                    headers: {
-
-                    },
+                $.ajax({
+                    url: "/blog/" + slug,
+                    type: 'POST',
                     data: {
-                        id: id,
+                        "id": id,
+                        '_method': 'DELETE',
+                        "_token": token,
                         api: 'deleteBlog'
-                    }
-                })
-                    .then(response => {
+                    },
+                    success: function (){
                         bootbox.alert({
-                            message: "Wpis usunięty",
+                            message: "Blog usunięty",
                             centerVertical: true,
                             callback: function(){
                                 location.reload(); }
                         })
+                    }
+                });
 
-                    })
-                    .catch(error => {
-                        console.log(error);
-                    });
-            }/* result is a boolean; true = OK, false = Cancel*/ }
+            }/* result is a boolean; true = OK, false = Cancel*/
+        }
     })
 });
 

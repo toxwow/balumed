@@ -61,7 +61,8 @@ $("a[data-type='delete']").click(function() {
                     }
                 });
 
-            }/* result is a boolean; true = OK, false = Cancel*/ }
+            }/* result is a boolean; true = OK, false = Cancel*/
+        }
     })
 });
 

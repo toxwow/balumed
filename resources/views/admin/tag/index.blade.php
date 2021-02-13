@@ -66,7 +66,9 @@
                             <td style="text-align: right">
                                 <a href="{{route('tagi.edit', $tag->id)}}"><i class="lni lni-pencil-alt"></i></a>
                             </td>
-                            <td ><a href="#" data-type="delete" data-id="{{$tag->id}}" data-slug="{{$tag->slug}}"><i class="lni lni-trash"></i></a></td>
+                            <td >
+                                @csrf
+                                <a href="#" data-type="delete" data-id="{{$tag->id}}" data-slug="{{$tag->slug}}"><i class="lni lni-trash"></i></a></td>
 
                         </tr>
                     @endif

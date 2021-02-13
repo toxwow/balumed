@@ -26,6 +26,7 @@ $( "select.change" ).change(function() {
 $("a[data-type='delete']").click(function() {
     var slug = $(this).attr('data-slug');
     var id = $(this).attr('data-id');
+    var token = $("input[name='_token']").attr("value");
     bootbox.confirm({
         size: "small",
         centerVertical: true,
@@ -41,28 +42,27 @@ $("a[data-type='delete']").click(function() {
         },
         callback: function(result){
             if(result){
-                axios.delete('/specjalisci/'+slug, {
-                    headers: {
-
-                    },
+                $.ajax({
+                    url: "/specjalisci/" + slug,
+                    type: 'POST',
                     data: {
-                        id: id,
+                        "id": id,
+                        '_method': 'DELETE',
+                        "_token": token,
                         api: 'deleteService'
-                    }
-                })
-                    .then(response => {
+                    },
+                    success: function (){
                         bootbox.alert({
-                            message: "Usługa usunięty",
+                            message: "Specjalista usunięty",
                             centerVertical: true,
                             callback: function(){
                                 location.reload(); }
                         })
+                    }
+                });
 
-                    })
-                    .catch(error => {
-                        console.log(error);
-                    });
-            }/* result is a boolean; true = OK, false = Cancel*/ }
+            }/* result is a boolean; true = OK, false = Cancel*/
+        }
     })
 });
 

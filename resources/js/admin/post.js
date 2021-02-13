@@ -1,6 +1,7 @@
 $( "select.change" ).change(function() {
     var id = $(this).attr('data-id');
     var status = $(this).find(':selected').attr('data-status');
+
     var slug = $(this).attr('data-slug');
 
     axios.put('/aktualnosci/'+slug, {
@@ -24,6 +25,8 @@ $( "select.change" ).change(function() {
 $("a[data-type='delete']").click(function() {
     var slug = $(this).attr('data-slug');
     var id = $(this).attr('data-id');
+    var token = $("input[name='_token']").attr("value");
+
     bootbox.confirm({
         size: "small",
         centerVertical: true,
@@ -39,28 +42,27 @@ $("a[data-type='delete']").click(function() {
         },
         callback: function(result){
             if(result){
-                axios.delete('/aktualnosci/'+slug, {
-                    headers: {
-
-                    },
+                $.ajax({
+                    url: "/aktualnosci/" + slug,
+                    type: 'POST',
                     data: {
-                        id: id,
+                        "id": id,
+                        '_method': 'DELETE',
+                        "_token": token,
                         api: 'deletePost'
-                    }
-                })
-                    .then(response => {
+                    },
+                    success: function (){
                         bootbox.alert({
-                            message: "Aktualność usunięta",
+                            message: "Aktualnosc usunięta",
                             centerVertical: true,
                             callback: function(){
                                 location.reload(); }
                         })
+                    }
+                });
 
-                    })
-                    .catch(error => {
-                        console.log(error);
-                    });
-            }/* result is a boolean; true = OK, false = Cancel*/ }
+            }/* result is a boolean; true = OK, false = Cancel*/
+        }
     })
 });
 

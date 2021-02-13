@@ -96,6 +96,7 @@
 $("a[data-type='delete']").click(function () {
   var slug = $(this).attr('data-slug');
   var id = $(this).attr('data-id');
+  var token = $("input[name='_token']").attr("value");
   bootbox.confirm({
     size: "small",
     centerVertical: true,
@@ -111,22 +112,24 @@ $("a[data-type='delete']").click(function () {
     },
     callback: function callback(result) {
       if (result) {
-        axios["delete"]('/tagi/' + slug, {
-          headers: {},
+        $.ajax({
+          url: "/tag/" + slug,
+          type: 'POST',
           data: {
-            id: id,
+            "id": id,
+            '_method': 'DELETE',
+            "_token": token,
             api: 'deleteTag'
+          },
+          success: function success() {
+            bootbox.alert({
+              message: "Tag usunięty",
+              centerVertical: true,
+              callback: function callback() {
+                location.reload();
+              }
+            });
           }
-        }).then(function (response) {
-          bootbox.alert({
-            message: "Tag usunięty",
-            centerVertical: true,
-            callback: function callback() {
-              location.reload();
-            }
-          });
-        })["catch"](function (error) {
-          console.log(error);
         });
       }
       /* result is a boolean; true = OK, false = Cancel*/
