@@ -21,11 +21,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-4 nav-service order-2 order-md-1">
+                        <div class="mobile-service-text">Zobacz pozostałe usługi:</div>
                         <ul>
-{{--                            <li> <a href="{{route('uslugi.show', $service->slug)}}" class="active">--}}
-{{--                                    <img class="icon" src="{{asset('storage/files/shares/uslugi/icon/'.$service->icon)}}" alt="" class="icon">--}}
-{{--                                    <span>{{$service->name}}</span>--}}
-{{--                                </a></li>--}}
                             @foreach($services as $element)
                                 @if($element->id === $service->id)
                                 @else

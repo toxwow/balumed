@@ -13,7 +13,7 @@
             <div class="wrapper-title">
                 <div>
                     <p class="title">Blog</p>
-                    <p class="description">Nasze najnowsze wpisy</p>
+                    <p class="description">Przeczytaj wpis</p>
                 </div>
                 <div style="padding-left: 50px; text-align: right;">
                     <a href="{{route('blog.index')}}" class="link primary-link plus">zobacz pozostałe wpisy</a>

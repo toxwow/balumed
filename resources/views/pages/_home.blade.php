@@ -16,7 +16,7 @@
                     <p class="description">For a time I worked in a convenience store as a clerk and cook and I used a deep fryer quite a bit for cooking battered chicken and French fried potatoes.
                         Of course the chicken doesn’t start out battered. It comes delivered frozen in big cardboard boxes. Before the chicken is ready for the cooking part it must be</p>
                 <div class="btn-wrapper">
-                    <a href="" class="btn btn-primary">Skontaktuj się z nami</a>
+                    <a href="{{route('contact')}}" class="btn btn-primary">Skontaktuj się z nami</a>
                     <a href="" class="btn btn-primary btn-outline"><img class="icon" src="{{url('images/icons/phone.png')}}"><span> zadzwoń </span>{{$info->phone_one}}</a>
                 </div>
                 </div>
@@ -68,7 +68,7 @@
                         <li data-aos="fade-left" data-aos-delay="1500" data-aos-duration="1000">14 gabinetów</li>
                     </ul>
                     <div class="btn-wrapper">
-                        <a href="" class="btn btn-primary">Umów się na wizytę</a>
+                        <a href="{{route('contact')}}" class="btn btn-primary">Umów się na wizytę</a>
                     </div>
                 </div>
             </div>
@@ -136,7 +136,7 @@
                     <h5 class="text">Innowacyjny, najnowocześniejszy i najbardziej efektywny sposób degradacji bilirubiny i leczenia żółtaczki w Polsce.</h5>
                     <p class="description">W przypadku, gdy pomiar bilirubiny wskazuje, że Twoje dziecko ma wysoki poziom bilirubiny i są wskazania do leczenia nasilonej żółtaczki fizjologicznej za pomocą fototerapii, w centrum medycznym BALUMED można wypożyczyć lampę neoBLUE do domu. </p>
                     <div class="btn-wrapper">
-                        <a href="" class="btn btn-primary">dowiedz się więcej</a>
+                        <a href="{{route('uslugi.show', 'fototerapia-w-domu')}}" class="btn btn-primary">dowiedz się więcej</a>
                     </div>
                 </div>
             </div>

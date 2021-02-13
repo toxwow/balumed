@@ -12,6 +12,14 @@
 
         .nav-service {
             border-right: 1px solid #e2e2e2;
+            .mobile-service-text{
+                padding-bottom: 10px;
+                display: none;
+                margin-top: 20px;
+                font-weight: 600;
+                border-bottom: 1px solid #e2e2e2;
+
+            }
             ul {
                 list-style: none;
                 margin: 0;
@@ -159,4 +167,13 @@
     /* The height is 400 pixels */
     width: 100%;
     /* The width is the width of the web page */
+}
+
+@media (max-width: 767.98px) {
+    .content-wrapper .service-wrapper .nav-service {
+        border-right: none !important;
+    }
+    .content-wrapper .service-wrapper .nav-service .mobile-service-text{
+        display: block;
+    }
 }

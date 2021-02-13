@@ -4713,6 +4713,20 @@ template {
   direction: rtl;
 }
 
+.massage-wrapper {
+  background-color: #32a2fd;
+  text-align: center;
+}
+
+.massage-wrapper a {
+  width: 100%;
+  display: inline-block;
+  padding: 10px 0;
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+}
+
 .hamburger {
   padding: 15px 15px;
   display: none;
@@ -5421,6 +5435,10 @@ body .menu-wrapper nav .items-wrapper a.item.link.mobile {
 }
 
 @media (max-width: 767.98px) {
+  body .top-bar.stickyHelper {
+    margin: 0;
+  }
+
   body .top-bar .container .contact-wrapper > div.email {
     display: none;
   }
@@ -5451,6 +5469,10 @@ body .menu-wrapper nav .items-wrapper a.item.link.mobile {
 
   .hamburger {
     display: inline-block;
+  }
+
+  .hamburger:focus {
+    outline: none;
   }
 
   body .wrapper-title p.description:after {

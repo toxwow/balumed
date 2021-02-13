@@ -1,3 +1,7 @@
+@php
+$stickyMassage = true;
+@endphp
+
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -23,6 +27,13 @@
 </head>
 <body>
     <div id="app">
+    @if($stickyMassage === true)
+        <div class="massage-wrapper">
+            <div class="container">
+                <a href="{{route('aktualnosci.show', 'szczepienie-covid19')}}">SZCZEPIENIA COVID-19</a>
+            </div>
+        </div>
+    @endif
     <div class="top-bar">
         <div class="container">
             <div class="contact-wrapper">
@@ -35,10 +46,10 @@
                 </div>
             </div>
             <div class="social-wrapper">
-                <a href=""><img src="{{url('images/icons/facebook.png')}}" alt=""></a>
-                <a href=""><img src="{{url('images/icons/instagram.png')}}" alt=""></a>
+                <a href="https://www.facebook.com/przychodniabalumed/" target="_blank"><img src="{{url('images/icons/facebook.png')}}" alt=""></a>
+                <a href="https://www.instagram.com/balumed/" target="_blank"><img src="{{url('images/icons/instagram.png')}}" alt=""></a>
             </div>
-            <div class="hamburger hamburger--elastic" type="button">
+            <div class="hamburger hamburger--elastic" >
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
                 </span>
@@ -97,9 +108,9 @@
                         </div>
                         <div class="right-social">
                             <div class="btn-wrapper">
-                                <a href="" class="btn btn-grey"><img src="{{url('images/icons/facebook.png')}}" alt=""></a>
-                                <a href="" class="btn btn-grey"><img src="{{url('images/icons/instagram.png')}}" alt=""></a>
-                                <a href="" class="btn btn-primary">umów się na wizytę</a>
+                                <a href="https://www.facebook.com/przychodniabalumed/" target="_blank" class="btn btn-grey"><img src="{{url('images/icons/facebook.png')}}" alt=""></a>
+                                <a href="https://www.instagram.com/balumed/" class="btn btn-grey" target="_blank"><img src="{{url('images/icons/instagram.png')}}" alt=""></a>
+                                <a href="{{route('contact')}}" class="btn btn-primary">umów się na wizytę</a>
                             </div>
                         </div>
                     </div>

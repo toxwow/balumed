@@ -13,7 +13,7 @@
             <div class="wrapper-title">
                 <div>
                     <h1 class="title">Blog</h1>
-                    <p class="description">Nasze najnowsze wpisy</p>
+                    <p class="description">Nasze porady specjalistyczne</p>
                 </div>
             </div>
         </div>

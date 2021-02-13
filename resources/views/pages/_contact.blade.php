@@ -200,7 +200,7 @@
             <div class="wrapper-title">
                 <div>
                     <h1 class="title">Kontakt</h1>
-                    <p class="description">Nasze najnowsze wpisy</p>
+                    <p class="description">Umów się na wizytę</p>
                 </div>
             </div>
         </div>

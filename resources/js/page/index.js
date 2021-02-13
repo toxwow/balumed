@@ -36,6 +36,7 @@ var stickyNav = function(){
     if (scrollTop > stickyNavTop) {
         $('.top-bar').addClass('stickyHelper');
         $('.menu-wrapper').addClass('sticky');
+
     } else {
         $('.top-bar').removeClass('stickyHelper');
         $('.menu-wrapper').removeClass('sticky');
