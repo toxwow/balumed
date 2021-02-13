@@ -130,23 +130,24 @@ $("a[data-type='delete']").click(function () {
     },
     callback: function callback(result) {
       if (result) {
-        axios["delete"]('/uslugi/' + id, {
+        $.ajax({
+          url: "/uslugi/" + slug,
+          type: 'POST',
           data: {
+            "id": id,
             '_method': 'DELETE',
-            id: id,
-            '_token': token,
+            "_token": token,
             api: 'deleteService'
+          },
+          success: function success() {
+            bootbox.alert({
+              message: "Usługa usuniętya",
+              centerVertical: true,
+              callback: function callback() {
+                location.reload();
+              }
+            });
           }
-        }).then(function (response) {
-          bootbox.alert({
-            message: "Usługa usunięty",
-            centerVertical: true,
-            callback: function callback() {
-              location.reload();
-            }
-          });
-        })["catch"](function (error) {
-          console.log(error);
         });
       }
       /* result is a boolean; true = OK, false = Cancel*/

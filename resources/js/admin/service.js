@@ -42,26 +42,25 @@ $("a[data-type='delete']").click(function() {
         },
         callback: function(result){
             if(result){
-                axios.delete('/uslugi/'+id, {
+                $.ajax({
+                    url: "/uslugi/" + slug,
+                    type: 'POST',
                     data: {
+                        "id": id,
                         '_method': 'DELETE',
-                        id: id,
-                        '_token': token,
+                        "_token": token,
                         api: 'deleteService'
-                    }
-                })
-                    .then(response => {
+                    },
+                    success: function (){
                         bootbox.alert({
-                            message: "Usługa usunięty",
+                            message: "Usługa usuniętya",
                             centerVertical: true,
                             callback: function(){
                                 location.reload(); }
                         })
+                    }
+                });
 
-                    })
-                    .catch(error => {
-                        console.log(error);
-                    });
             }/* result is a boolean; true = OK, false = Cancel*/ }
     })
 });
