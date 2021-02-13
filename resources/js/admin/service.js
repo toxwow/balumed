@@ -24,6 +24,7 @@ $( "select.change" ).change(function() {
 
 
 $("a[data-type='delete']").click(function() {
+    var token = $("input[name='_token']").attr("value");
     var slug = $(this).attr('data-slug');
     var id = $(this).attr('data-id');
     bootbox.confirm({
@@ -47,6 +48,7 @@ $("a[data-type='delete']").click(function() {
                     },
                     data: {
                         id: id,
+                        "_token": token,
                         api: 'deleteService'
                     }
                 })
