@@ -19,7 +19,7 @@ $("a[data-type='delete']").click(function() {
         callback: function(result){
             if(result){
                 $.ajax({
-                    url: "/tag/" + slug,
+                    url: "/tagi/" + slug,
                     type: 'POST',
                     data: {
                         "id": id,
