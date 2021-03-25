@@ -33,7 +33,7 @@
 
 
                                     <a href="{{route('uslugi.show', $element->slug)}}">
-                                        <img class="icon" src="{{asset('storage/files/shares/uslugi/icon/'.$service->icon)}}" alt="" class="icon">
+                                        <img class="icon" src="{{asset('storage/files/shares/uslugi/icon/'.$element->icon)}}" alt="" class="icon">
                                         <span>{{$element->name}}</span>
                                     </a>
                                 </li>

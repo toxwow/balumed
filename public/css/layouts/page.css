@@ -5216,7 +5216,7 @@ body .card-secondary .img-wrapper {
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center;
 }
 
 body .card-secondary div.person-name {
