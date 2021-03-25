@@ -198,6 +198,7 @@ a.link{
 body{
     font-family: 'Mulish', sans-serif;
     background-color: #fff;
+    color: #3f3f3f;
 
     .top-bar{
         padding: 20px 0;
@@ -337,6 +338,7 @@ body{
                 font-size: 16px;
             img{
                 margin-right: 10px;
+                height: 30px;
             }
                 &:hover{
                     color: #4f5258;
@@ -414,6 +416,11 @@ body{
             font-weight: 400;
             position: relative;
 
+            &.seo-description{
+                margin-top: 10px;
+                font-size: 14px;
+            }
+
             &:after{
                 content: '';
                 width: 120%;
@@ -435,6 +442,7 @@ body{
 
         img.icon{
             margin-bottom: 15px;
+            height: 35px;
         }
         h2.name{
             font-size: 1.1rem;
@@ -523,13 +531,17 @@ body{
                 content: '';
                 position: absolute;
                 left: 0;
-                top: calc(50% - 8px);
+                top: 12px;
                 width: 16px;
                 height: 16px;
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center;
                 background-image: url("../images/icons/pointer.png");
+            }
+            a{
+                text-decoration: none;
+                color: #27ddd2;
             }
         }
     }

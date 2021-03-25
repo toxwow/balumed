@@ -18,6 +18,8 @@ class CreateServicesTable extends Migration
             $table->string('name');
             $table->string('slug');
             $table->string('intro');
+            $table->text('pageTitleService');
+            $table->text('metaDescriptionService');
             $table->longText('description');
             $table->string('icon');
             $table->boolean('status')->default('0');

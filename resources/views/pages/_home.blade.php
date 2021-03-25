@@ -1,7 +1,9 @@
 @extends('layouts.page',
 [
     'seo'=> '',
-    'footerStatus' => true
+    'footerStatus' => true,
+    'metaDescription' => 'Centrum Medyczne Balumed znajdujące się w Warszawie przy ul. Sarmackiej 18 świadczy profesjonalne usługi medyczne w szerokim zakresie. Sprawdź!',
+    'pageTitle' => 'Specjalistyczne Centrum Medyczne Warszawa. Przychodnia Wilanów Sarmacka | Balumed'
 ])
 @push('css')
     <link href="{{ asset('css/page/_home.css') }}" rel="stylesheet">
@@ -11,10 +13,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-6" >
-                    <h1>Specjalistyczne<br>Centrum Medyczne</h1>
-                    <h2>Profilaktyki, Diagnostyki i Terapii Małego Dziecka</h2>
-                    <p class="description">For a time I worked in a convenience store as a clerk and cook and I used a deep fryer quite a bit for cooking battered chicken and French fried potatoes.
-                        Of course the chicken doesn’t start out battered. It comes delivered frozen in big cardboard boxes. Before the chicken is ready for the cooking part it must be</p>
+                    <h1>Balumed - Specjalistyczne Centrum Medyczne w Warszawie</h1>
+                    <p class="description">Specjalistyczne Centrum Medyczne Profilaktyki, Diagnostyki i Terapii Małego Dziecka powstało z myślą o zapewnieniu pełnej i wysokospecjalistycznej opieki zdrowotnej najmłodszym pacjentom już od momentu ich poczęcia. Nasza działalność skupiona jest na takich dziedzinach medycyny jak <a href="
+  /pediatria">pediatria</a>, <a href="
+  /neonatologia">neonatologia</a> oraz położnictwo z <a href="
+  /ginekologia">ginekologią</a>. Ciąże fizjologiczne, a także ciąże wysokiego ryzyka położniczego prowadzone są przez wysokiej klasy specjalist&oacute;w położnictwa i ginekologii z dużym doświadczeniem klinicznym.</p>
                 <div class="btn-wrapper">
                     <a href="{{route('contact')}}" class="btn btn-primary">Skontaktuj się z nami</a>
                     <a href="" class="btn btn-primary btn-outline"><img class="icon" src="{{url('images/icons/phone.png')}}"><span> zadzwoń </span>{{$info->phone_one}}</a>
@@ -34,6 +37,7 @@
         </div>
         <div class="container">
             <div class="row">
+
                 @foreach($services as $service)
                     <div class="col-12 col-sm-6 col-md-4 mt-4">
                         <div class="card">
@@ -60,12 +64,12 @@
                             <p class="description">Profesjonalne podejscie dla każdego pacjenta</p>
                         </div>
                     </div>
-                    <h5 class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vestibulum vehicula vehicula. Etiam id velit vitae enim ultrices convallis.</h5>
+                    <h5 class="text">Nowoczesna przychodnia z doświadczonymi specjalistami</h5>
                     <ul class="primary-list">
-                        <li data-aos="fade-left" data-aos-delay="750" data-aos-duration="1000">1200 przyjętych pacjentów</li>
-                        <li data-aos="fade-left" data-aos-delay="1000" data-aos-duration="1000">24 wyspecjalizownych lekarzy</li>
-                        <li data-aos="fade-left" data-aos-delay="1250" data-aos-duration="1000">8 najnowych urządzeń ultrasonograficznych</li>
-                        <li data-aos="fade-left" data-aos-delay="1500" data-aos-duration="1000">14 gabinetów</li>
+                        <li data-aos="fade-left" data-aos-delay="750" data-aos-duration="1000">Nasze gabinety wyposażone zostały w najnowszej generacji sprzęt medyczny</li>
+                        <li data-aos="fade-left" data-aos-delay="1000" data-aos-duration="1000">Wnętrze przychodni zaprojektowano tak, by było przyjazne mamom i ich maluchom</li>
+                        <li data-aos="fade-left" data-aos-delay="1250" data-aos-duration="1000">Zdrowie i zaufanie naszych Pacjentów jest dla nas najważniejsze</li>
+                        <li data-aos="fade-left" data-aos-delay="1500" data-aos-duration="1000">W Balumed zwracamy uwagę na najistotniejsze zagadnienia po porodzie, jakimi są między innymi: żywienie, pielęgnacja, szczepienia dziecka, problemy emocjonalne matki, czy też rola ojca w opiece nad matką i dzieckiem. <a href="/szkolenia-dla-rodzicow">Wspieramy rodziców</a> w tym najtrudniejszym dla nich czasie, aby szybko osiągnęli poczucie komfortu psychicznego, spokoju oraz bezpieczeństwa.</li>
                     </ul>
                     <div class="btn-wrapper">
                         <a href="{{route('contact')}}" class="btn btn-primary">Umów się na wizytę</a>

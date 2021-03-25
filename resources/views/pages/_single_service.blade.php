@@ -1,7 +1,9 @@
 @extends('layouts.page',
 [
     'seo'=> '',
-    'footerStatus' => true
+    'footerStatus' => true,
+    'metaDescription' => $service -> metaDescriptionService,
+    'pageTitle' => $service -> pageTitleService
 ])
 @push('css')
     <link href="{{ asset('css/page/_sub_page.css') }}" rel="stylesheet">
@@ -40,7 +42,7 @@
                         </ul>
                     </div>
                     <div class="col-12 col-md-8 order-1 order-md-2">
-                        <h1>{{$service->name}}</h1>
+
                         {!! $service->description !!}
                     </div>
                 </div>

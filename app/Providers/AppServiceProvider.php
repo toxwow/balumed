@@ -3,6 +3,7 @@
 namespace App\Providers;
 use App\Info;
 use App\Service;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
@@ -33,6 +34,7 @@ class AppServiceProvider extends ServiceProvider
             }
         });
         View::share('info', Info::all()->first());
-        View::share('servicesMenu', Service::all());
+        View::share('partners', Storage::disk('public')->files('/files/shares/partnerzy'));
+        View::share('servicesMenu', Service::all()->where('status', '=', '1' ));
     }
 }

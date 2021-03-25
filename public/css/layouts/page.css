@@ -4938,6 +4938,7 @@ a.link.primary-link:hover {
 body {
   font-family: "Mulish", sans-serif;
   background-color: #fff;
+  color: #3f3f3f;
 }
 
 body .top-bar {
@@ -5090,6 +5091,7 @@ body .menu-wrapper .second-nav a {
 
 body .menu-wrapper .second-nav a img {
   margin-right: 10px;
+  height: 30px;
 }
 
 body .menu-wrapper .second-nav a:hover {
@@ -5160,6 +5162,11 @@ body .wrapper-title p.description {
   position: relative;
 }
 
+body .wrapper-title p.description.seo-description {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
 body .wrapper-title p.description:after {
   content: "";
   width: 120%;
@@ -5180,6 +5187,7 @@ body .card {
 
 body .card img.icon {
   margin-bottom: 15px;
+  height: 35px;
 }
 
 body .card h2.name {
@@ -5279,13 +5287,18 @@ body ul.primary-list li:before {
   content: "";
   position: absolute;
   left: 0;
-  top: calc(50% - 8px);
+  top: 12px;
   width: 16px;
   height: 16px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(/images/pointer.png?25af9fa03a3f0d73adb0d87573eaeff1);
+}
+
+body ul.primary-list li a {
+  text-decoration: none;
+  color: #27ddd2;
 }
 
 body .footer {

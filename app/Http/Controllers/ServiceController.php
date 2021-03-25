@@ -55,12 +55,16 @@ class ServiceController extends Controller
             'slug' => 'required|unique:services',
             'intro' => 'required',
             'description' => 'required',
-            'icon' => 'required|mimes:jpeg,png,bmp,tiff|max:4096',
+            'metaDescriptionService' => 'required',
+            'pageTitleService' => 'required',
+            'icon' => 'required|mimes:jpeg,png,bmp,tiff,svg|max:4096',
         ],[
             'name.required' => 'Pole nazwa jest wymagane',
             'slug.unique' => 'Istnieje już slug o tej nazwie',
             'slug.required' => 'Pole slug jest wymagane',
             'intro.required' => 'Pole wstępny opis jest wymagane',
+            'metaDescriptionService.required' => 'Pole seo meta  jest wymagane',
+            'pageTitleService.required' => 'Pole title seo jest wymagane',
             'description.required' => 'Pole opis wspisu jest wymagane',
             'icon.required' => 'Zdjęcie jest wymagane',
             'icon.mimes' => 'Zły format zdjęcia',
@@ -74,6 +78,8 @@ class ServiceController extends Controller
             'icon' => $photo->hashName(),
             'name' => $request->get('name'),
             'intro' => $request->get('intro'),
+            'pageTitleService' => $request->get('pageTitleService'),
+            'metaDescriptionService' => $request->get('metaDescriptionService'),
             'slug' => $request->get('slug'),
             'status' => $request->get('status'),
             'description' => $request->get('description')
@@ -131,10 +137,14 @@ class ServiceController extends Controller
                 'slug' => 'required',
                 'intro' => 'required',
                 'description' => 'required',
+                'pageTitleService' => 'required',
+                'metaDescriptionService' => 'required',
             ], [
                 'name.required' => 'Pole nazwa jest wymagane',
                 'slug.unique' => 'Istnieje już slug o tej nazwie',
                 'slug.required' => 'Pole slug jest wymagane',
+                'metaDescriptionService.required' => 'Pole seo meta  jest wymagane',
+                'pageTitleService.required' => 'Pole title seo jest wymagane',
                 'intro.required' => 'Pole wstępny opis jest wymagane',
                 'description.required' => 'Pole opis wspisu jest wymagane',
             ]);
@@ -144,6 +154,8 @@ class ServiceController extends Controller
             $service->name = $request->get('name');
             $service->slug = $request->get('slug');
             $service->intro = $request->get('intro');
+            $service->metaDescriptionService = $request->get('metaDescriptionService');
+            $service->pageTitleService = $request->get('pageTitleService');
             $service->status = $request->get('status');
             $service->description = $request->get('description');
 

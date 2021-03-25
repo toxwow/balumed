@@ -1,7 +1,9 @@
 @extends('layouts.page',
 [
     'seo'=> '',
-    'footerStatus' => false
+    'footerStatus' => false,
+    'metaDescription' => 'Blog medyczny na stronie warszawskiego Centrum Medycznego Balumed to miejsce, w którym znajdziesz rzetelne poradniki zdrowotne. Sprawdź sam!',
+    'pageTitle' => 'Blog medyczny dla pacjentów i lekarzy. Poradniki zdrowotne | Balumed Warszawa'
 ])
 @push('css')
     <link href="{{ asset('css/page/_sub_page.css') }}" rel="stylesheet">
@@ -12,8 +14,8 @@
         <div class="container">
             <div class="wrapper-title">
                 <div>
-                    <h1 class="title">Blog</h1>
-                    <p class="description">Nasze porady specjalistyczne</p>
+                    <h1 class="title">Blog medyczny </h1>
+                    <p class="description">poradniki zdrowotne dla pacjentów i lekarzy</p>
                 </div>
             </div>
         </div>

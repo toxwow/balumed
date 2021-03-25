@@ -26,6 +26,12 @@
   font-size: 14px;
   font-weight: 300;
   color: #929396;
+  margin-top: 15px;
+}
+
+.header-wrapper p.description a {
+  text-decoration: none;
+  color: #27ddd2;
 }
 
 .header-wrapper .btn-wrapper > a:last-of-type {
@@ -64,7 +70,7 @@
   background-image: url(/images/profit-woman.png?395e0b32ec5823a24e605d439a65d0ca);
 }
 
-.profits-wrapper h5.text {
+.profits-wrapper h2.text {
   color: #3f3f3f;
   font-size: 18px;
   margin: 20px 0 30px;

@@ -1,7 +1,9 @@
 @extends('layouts.page',
 [
-    'seo'=> '',
-    'footerStatus' => true
+    'seo'=> 'Nasi lekarze to wysokiej klasy specjaliści pediatrzy, neonatolodzy, ginekolodzy, położnicy z wieloletnią praktyką w wiodących szpitalach klinicznych i uniwersyteckich, dla których leczenie jest pasją i sposobem na życie. W Centrum Medycznym Balumed dajemy także możliwość konsultacji specjalistycznych m.in.: alergologa, chirurga dziecięcego, kardiologa dziecięcego, nefrologa, radiologa czy urologa.',
+    'footerStatus' => true,
+    'metaDescription' => 'Lekarze świadczący usługi w warszawskim Centrum Medycznym Balumed to wykwalifikowani specjaliści z wieloletnim doświadczeniem. Sprawdź sam!',
+    'pageTitle' => 'Specjaliści: poznaj nas bliżej | Balumed Warszawa'
 ])
 @push('css')
     <link href="{{ asset('css/page/_sub_page.css') }}" rel="stylesheet">
@@ -11,8 +13,8 @@
         <div class="container">
             <div class="wrapper-title">
                 <div>
-                    <h1 class="title">Nasza kadra</h1>
-                    <p class="description">Poznaj naszych lekarzy</p>
+                    <h1 class="title">Specjaliści&nbsp;z wieloletnią praktyką medyczną</h1>
+                    <p class="description seo-description">Miły i doskonale przeszkolony personel sprawi, że każda wizyta w naszej warszawskiej poradni będzie przyjazna dla mam i ich maluszków.</p>
                 </div>
             </div>
         </div>

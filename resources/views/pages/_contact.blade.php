@@ -1,7 +1,9 @@
 @extends('layouts.page',
 [
     'seo'=> '',
-    'footerStatus' => false
+    'footerStatus' => false,
+    'metaDescription' => 'Specjalistyczne Centrum Medyczne Balumed znajduje się w Warszawie przy ul.Sarmackiej 18/93. Sprawdź godziny otwarcia i umów się na wizytę już dziś!',
+    'pageTitle' => 'Kontakt: znajdź naszą poradnię i umów się na wizytę | Balumed Warszawa'
 ])
 @push('script')
 
@@ -199,8 +201,8 @@
         <div class="container">
             <div class="wrapper-title">
                 <div>
-                    <h1 class="title">Kontakt</h1>
-                    <p class="description">Umów się na wizytę</p>
+                    <h1 class="title">Kontakt </h1>
+                    <p class="description">znajdź naszą poradnię i umów się na wizytę</p>
                 </div>
             </div>
         </div>

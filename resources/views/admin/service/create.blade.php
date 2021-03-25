@@ -56,6 +56,20 @@
             <div class="row">
                 <div class="col">
                     <div class="form-group">
+                        <label for="metaDescriptionService">Meta description seo</label>
+                        <textarea type="text" class="form-control"name="metaDescriptionService" style="height: 100px;">{{old('metaDescriptionService')}}</textarea>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="pageTitleService">Page Title seo</label>
+                        <textarea type="text" class="form-control"name="pageTitleService" style="height: 100px;">{{old('pageTitleService')}}</textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
                         <label for="intro">Wstępny opis</label>
                         <textarea type="text" class="form-control"name="intro" style="height: 100px;">{{old('intro')}}</textarea>
                     </div>

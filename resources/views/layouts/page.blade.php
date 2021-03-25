@@ -10,8 +10,9 @@ $stickyMassage = true;
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="description" content="{{$metaDescription ?? ""}}">
 
-    <title>{{ config('app.name') }}</title>
+    <title>{{$pageTitle ?? ""}}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/page/index.js') }}" defer></script>
@@ -161,9 +162,12 @@ $stickyMassage = true;
             <div class="glide">
                 <div class="glide__track" data-glide-el="track">
                     <ul class="glide__slides">
+                        @foreach($partners as $partner)
                         <li class="glide__slide" style="text-align: center">
-                            <img src="{{asset('storage/files/shares/partnerzy/allianz-90x40.png/')}}" alt="">
+
+                            <img src="{{asset('storage/'.$partner)}}" alt="">
                         </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>

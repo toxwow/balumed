@@ -1,7 +1,9 @@
 @extends('layouts.page',
 [
     'seo'=> '',
-    'footerStatus' => false
+    'footerStatus' => false,
+    'metaDescription' => 'Jesteś ciekaw co słychać w Centrum Medycznym Balumed? Sprawdź aktualności i bądź na bieżąco z nowinkami dotyczącymi naszej poradni! ',
+    'pageTitle' => 'Aktualności: bądź na bieżąco | Balumed Warszawa'
 ])
 @push('css')
     <link href="{{ asset('css/page/_sub_page.css') }}" rel="stylesheet">
@@ -12,8 +14,8 @@
         <div class="container">
             <div class="wrapper-title">
                 <div>
-                    <h1 class="title">Aktualności</h1>
-                    <p class="description">Najnowsze wiadomości</p>
+                    <h1 class="title">Aktualności </h1>
+                    <p class="description">sprawdź co słychać w Centrum Medycznym Balumed</p>
                 </div>
             </div>
         </div>

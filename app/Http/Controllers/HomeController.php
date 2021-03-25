@@ -8,6 +8,7 @@ use App\Service;
 use App\Specialist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rules\In;
 
 class HomeController extends Controller
@@ -30,6 +31,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+
+
+
         $services = Service::all()->where('status', '=', '1' );
         $specialists = Specialist::with('services')->where('status', '=', '1')->get();
         $articles = Post::all()->where('status', '=', '1' );
