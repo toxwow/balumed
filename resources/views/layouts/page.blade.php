@@ -16,12 +16,11 @@ $stickyMassage = true;
 
     <!-- Scripts -->
     <script src="{{ asset('js/page/index.js') }}" defer></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" ></script>
 
 
     <!-- Styles -->
     <link href="{{ asset('css/layouts/page.css') }}" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+{{--    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">--}}
 
     @stack('css')
     @stack('script')
@@ -196,6 +195,45 @@ $stickyMassage = true;
             copyright © 2021
         </div>
     </div>
+        <div>
+
+            <!-- Modal -->
+
+
+            @if($articleModal->isEmpty())
+            @else
+
+                @if($modalCheck !== null)
+
+                @else
+
+                    <div class="modal  fade" tabindex="-1" role="dialog" id="my-modal">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    @csrf
+
+                                    <button type="button" class="close set-cookie" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body" style="text-align: center">
+                                    @foreach($articleModal as $modal)
+                                        <div class="img-wrapper-modal" style="background-image: url({{asset('storage/files/shares/aktualnosci/'.$modal->photo)}})"></div>
+                                        <h3 class="modal-title">{{$modal->title}}</h3>
+                                        <p class="modal-description">{{$modal->description}}</p>
+                                        <a class="btn btn-primary btn-modal set-cookie" href="{{route('aktualnosci.show', $modal->slug)}}">czytaj więcej</a>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endif
+
+            @endif
+        </div>
 </div>
+{{--    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer ></script>--}}
+
 </body>
 </html>

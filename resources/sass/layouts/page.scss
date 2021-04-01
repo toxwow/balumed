@@ -1,7 +1,9 @@
 @import '~bootstrap/scss/bootstrap-grid';
 @import '~bootstrap/scss/bootstrap-reboot';
+@import "~bootstrap/scss/modal";
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700&display=swap');
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "~aos/dist/aos.css";
 
 //Global bootsrap
 
@@ -775,4 +777,75 @@ body .menu-wrapper nav .items-wrapper a.item.link.mobile{
     to{
         top: 0;
     }
+}
+.modal-header{
+    border-bottom: 0;
+}
+.modal-header .close{
+    background: none;
+    outline: 0;
+    border: 0;
+}
+
+
+.img-wrapper-modal{
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+}
+.modal-description{
+    margin-bottom: 10px;
+}
+
+.btn-modal{
+    margin-bottom: 20px;
+    display: block;
+}
+
+.modal-specialist{
+    .main-info {
+        border-bottom: 1px solid #27ddd2;
+        padding: 0px 0 20px;
+        margin-bottom: 20px;
+        display: flex;
+
+        .img{
+            width: 150px;
+            height: 150px;
+            background-position: center;
+            background-size: cover;
+            margin-right: 20px;
+        }
+
+        .titles{
+            margin: 0;
+            color: #9f9d9d;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: bolder;
+        }
+
+        .services a{
+            text-decoration: none;
+            color: #27ddd2;
+        }
+    }
+    .description p{
+        margin: 0;
+        text-align: justify;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .modal-specialist .main-info{
+        flex-direction: column;
+    }
+    .modal-specialist .main-info .img{
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+
 }

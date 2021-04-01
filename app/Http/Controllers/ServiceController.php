@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Service;
+use App\Specialist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -100,6 +101,7 @@ class ServiceController extends Controller
     {
         $services = Service::all()->where('status', '=', '1' );
         $service = DB::table('services')->where('slug', $slug)->first();
+
         if(empty($service)){
             abort(404);
         }

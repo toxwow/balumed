@@ -25,7 +25,9 @@
                     <div class="col-12 col-md-4 nav-service order-2 order-md-1">
                         <div class="mobile-service-text">Zobacz pozostałe usługi:</div>
                         <ul>
+
                             @foreach($services as $element)
+
                                 @if($element->id === $service->id)
                                 @else
                                 <li>
@@ -45,10 +47,10 @@
 
                         {!! $service->description !!}
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
-
 
 @endsection

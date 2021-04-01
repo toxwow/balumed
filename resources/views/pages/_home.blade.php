@@ -69,7 +69,7 @@
                         <li data-aos="fade-left" data-aos-delay="750" data-aos-duration="1000">Nasze gabinety wyposażone zostały w najnowszej generacji sprzęt medyczny</li>
                         <li data-aos="fade-left" data-aos-delay="1000" data-aos-duration="1000">Wnętrze przychodni zaprojektowano tak, by było przyjazne mamom i ich maluchom</li>
                         <li data-aos="fade-left" data-aos-delay="1250" data-aos-duration="1000">Zdrowie i zaufanie naszych Pacjentów jest dla nas najważniejsze</li>
-                        <li data-aos="fade-left" data-aos-delay="1500" data-aos-duration="1000">W Balumed zwracamy uwagę na najistotniejsze zagadnienia po porodzie, jakimi są między innymi: żywienie, pielęgnacja, szczepienia dziecka, problemy emocjonalne matki, czy też rola ojca w opiece nad matką i dzieckiem. <a href="/szkolenia-dla-rodzicow">Wspieramy rodziców</a> w tym najtrudniejszym dla nich czasie, aby szybko osiągnęli poczucie komfortu psychicznego, spokoju oraz bezpieczeństwa.</li>
+                        <li data-aos="fade-left" data-aos-delay="1500" data-aos-duration="1000">W Balumed zwracamy uwagę na najistotniejsze zagadnienia po porodzie, jakimi są między innymi: żywienie, pielęgnacja, szczepienia dziecka, problemy emocjonalne matki, czy też rola ojca w opiece nad matką i dzieckiem. </li>
                     </ul>
                     <div class="btn-wrapper">
                         <a href="{{route('contact')}}" class="btn btn-primary">Umów się na wizytę</a>

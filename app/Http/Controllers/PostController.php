@@ -130,6 +130,9 @@ class PostController extends Controller
         if($request->api == 'statusChange'){
             Post::where('id', $request->id)->update(['status' => $request->status]);
         }
+        else if($request->api == 'typeChange'){
+            Post::where('id', $request->id)->update(['type' => $request->status]);
+        }
         else{
             $request->validate([
                 'title' => 'required|min:5',

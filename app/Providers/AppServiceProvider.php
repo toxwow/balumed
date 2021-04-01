@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 use App\Info;
+use App\Post;
 use App\Service;
+use Session;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Auth;
@@ -33,8 +36,14 @@ class AppServiceProvider extends ServiceProvider
                 view()->share('user', Auth::user());
             }
         });
+//        Cookie::queue('name', 'tomek', 10);
+
+
         View::share('info', Info::all()->first());
+        View::share('modalCheck', Cookie::get('name'));
+        View::share('articleModal', Post::all()->where('type', '=', '1'));
         View::share('partners', Storage::disk('public')->files('/files/shares/partnerzy'));
         View::share('servicesMenu', Service::all()->where('status', '=', '1' ));
     }
+
 }

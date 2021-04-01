@@ -25,6 +25,7 @@
             <th scope="col">Tagi</th>
             <th scope="col">Data dodania</th>
             <th scope="col">Status</th>
+            <th scope="col">Typ</th>
             <th scope="col" style="text-align: center" colspan="2">Akcje</th>
         </tr>
         </thead>
@@ -45,9 +46,14 @@
                     </div>
                 </td>
                 <td>{{Carbon\Carbon::parse($post->created_at)->format('Y-m-d, G:i:s')}}</td>
-                <td><select class="form-control change" data-attribute="status" data-id="{{$post->id}}" data-slug="{{$post->slug}}">
+                <td><select class=" form-control change" data-attribute="status" data-id="{{$post->id}}" data-slug="{{$post->slug}}">
                         <option data-status="1" {{($post->status === 1 ? 'selected' : '')}}>Widoczny</option>
                         <option data-status="0" {{($post->status === 0 ? 'selected' : '')}}>Ukryty</option>
+                    </select>
+                </td>
+                <td><select class="select-to-check form-control change-type" data-attribute="type" data-id="{{$post->id}}" data-slug="{{$post->slug}}">
+                        <option data-type="1" {{($post->type === 1 ? 'selected' : '')}}>Modal</option>
+                        <option data-type="0" {{($post->type === 0 ? 'selected' : '')}}>Domyślny</option>
                     </select>
                 </td>
                 <td style="text-align: right">

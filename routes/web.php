@@ -1,5 +1,6 @@
 <?php
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -60,6 +61,9 @@ Route::resource('info', 'InfoController')->only(['update'])->middleware('auth');
 Route::get('/admin/partnerzy', 'PartnerController@adminPartner')->name('adminPartner')->middleware('auth');;
 Route::resource('partnerzy', 'PartnerController')->only(['update'])->middleware('auth');;
 
+
+
+
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
@@ -72,4 +76,9 @@ Route::get('/kontakt',  function () {
 })->name('contact');
 
 Route::get('/{slug}', 'ServiceController@show')->name('uslugi.show');
+
+
+
+Route::post('/setCookie', 'CookiesController@addCookies')->name('test');
+
 

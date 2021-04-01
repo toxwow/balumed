@@ -23,8 +23,41 @@ $( "select.change" ).change(function() {
             })
         }
     });
+});
+function checkIfModal(){
+    $( ".select-to-check" ).each(function(  ) {
+        let test = $( this ).find(':selected').attr('data-type');
+        if(test == 1){
+            $( ".select-to-check" ).attr("disabled", true);
+            $(this).attr("disabled", false);
+        }
+    });
+}
+
+$( "select.change-type" ).change(function() {
+    var id = $(this).attr('data-id');
+    var status = $(this).find(':selected').attr('data-type');
+    var slug = $(this).attr('data-slug');
+
+    $.ajax({
+        url: "/aktualnosci/" + slug,
+        type: 'POST',
+        data: {
+            "id": id,
+            '_method': 'PUT',
+            'status': status,
+            "_token": token,
+            api: 'typeChange'
+        },
+        success: function (){
+
+            location.reload();
+        }
+    });
 
 });
+checkIfModal();
+
 
 
 
