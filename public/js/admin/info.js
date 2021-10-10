@@ -132,7 +132,7 @@ $("#changeData").click(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /var/www/html/balumed/resources/js/admin/info.js */"./resources/js/admin/info.js");
+module.exports = __webpack_require__(/*! /Users/Shared/Previously Relocated Items/Security/Praca 2020/balumed-dev/resources/js/admin/info.js */"./resources/js/admin/info.js");
 
 
 /***/ })

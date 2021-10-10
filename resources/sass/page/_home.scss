@@ -1,5 +1,5 @@
 .header-wrapper{
-    background-image: url('../images/bg-header.png');
+    background-image: url('/images/bg-header.png');
     background-size: contain;
     z-index: 2;
     position: relative;
@@ -67,7 +67,7 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        background-image: url("../images/profit-woman.png");
+        background-image: url("/images/profit-woman.png");
     }
     h2.text{
         color: #3f3f3f;
@@ -84,7 +84,7 @@
 .promotion-wrapper{
     padding: 70px 0;
     background-color: #f6fbfe;
-    background-image: url("../images/promotion-bg.png");
+    background-image: url("/images/promotion-bg.png");
     background-position: right;
     background-repeat: no-repeat;
     background-size: contain;

@@ -30,7 +30,7 @@ $stickyMassage = true;
     @if($stickyMassage === true)
         <div class="massage-wrapper">
             <div class="container">
-                <a href="{{route('aktualnosci.show', 'szczepienie-covid19')}}">SZCZEPIENIA COVID-19</a>
+                <a href="{{route('uslugi.show', 'punkt-szczepien')}}">SZCZEPIENIA COVID-19</a>
             </div>
         </div>
     @endif
@@ -63,14 +63,15 @@ $stickyMassage = true;
                     <a href="{{route('home')}}"><img src="{{url('images/logo-bg.png')}}" alt=""></a>
                 </div>
                 <div class="items-wrapper">
+                    <a href="{{route('aktualnosci.index')}}" class="item link {{ (request()->is('aktualnosci*')) ? 'active' : '' }}">Aktualności</a>
                     <div class="item dropdown">
                         Nasze usługi
                     </div>
                     <a href="{{route('home')}}" class="item link mobile {{ (request()->is('/')) ? 'active' : '' }}" >Strona główna</a>
                     <a href="{{route('uslugi.index')}}" class="item link mobile ">Nasze usługi</a>
                     <a href="{{route('specjalisci.index')}}" class="item link {{ (request()->is('specjalisci')) ? 'active' : '' }}">Nasi specjaliści</a>
-                    <a href="{{route('aktualnosci.index')}}" class="item link {{ (request()->is('aktualnosci*')) ? 'active' : '' }}">Aktualności</a>
-                    <a href="{{route('blog.index')}}" class="item link {{ (request()->is('blog*')) ? 'active' : '' }}">Blog</a>
+                    <!-- <a href="{{route('blog.index')}}" class="item link {{ (request()->is('blog*')) ? 'active' : '' }}">Blog</a> -->
+                    <a href="{{route('galery')}}" class="item link {{ (request()->is('galeria')) ? 'active' : '' }}">Galeria</a>
                     <a href="{{route('contact')}}" class="item link {{ (request()->is('kontakt')) ? 'active' : '' }}">Kontakt</a>
                     <a href="{{route('contact')}}" class="item btn btn-primary btn-outline"><img src="{{url('images/icons/calendar.png')}}">Umów wizytę</a>
                 </div>

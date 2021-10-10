@@ -26,6 +26,48 @@
             </div>
         </div>
     </div>
+    <div class="news-wrapper">
+        <div class="container">
+            <div class="wrapper-title">
+                <div>
+                    <p class="title">Aktualności</p>
+                    <p class="description">Zapoznaj się z najnowszymi informacjami</p>
+                </div>
+                <div style="padding-left: 50px; text-align: right;">
+                    <a href="{{route('aktualnosci.index')}}" class="link primary-link plus">zobacz wszystkie aktualności</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                @foreach($articles->slice(0, 3) as $key => $article)
+                    <div class="col-12 col-sm-6  col-md-4 my-4" data-aos="fade-up" data-aos-duration="1000"
+                         @if($key == 0)
+                            data-aos-delay="500"
+                         @elseif($key == 1)
+                            data-aos-delay="750"
+                         @else
+                            data-aos-delay="1000"
+                        @endif
+                    >
+                        <div class="card-secondary">
+                            <div class="img-wrapper" style="background-image: url({{asset('storage/files/shares/aktualnosci/'.$article->photo)}})"></div>
+                            <div class="article-info">
+                                <p class="date">{{$article->created_at->format('j.m.Y')}}</p>
+                                <p class="title">{{$article->title}}</p>
+                            </div>
+                            <div class="article-description">
+                                <p class="description">{{substrwords($article->description, 200)}}</p>
+                            </div>
+                            <div class="action-wrapper">
+                                <a href="{{route('aktualnosci.show', $article->slug)}}" class="link primary-link arrow">czytaj dalej</a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
     <div class="services-wrapper">
         <div class="container">
             <div class="wrapper-title">
@@ -146,47 +188,6 @@
             </div>
         </div>
     </div>
-    <div class="news-wrapper">
-        <div class="container">
-            <div class="wrapper-title">
-                <div>
-                    <p class="title">Aktualności</p>
-                    <p class="description">Zapoznaj się z najnowszymi informacjami</p>
-                </div>
-                <div style="padding-left: 50px; text-align: right;">
-                    <a href="{{route('aktualnosci.index')}}" class="link primary-link plus">zobacz wszystkie aktualności</a>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                @foreach($articles->slice(0, 3) as $key => $article)
-                    <div class="col-12 col-sm-6  col-md-4 mt-4" data-aos="fade-up" data-aos-duration="1000"
-                         @if($key == 0)
-                            data-aos-delay="500"
-                         @elseif($key == 1)
-                            data-aos-delay="750"
-                         @else
-                            data-aos-delay="1000"
-                        @endif
-                    >
-                        <div class="card-secondary">
-                            <div class="img-wrapper" style="background-image: url({{asset('storage/files/shares/aktualnosci/'.$article->photo)}})"></div>
-                            <div class="article-info">
-                                <p class="date">{{$article->created_at->format('j.m.Y')}}</p>
-                                <p class="title">{{$article->title}}</p>
-                            </div>
-                            <div class="article-description">
-                                <p class="description">{{substrwords($article->description, 200)}}</p>
-                            </div>
-                            <div class="action-wrapper">
-                                <a href="{{route('aktualnosci.show', $article->slug)}}" class="link primary-link arrow">czytaj dalej</a>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </div>
+
 
 @endsection

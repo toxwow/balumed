@@ -11,6 +11,14 @@ window.bootbox = require('bootbox');
 window.ClassicEditor = require('@ckeditor/ckeditor5-build-classic')
 window.Vue = require('vue');
 
+import lightGallery from 'lightgallery';
+
+
+
+
+
+
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue

@@ -168,7 +168,7 @@ a.link{
                 top: 0;
                 width: 15px;
                 height: 15px;
-                background-image: url("../images/icons/right-arrow.png");
+                background-image: url("/images/icons/right-arrow.png");
             }
         }
 
@@ -186,7 +186,7 @@ a.link{
                 top: 0;
                 width: 15px;
                 height: 15px;
-                background-image: url("../images/icons/plus.png");
+                background-image: url("/images/icons/plus.png");
             }
         }
 
@@ -232,12 +232,12 @@ body{
                         position: absolute;
                     }
                     &.phone:before{
-                        background-image: url("../images/icons/phone.png");
+                        background-image: url("/images/icons/phone.png");
                     }
                     &.email {
                         margin-left: 35px;
                         &:before {
-                            background-image: url("../images/icons/email.png");
+                            background-image: url("/images/icons/email.png");
                         }
                     }
                 }
@@ -362,7 +362,7 @@ body{
     .header-sub-page-wrapper{
         padding: 70px 0;
         text-align: center;
-        background-image: url("../images/bg1.png");
+        background-image: url("/images/bg1.png");
 
         h1{
             font-size: 32px;
@@ -539,7 +539,7 @@ body{
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center;
-                background-image: url("../images/icons/pointer.png");
+                background-image: url("/images/icons/pointer.png");
             }
             a{
                 text-decoration: none;

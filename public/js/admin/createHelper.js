@@ -130,7 +130,7 @@ $("input#title").change(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /var/www/html/balumed/resources/js/admin/createHelper.js */"./resources/js/admin/createHelper.js");
+module.exports = __webpack_require__(/*! /Users/Shared/Previously Relocated Items/Security/Praca 2020/balumed-dev/resources/js/admin/createHelper.js */"./resources/js/admin/createHelper.js");
 
 
 /***/ })

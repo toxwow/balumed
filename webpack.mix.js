@@ -27,5 +27,5 @@ mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/admin/post.js', 'public/js/admin')
     .js('resources/js/admin/tag.js', 'public/js/admin')
     .js('resources/js/admin/info.js', 'public/js/admin')
-    .js('resources/js/page/index.js', 'public/js/page')
-;
+    .js('resources/js/page/index.js', 'public/js/page').options({processCssUrls: false
+    });

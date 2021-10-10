@@ -17,6 +17,8 @@
 
 Auth::routes();
 
+Route::get('/galeria', 'HomeController@galery')->name('galery');
+
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/admin', 'HomeController@admin')->name('adminHome')->middleware('auth');;
@@ -26,6 +28,8 @@ Route::get('/admin/blog', 'BlogController@adminBlog')->name('adminBlog')->middle
 Route::resource('blog', 'BlogController')->parameters([
     'blog' => 'slug'
 ]);
+
+
 
 //Services routes
 

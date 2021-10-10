@@ -2,6 +2,9 @@
 require('./../bootstrap');
 import Glide from '@glidejs/glide'
 import AOS from 'aos';
+import { Fancybox, Carousel, Panzoom } from "@fancyapps/ui";
+
+
 $( document ).ready(function() {
 
     setTimeout(function(){
@@ -97,6 +100,17 @@ $( document ).ready(function() {
         anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 
     });
+
+    Fancybox.bind('[data-fancybox="gallery"]', {
+          Thumbs: false,
+          Toolbar: false,
+
+          Image: {
+            zoom: false,
+            click: false,
+            wheel: "slide",
+          },
+        });
 });
 
 

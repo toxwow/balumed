@@ -170,7 +170,7 @@ $("a[data-type='delete']").click(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /var/www/html/balumed/resources/js/admin/service.js */"./resources/js/admin/service.js");
+module.exports = __webpack_require__(/*! /Users/Shared/Previously Relocated Items/Security/Praca 2020/balumed-dev/resources/js/admin/service.js */"./resources/js/admin/service.js");
 
 
 /***/ })
