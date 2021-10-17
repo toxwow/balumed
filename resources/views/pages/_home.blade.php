@@ -26,7 +26,7 @@
             </div>
         </div>
     </div>
-    <div class="news-wrapper">
+    <!-- <div class="news-wrapper">
         <div class="container">
             <div class="wrapper-title">
                 <div>
@@ -67,7 +67,7 @@
                 @endforeach
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="services-wrapper">
         <div class="container">
             <div class="wrapper-title">

@@ -63,7 +63,7 @@ $stickyMassage = true;
                     <a href="{{route('home')}}"><img src="{{url('images/logo-bg.png')}}" alt=""></a>
                 </div>
                 <div class="items-wrapper">
-                    <a href="{{route('aktualnosci.index')}}" class="item link {{ (request()->is('aktualnosci*')) ? 'active' : '' }}">Aktualności</a>
+                    <!-- <a href="{{route('aktualnosci.index')}}" class="item link {{ (request()->is('aktualnosci*')) ? 'active' : '' }}">Aktualności</a> -->
                     <div class="item dropdown">
                         Nasze usługi
                     </div>
