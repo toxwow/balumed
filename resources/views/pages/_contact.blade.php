@@ -235,7 +235,7 @@
                         <div class="info">
                             tel: {{$info->phone_one}}<br>
                             tel: {{$info->phone_two}}<br>
-                            email: kontakt@balumed.pl
+                            email: balumed@balumed.pl
                         </div>
                     </div>
                 </div>
