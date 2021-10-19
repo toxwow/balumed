@@ -34,6 +34,7 @@ $stickyMassage = true;
 
     @stack('css')
     @stack('script')
+    <meta name="google-site-verification" content="V64VHfcMVCLJRUtbOGwPfZi22d686gkqtD50w-_AHMI" />
 </head>
 <body>
     <div id="app">
