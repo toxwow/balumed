@@ -52,8 +52,9 @@
                     </select>
                 </td>
                 <td><select class="select-to-check form-control change-type" data-attribute="type" data-id="{{$post->id}}" data-slug="{{$post->slug}}">
-                        <option data-type="1" {{($post->type === 1 ? 'selected' : '')}}>Modal</option>
-                        <option data-type="0" {{($post->type === 0 ? 'selected' : '')}}>Domyślny</option>
+                        <option data-type="1" {{($post->type === 1 ? 'selected' : '')}}>Modal + wpis</option>
+                        <option data-type="0" {{($post->type === 0 ? 'selected' : '')}}>Wpis</option>
+                        <option data-type="2" {{($post->type === 2 ? 'selected' : '')}}>Sam modal</option>
                     </select>
                 </td>
                 <td style="text-align: right">

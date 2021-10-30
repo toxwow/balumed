@@ -33,7 +33,8 @@ class HomeController extends Controller
     {
         $services = Service::all()->where('status', '=', '1' );
         $specialists = Specialist::with('services')->where('status', '=', '1')->get();
-        $articles = Post::all()->where('status', '=', '1' );
+        $articles = Post::all()->where('status', '=', '1' )->where("type", "!=", "2");
+
         return view('pages._home', [ 'services' => $services, 'specialists' => $specialists, 'articles' => $articles]);
     }
 

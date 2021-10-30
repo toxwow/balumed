@@ -243,6 +243,37 @@ $stickyMassage = true;
                 @endif
 
             @endif
+
+            @if($articleOnlyModal->isEmpty())
+            @else
+
+                @if($modalCheck !== null)
+
+                @else
+
+                    <div class="modal  fade" tabindex="-1" role="dialog" id="my-modal">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    @csrf
+
+                                    <button type="button" class="close set-cookie" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body" style="text-align: center">
+                                    @foreach($articleOnlyModal as $modal)
+                                        <div class="img-wrapper-modal" style="background-image: url({{asset('storage/files/shares/aktualnosci/'.$modal->photo)}})"></div>
+                                        <h3 class="modal-title">{{$modal->title}}</h3>
+                                        <p class="modal-description">{{$modal->contents}}</p>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endif
+
+            @endif
         </div>
 </div>
 {{--    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer ></script>--}}

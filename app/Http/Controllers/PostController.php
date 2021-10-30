@@ -152,7 +152,7 @@ class PostController extends Controller
 
             $post = Post::find($id);
             $post->title = $request->get('title');
-            $post->slug = $request->get('status');
+            $post->slug = $request->get('slug');
             $post->status = $request->get('status');
             $post->description = $request->get('description');
             $post->contents = $request->get('contents');

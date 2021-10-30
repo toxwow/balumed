@@ -42,6 +42,7 @@ class AppServiceProvider extends ServiceProvider
         View::share('info', Info::all()->first());
         View::share('modalCheck', Cookie::get('name'));
         View::share('articleModal', Post::all()->where('type', '=', '1'));
+        View::share('articleOnlyModal', Post::all()->where('type', '=', '2'));
         View::share('partners', Storage::disk('public')->files('/files/shares/partnerzy'));
         View::share('servicesMenu', Service::all()->where('status', '=', '1' ));
     }
