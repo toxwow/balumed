@@ -9,6 +9,11 @@ html {
   -ms-overflow-style: scrollbar;
 }
 
+.glide__slide > img{
+width: 100%;
+max-width: 120px;
+}
+
 *,
 *::before,
 *::after {

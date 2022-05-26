@@ -32,7 +32,6 @@
                                 <span class="tag">{{$tag->name}}</span>
                             @endforeach
                             <h1>{{$post->title}}</h1>
-                            <p class="date">{{$post->created_at->format('j.m.Y')}}</p>
                         </div>
                         <p class="description">
                             {{$post->description}}

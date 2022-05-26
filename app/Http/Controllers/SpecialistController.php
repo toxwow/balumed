@@ -29,7 +29,7 @@ class SpecialistController extends Controller
      */
     public function index()
     {
-        $specialists = Specialist::with('services')->where('status', '=', '1')->get();
+        $specialists = Specialist::with('services')->orderBy('sort')->where('status', '=', '1')->get();
 
         return view('pages._specialists', [ 'specialists' => $specialists]);
     }

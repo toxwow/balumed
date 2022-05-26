@@ -133,7 +133,7 @@ $stickyMassage = true;
                         <div class="title">Adres</div>
                         <div class="info">
                             ul. Sarmacka 18 lok 93<br>
-                            02-972 Warszawa, Wiladnów <br>
+                            02-972 Warszawa, Wilanów <br>
                             (wejście od ul. Herbu Szreniawa)
                         </div>
                         <a href="https://goo.gl/maps/cRBA1K8QbMAcj45c9" class="link primary-link arrow">prowadź</a>
@@ -172,11 +172,11 @@ $stickyMassage = true;
         <div class="container">
             <div class="glide">
                 <div class="glide__track" data-glide-el="track">
-                    <ul class="glide__slides">
+                    <ul class="glide__slides" style="align-items: center;">
                         @foreach($partners as $partner)
                         <li class="glide__slide" style="text-align: center">
 
-                            <img src="{{asset('storage/'.$partner)}}" alt="">
+                            <img style="width: 100%; max-width: 120px;" src="{{asset('storage/'.$partner)}}" alt="">
                         </li>
                         @endforeach
                     </ul>

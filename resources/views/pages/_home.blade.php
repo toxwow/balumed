@@ -53,7 +53,6 @@
                         <div class="card-secondary">
                             <div class="img-wrapper" style="background-image: url({{asset('storage/files/shares/aktualnosci/'.$article->photo)}})"></div>
                             <div class="article-info">
-                                <p class="date">{{$article->created_at->format('j.m.Y')}}</p>
                                 <p class="title">{{$article->title}}</p>
                             </div>
                             <div class="article-description">

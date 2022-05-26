@@ -213,7 +213,7 @@
                         <h2 class="title">Adres</h2>
                         <div class="info">
                             ul. Sarmacka 18 lok 93<br>
-                            02-972 Warszawa, Wiladnów <br>
+                            02-972 Warszawa, Wilanów <br>
                             (wejście od ul. Herbu Szreniawa)
                         </div>
                         <a href="https://goo.gl/maps/cRBA1K8QbMAcj45c9" class="link primary-link arrow">prowadź</a>
