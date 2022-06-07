@@ -1,6 +1,7 @@
 @extends('layouts.page',
 [
     'seo'=> '',
+    'uslugaActive' => false,
     'footerStatus' => false,
     'metaDescription' => 'Jesteś ciekaw co słychać w Centrum Medycznym Balumed? Sprawdź aktualności i bądź na bieżąco z nowinkami dotyczącymi naszej poradni! ',
     'pageTitle' => 'Aktualności: bądź na bieżąco | Balumed Warszawa'

@@ -159,6 +159,7 @@ class ServiceController extends Controller
             $service->metaDescriptionService = $request->get('metaDescriptionService');
             $service->pageTitleService = $request->get('pageTitleService');
             $service->status = $request->get('status');
+            $service->main = $request->get('main');
             $service->description = $request->get('description');
 
             if (!empty($photoImage)) {

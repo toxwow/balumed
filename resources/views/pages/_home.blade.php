@@ -2,6 +2,7 @@
 [
     'seo'=> '',
     'footerStatus' => true,
+    'uslugaActive' => false,
     'metaDescription' => 'Centrum Medyczne Balumed znajdujące się w Warszawie przy ul. Sarmackiej 18 świadczy profesjonalne usługi medyczne w szerokim zakresie. Sprawdź!',
     'pageTitle' => 'Specjalistyczne Centrum Medyczne Warszawa. Przychodnia Wilanów Sarmacka | Balumed'
 ])
@@ -9,23 +10,22 @@
     <link href="{{ asset('css/page/_home.css') }}" rel="stylesheet">
 @endpush
 @section('content')
-    <div class="header-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-lg-6" >
+<div class="header-new">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-8">
+                <div class="header-new__box">
                     <h1>Balumed - Specjalistyczne Centrum Medyczne w Warszawie</h1>
-                    <p class="description">Specjalistyczne Centrum Medyczne Profilaktyki, Diagnostyki i Terapii Małego Dziecka powstało z myślą o zapewnieniu pełnej i wysokospecjalistycznej opieki zdrowotnej najmłodszym pacjentom już od momentu ich poczęcia. Nasza działalność skupiona jest na takich dziedzinach medycyny jak <a href="
-  /pediatria">pediatria</a>, <a href="
-  /neonatologia">neonatologia</a> oraz położnictwo z <a href="
-  /ginekologia">ginekologią</a>. Ciąże fizjologiczne, a także ciąże wysokiego ryzyka położniczego prowadzone są przez wysokiej klasy specjalist&oacute;w położnictwa i ginekologii z dużym doświadczeniem klinicznym.</p>
-                <div class="btn-wrapper">
-                    <a href="{{route('contact')}}" class="btn btn-primary">Skontaktuj się z nami</a>
-                    <a href="" class="btn btn-primary btn-outline"><img class="icon" src="{{url('images/icons/phone.png')}}"><span> zadzwoń </span>{{$info->phone_one}}</a>
-                </div>
+                                        <p class="description">Specjalistyczne Centrum Medyczne Profilaktyki, Diagnostyki i Terapii Małego Dziecka powstało z myślą o zapewnieniu pełnej i wysokospecjalistycznej opieki zdrowotnej najmłodszym pacjentom już od momentu ich poczęcia. Nasza działalność skupiona jest na takich dziedzinach medycyny jak <a href="/pediatria">pediatria</a>, <a href="/neonantologia">neonatologia</a> oraz położnictwo z <a href="/ginekologia">ginekologią</a>. Ciąże fizjologiczne, a także ciąże wysokiego ryzyka położniczego prowadzone są przez wysokiej klasy specjalist&oacute;w położnictwa i ginekologii z dużym doświadczeniem klinicznym.</p>
+                                    <div class="btn-wrapper">
+                                        <a href="{{route('contact')}}" class="btn btn-primary">Skontaktuj się z nami</a>
+                                    </div>
                 </div>
             </div>
         </div>
+
     </div>
+</div>
     <div class="news-wrapper">
         <div class="container">
             <div class="wrapper-title">
@@ -33,37 +33,43 @@
                     <p class="title">Aktualności</p>
                     <p class="description">Zapoznaj się z najnowszymi informacjami</p>
                 </div>
-                <div style="padding-left: 50px; text-align: right;">
-                    <a href="{{route('aktualnosci.index')}}" class="link primary-link plus">zobacz wszystkie aktualności</a>
-                </div>
             </div>
         </div>
         <div class="container">
             <div class="row">
-                @foreach($articles->slice(0, 3) as $key => $article)
+                @foreach($articles->slice(0, 2) as $key => $article)
                     <div class="col-12 col-sm-6  col-md-4 my-4" data-aos="fade-up" data-aos-duration="1000"
                          @if($key == 0)
                             data-aos-delay="500"
-                         @elseif($key == 1)
-                            data-aos-delay="750"
                          @else
-                            data-aos-delay="1000"
+                            data-aos-delay="750"
                         @endif
                     >
                         <div class="card-secondary">
                             <div class="img-wrapper" style="background-image: url({{asset('storage/files/shares/aktualnosci/'.$article->photo)}})"></div>
                             <div class="article-info">
                                 <p class="title">{{$article->title}}</p>
-                            </div>
-                            <div class="article-description">
-                                <p class="description">{{substrwords($article->description, 200)}}</p>
+                                <p class="description">{{$article->description}}</p>
                             </div>
                             <div class="action-wrapper">
-                                <a href="{{route('aktualnosci.show', $article->slug)}}" class="link primary-link arrow">czytaj dalej</a>
+                                <a href="{{route('aktualnosci.show', $article->slug)}}" class="btn btn-primary">więcej</a>
                             </div>
                         </div>
                     </div>
                 @endforeach
+                <div class="col-12 col-sm-6  col-md-4 my-4" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="1000">
+                    <div class="card-secondary">
+                        <div class="img-wrapper" style="background-image: url({{asset('storage/files/shares/aktualnosci/MnhQVc0pqVyaXSUngHCIWga64Nibguep2WTLzDzO.png')}})"></div>
+                        <div class="article-info">
+                            <p class="title">Punkt szczepień - Warszawa Wilanów</p>
+                            <p class="description">Odporność czynna przeciw chorobie zakaźnej może się rozwinąć naturalnie w toku zakażenia i rozwoju choroby albo w wyniku sztucznie nabytej odporności czyli szczepienia.</p>
+                        </div>
+                        <div class="action-wrapper">
+                            <a href="{{route('uslugi.show', 'punkt-szczepien')}}" class="btn btn-primary">więcej</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -102,7 +108,7 @@
                     <div class="wrapper-title">
                         <div>
                             <p class="title">Dlaczego my?</p>
-                            <p class="description">Profesjonalne podejscie dla każdego pacjenta</p>
+                            <p class="description">Profesjonalne podejście do każdego pacjenta</p>
                         </div>
                     </div>
                     <h5 class="text">Nowoczesna przychodnia z doświadczonymi specjalistami</h5>
@@ -126,9 +132,6 @@
                     <p class="title">Nasi specjaliści</p>
                     <p class="description">Profesjonalna kadra</p>
                 </div>
-                <div style="padding-left: 50px; text-align: right;">
-                    <a href="{{route('specjalisci.index')}}" class="link primary-link plus">zobacz wszystkich lekarzy</a>
-                </div>
             </div>
         </div>
         <div class="container">
@@ -144,8 +147,8 @@
                      @endif
                     >
                         <div class="card-secondary">
-                            <div class="img-wrapper" style="background-image: url({{asset('storage/files/shares/specjalisci/'.$specialist->photo)}})"></div>
                             <div class="person-name">
+
                                 <p class="titles">{{$specialist->titlePerson}}</p>
                                 <h3 class="name">{{$specialist->name}}</h3>
                                 @if((!$specialist->services->isEmpty()))
@@ -159,16 +162,56 @@
                                     <span class="services">&nbsp;</span>
                                 @endif
                             </div>
-                            <div class="person-description">
-                                <p class="description">{{substrwords($specialist->description, 200)}}</p>
+                            <div class="card-description">
+                                <p class="description">{{$specialist->description}}</p>
+                                <!-- <p class="description">{{substrwords($specialist->description, 200)}}</p> -->
+                            </div>
+                            <div class="action-wrapper">
+                                <a class="btn btn-primary js-toggle">więcej</a>
                             </div>
                         </div>
                     </div>
                 @endforeach
             </div>
+            <div class="row">
+                <div class="col">
+                    <div style="margin-top: 40px; text-align: right;">
+                        <a href="{{route('specjalisci.index')}}" class="link primary-link plus">zobacz wszystkich lekarzy</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="promotion-wrapper">
+    <div class="profits-wrapper-new">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12 col-md-6 order-2 order-md-1">
+                    <div class="profits-wrapper-new__flexer">
+                        <div class="wrapper-title">
+                            <div>
+                                <p class="title">Fototeriapia w domu</p>
+                                <p class="description">Intensywna terapia w łagodnym otoczeniua</p>
+                            </div>
+                        </div>
+                        <h5 class="text">Innowacyjny, najnowocześniejszy i najbardziej efektywny sposób degradacji bilirubiny i leczenia żółtaczki w Polsce.</h5>
+                        <p class="description">W przypadku, gdy pomiar bilirubiny wskazuje, że Twoje dziecko ma wysoki poziom bilirubiny i są wskazania do leczenia nasilonej żółtaczki fizjologicznej za pomocą fototerapii, w centrum medycznym BALUMED można wypożyczyć lampę neoBLUE do domu. </p>
+                        <p class="description">Dzięki temu mama przez cały okres stosowania fototerapii może przebywać ze swoim dzieckiem w domu, bez konieczności hospitalizacji.
+</p>
+                        <p class="description"> Z pewnością jest to największa zaleta proponowanego rozwiązania. Należy pamiętać o tym, że przebywanie w szpitalu to obciążenie zarówno dla rodziców, jak i dziecka.</p>
+                        <div class="btn-wrapper">
+                            <a href="{{route('uslugi.show', 'fototerapia-w-domu')}}" class="btn btn-primary">dowiedz się więcej</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 order-1 order-md-2">
+                    <div class="img-wrapper"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="promotion-wrapper">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-8" data-aos="fade-right" data-aos-duration="1000">
@@ -186,7 +229,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
 @endsection

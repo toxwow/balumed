@@ -1,6 +1,7 @@
 @extends('layouts.page',
 [
     'seo'=> '',
+    'uslugaActive' => false,
     'footerStatus' => false,
     'metaDescription' => 'Specjalistyczne Centrum Medyczne Balumed znajduje się w Warszawie przy ul.Sarmackiej 18/93. Sprawdź godziny otwarcia i umów się na wizytę już dziś!',
     'pageTitle' => 'Kontakt: znajdź naszą poradnię i umów się na wizytę | Balumed Warszawa'

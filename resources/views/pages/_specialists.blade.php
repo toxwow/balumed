@@ -1,7 +1,11 @@
+
+
 @extends('layouts.page',
 [
+
     'seo'=> 'Nasi lekarze to wysokiej klasy specjaliści pediatrzy, neonatolodzy, ginekolodzy, położnicy z wieloletnią praktyką w wiodących szpitalach klinicznych i uniwersyteckich, dla których leczenie jest pasją i sposobem na życie. W Centrum Medycznym Balumed dajemy także możliwość konsultacji specjalistycznych m.in.: alergologa, chirurga dziecięcego, kardiologa dziecięcego, nefrologa, radiologa czy urologa.',
     'footerStatus' => true,
+    'uslugaActive' => false,
     'metaDescription' => 'Lekarze świadczący usługi w warszawskim Centrum Medycznym Balumed to wykwalifikowani specjaliści z wieloletnim doświadczeniem. Sprawdź sam!',
     'pageTitle' => 'Specjaliści: poznaj nas bliżej | Balumed Warszawa'
 ])
@@ -9,7 +13,8 @@
     <link href="{{ asset('css/page/_sub_page.css') }}" rel="stylesheet">
 @endpush
 @section('content')
-    <div class="content-wrapper with-bg">
+
+    <div class="content-wrapper">
         <div class="container">
             <div class="wrapper-title">
                 <div>
@@ -23,7 +28,6 @@
                 @foreach($specialists as $keyMain => $specialist)
                     <div class="col-12 col-sm-6 col-md-4 mt-5">
                         <div class="card-secondary">
-                            <div class="img-wrapper" style="background-image: url({{asset('storage/files/shares/specjalisci/'.$specialist->photo)}})"></div>
                             <div class="person-name">
                                 <p class="titles">{{$specialist->titlePerson}}</p>
                                 <h2 class="name">{{$specialist->name}}</h2>
@@ -54,7 +58,7 @@
                                         </div>
                                         <div class="modal-body modal-specialist">
                                             <div class="main-info">
-                                                <div class="img" style="background-image: url({{asset('storage/files/shares/specjalisci/'.$specialist->photo)}})"></div>
+
                                                 <div class="name">
                                                     <p class="titles">{{$specialist->titlePerson}}</p>
                                                     <h2 class="name">{{$specialist->name}}</h2>

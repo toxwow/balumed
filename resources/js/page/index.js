@@ -7,6 +7,17 @@ import { Fancybox, Carousel, Panzoom } from "@fancyapps/ui";
 
 $( document ).ready(function() {
 
+    $(".js-toggle").on("click", function(){
+        $(this).parent().parent().children('.card-description').children('p').toggleClass('active');
+        $(this).toggleClass('active');
+
+        if($(this).hasClass('active')){
+            $(this).text("zwiń");
+        } else{
+            $(this).text("więcej");
+        }
+    })
+
     setTimeout(function(){
         $('#my-modal').modal('show')
 
@@ -21,6 +32,9 @@ $( document ).ready(function() {
         breakpoints: {
             992: {
                 perView: 3
+            },
+            560: {
+                perView: 1
             }
         }
     }).mount();

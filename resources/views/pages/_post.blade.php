@@ -1,6 +1,7 @@
 @extends('layouts.page',
 [
     'seo'=> '',
+    'uslugaActive' => false,
     'footerStatus' => false
 ])
 @push('css')

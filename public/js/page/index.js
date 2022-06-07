@@ -41110,6 +41110,16 @@ __webpack_require__(/*! ./../bootstrap */ "./resources/js/bootstrap.js");
 
 
 $(document).ready(function () {
+  $(".js-toggle").on("click", function () {
+    $(this).parent().parent().children('.card-description').children('p').toggleClass('active');
+    $(this).toggleClass('active');
+
+    if ($(this).hasClass('active')) {
+      $(this).text("zwiń");
+    } else {
+      $(this).text("więcej");
+    }
+  });
   setTimeout(function () {
     $('#my-modal').modal('show');
   }, 8000);
@@ -41121,6 +41131,9 @@ $(document).ready(function () {
     breakpoints: {
       992: {
         perView: 3
+      },
+      560: {
+        perView: 1
       }
     }
   }).mount();
@@ -41221,7 +41234,7 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/Shared/Previously Relocated Items/Security/Praca 2020/balumed-dev/resources/js/page/index.js */"./resources/js/page/index.js");
+module.exports = __webpack_require__(/*! /Users/Shared/Previously Relocated Items/Security/Praca 2020/Balumed/balumed-dev/resources/js/page/index.js */"./resources/js/page/index.js");
 
 
 /***/ })

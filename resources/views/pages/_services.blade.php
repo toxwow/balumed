@@ -12,7 +12,7 @@
         <div class="container">
             <div class="wrapper-title">
                 <div>
-                    <p class="title">Nasza oferta</p>
+                    <p class="title">Nasza usługi</p>
                     <p class="description">Zapoznaj się z naszymi usługami</p>
                 </div>
             </div>

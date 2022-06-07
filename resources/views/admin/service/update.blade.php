@@ -54,6 +54,15 @@
                                 </select>
                             </div>
                         </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="main">Pokaz na stronie głownej</label>
+                                <select class="form-control" id="main" name="main">
+                                    <option {{ $service->main == 0 ? "selected" : "" }} value="0" >Nie</option>
+                                    <option {{ $service->main == 1 ? "selected" : "" }} value="1">Tak</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -80,7 +89,11 @@
                     </div>
                 </div>
             </div>
-
+            <div class="row">
+                <div class="col">
+                    /storage/files/shares/uslugi/{NAZWA PLIKU.ROZSZERZENIE}
+                </div>
+            </div>
             <div class="row">
                 <div class="col">
                     <div class="form-group">

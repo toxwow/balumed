@@ -1,3 +1,52 @@
+.header-new{
+    background-image: url('/images/bg-header2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+    width: 100%;
+    &__box{
+        background: rgba(#fff , 0.95);
+        padding: 40px 50px;
+        border-radius: 10px;
+        @media (max-width: 575.98px) {
+            padding: 25px;
+        }
+    }
+
+    h1{
+        font-size: 28px;
+        color: #3f3f3f;
+        font-weight: 600;
+        line-height: 38px;
+
+        @media (max-width: 575.98px) {
+            font-size: 22px;
+            line-height: 31px;
+        }
+    }
+
+    h2{
+        font-size: 18px;
+        margin-top: 25px;
+        color: #3f3f3f;
+        font-weight: 400;
+    }
+    p.description{
+        font-size: 14px;
+        font-weight: 400;
+        color: #929396;
+        margin-top: 15px;
+        margin-bottom: 30px;
+
+        a{
+            text-decoration: none;
+            color: #27ddd2;
+        }
+    }
+
+
+}
 .header-wrapper{
     background-image: url('/images/bg-header.png');
     background-size: contain;
@@ -57,8 +106,14 @@
 }
 
 .profits-wrapper{
-    background-image: linear-gradient(180deg, #ffffff 0%, #f2f9fe 100%);
+    background-color: #ffff;
     padding: 70px 0;
+
+    li{
+        font-size: 14px;
+        color: #9f9d9d;
+    }
+
     .img-wrapper{
         margin-right: 80px;
         height: 100%;
@@ -67,7 +122,40 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        background-image: url("/images/profit-woman.png");
+        background-image: url("/images/profit-child.jpg");
+    }
+    h2.text{
+        color: #3f3f3f;
+        font-size: 18px;
+        margin: 20px 0 30px;
+    }
+}
+
+.profits-wrapper-new{
+    background-image: linear-gradient(180deg, #ffff 0%, #ffff 100%);
+    padding: 70px 0;
+
+    p.description{
+        font-size: 14px;
+        color: #9f9d9d;
+    }
+
+    &__flexer{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+    }
+    .img-wrapper{
+        margin-left: 80px;
+        height: 100%;
+        min-height: 480px;
+        width: calc(100% - 80px);
+        border-radius: 5px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("/images/profit-child1.jpg");
     }
     h2.text{
         color: #3f3f3f;
@@ -99,8 +187,8 @@
 }
 
 .news-wrapper{
-    padding: 70px 0;
-    background-color: #fff;
+    padding: 70px 0 90px;
+    background-image: linear-gradient(180deg, #ffff 0%, #f6fbff 100%);
 }
 
 // X-Small devices (portrait phones, less than 576px)
@@ -119,8 +207,26 @@
         background-image: none;
     }
 
+    .profits-wrapper{
+        padding: 0 0 70px;
+    }
+
     .profits-wrapper .img-wrapper{
         width: 100%;
+        height: 250px;
+        margin-bottom: 40px;
+    }
+
+    .profits-wrapper-new .img-wrapper{
+        width: 100%;
+        margin-left: 0;
+        min-height: auto;
+        height: 250px;
+        margin-bottom: 40px;
+
+        img{
+            background-position: top;
+        }
     }
 }
 

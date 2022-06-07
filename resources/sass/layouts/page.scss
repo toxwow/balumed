@@ -1,7 +1,7 @@
 @import '~bootstrap/scss/bootstrap-grid';
 @import '~bootstrap/scss/bootstrap-reboot';
 @import "~bootstrap/scss/modal";
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
 @import "~aos/dist/aos.css";
 
@@ -106,6 +106,7 @@ h5.text{
 a.btn {
     padding: 10px 20px;
     border-radius: 3px;
+    display: inline-block;
     text-decoration: none;
 
     &.btn-grey{
@@ -198,7 +199,7 @@ a.link{
 
 
 body{
-    font-family: 'Mulish', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background-color: #fff;
     color: #3f3f3f;
 
@@ -220,6 +221,9 @@ body{
                     padding: 0 30px;
                     font-size: 14px;
                     color: #9f9d9d;
+                    a{
+                        color: #9f9d9d;
+                    }
                     &:before{
                         content: '';
                         width: 17px;
@@ -236,6 +240,7 @@ body{
                     }
                     &.email {
                         margin-left: 35px;
+                        padding-right: 0;
                         &:before {
                             background-image: url("/images/icons/email.png");
                         }
@@ -246,9 +251,6 @@ body{
                 a>img{
                     height: 20px;
 
-                    &:last-of-type{
-                        margin-left: 30px;
-                    }
                 }
 
             }
@@ -277,12 +279,12 @@ body{
 
 
             .brand-logo img{
-                height: 30px;
+                height: 35px;
             }
 
             .items-wrapper{
                 flex: 1;
-                margin-left: 100px;
+                margin-left: 180px;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -293,7 +295,7 @@ body{
                         display: inline-block;
 
                         &.link {
-                            padding: 25px 0;
+                            padding: 25px 10px;
                             color: #929396;
                             font-size: 16px;
                             position: relative;
@@ -409,14 +411,27 @@ body{
             margin-bottom: 0px;
         }
 
-        p.description{
+        p:last-of-type{
             padding-bottom: 10px;
+        }
+
+        @media (max-width: 575.98px) {
+            p:first-of-type{
+                padding-bottom: 10px;
+            }
+        }
+
+        p.description{
             font-size: 16px;
             color: #929396;
             display: inline-block;
             margin: 0;
             font-weight: 400;
             position: relative;
+
+            @media (max-width: 575.98px) {
+                display: none;
+            }
 
             &.seo-description{
                 margin-top: 10px;
@@ -441,8 +456,11 @@ body{
         box-shadow: 0 0 35px rgba(212, 212, 212, 0.5);
         border-radius: 5px;
         padding: 30px;
+        display: flex;
+        flex-direction: column;
 
         img.icon{
+            width: 35px;
             margin-bottom: 15px;
             height: 35px;
         }
@@ -453,6 +471,11 @@ body{
         p.description{
             color: #9f9d9d;
             font-size: 14px;
+
+        }
+
+        a{
+            margin-top: auto;
         }
     }
     .card-secondary{
@@ -460,6 +483,8 @@ body{
         height: 100%;
         border-bottom: 1px solid #d8d8d8;
         transition: all 0.25s ease-in;
+        display: flex;
+        flex-direction: column;
 
         &:hover{
             border-bottom: 1px solid #27ddd2;
@@ -472,6 +497,29 @@ body{
             background-repeat: no-repeat;
             background-position: center;
         }
+
+        a{
+            margin-top: auto;
+        }
+
+        div.card-description{
+            p{
+                 overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2; /* number of lines to show */
+                    -webkit-box-orient: vertical;
+
+                    &.active{
+                        display: block;
+                        -webkit-line-clamp: none;
+                    }
+            }
+        }
+
+        .js-toggle{
+            cursor: pointer;
+        }
         div.person-name{
             margin-top: 15px;
 
@@ -480,14 +528,15 @@ body{
                 color: #9f9d9d;
                 font-size: 12px;
                 text-transform: uppercase;
-                font-weight: bolder;
+                font-weight: 500;
             }
 
             .name{
                 font-size: 18px;
                 margin-bottom: 0;
                 color: #3f3f3f;
-                font-weight: bolder;
+                font-weight: 600;
+                text-transform: uppercase;
             }
 
             .services{
@@ -514,6 +563,7 @@ body{
                 font-size: 18px;
                 color: #3f3f3f;
                 font-weight: bolder;
+                margin-bottom: 15px;
             }
         }
         p.description{
@@ -563,6 +613,10 @@ body{
                 align-items: center;
                 .avatar-wrapper{
                     margin-right: 10px;
+                    img{
+                        max-height: 60px;
+                        width: 100%;
+                    }
                 }
                 .text-wrapper{
                     p{
@@ -615,9 +669,14 @@ body{
             }
         }
         .info{
-            font-size: 14px;
+            font-size: 16px;
             color: #3f3f3f;
             margin-bottom: 15px;
+
+            a{
+                text-decoration: underline;
+                color: #3f3f3f;
+            }
 
             &.text{
                 padding-right: 40px;
@@ -640,11 +699,18 @@ body{
             display: flex;
             align-items: center;
             justify-content: space-between;
+            @media (max-width: 767.98px) {
+                flex-direction: column;
+            }
             &>div{
                 flex:1;
                 padding: 0 30px;
+                @media (max-width: 767.98px) {
+                    padding: 15 0px;
+                }
                 &>img{
                     width: 100%;
+                    max-width: 200px;
                 }
             }
         }
@@ -652,10 +718,11 @@ body{
             color: #929292;
             text-align: center;
             font-size: 14px;
-            margin-top: 10px;
+            margin-top: 20px;
         }
     }
     .copyright{
+        background: #f3f3f3;
         padding: 20px 0;
         text-align: center;
         color: #3f3f3f;
@@ -667,12 +734,21 @@ body{
 body .menu-wrapper nav .items-wrapper a.item.link.mobile{
     display: none;
 }
+
+.brand-logo-mobile{
+    display: none;
+}
+
 // X-Small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
-    body .top-bar .container .contact-wrapper > div{
+    body .top-bar .container .contact-wrapper > div.phone{
         span:last-of-type{
             display: none;
         }
+    }
+
+    body .top-bar .container .contact-wrapper > div.email{
+        margin-left: 10px;
     }
     .header-wrapper{
         .btn-wrapper{
@@ -698,9 +774,6 @@ body .menu-wrapper nav .items-wrapper a.item.link.mobile{
     body .top-bar.stickyHelper{
         margin: 0;
     }
-    body .top-bar .container .contact-wrapper > div.email{
-        display: none;
-    }
     .top-bar .social-wrapper{
         display: none;
     }
@@ -720,13 +793,35 @@ body .menu-wrapper nav .items-wrapper a.item.link.mobile{
         display: none;
     }
 
+    nav .brand-logo{
+        display: none;
+    }
+
+    .menu-wrapper__holder{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+    }
+
     .hamburger{
         display: inline-block;
         &:focus{
             outline: none;
         }
-
     }
+
+    .brand-logo-mobile{
+        display: block;
+        img{
+            height: 35px;
+        }
+    }
+
+    body .menu-wrapper nav .items-wrapper{
+        margin-left: 0px !important;
+    }
+
     body .wrapper-title p.description:after{
         width: 80%;
     }
@@ -734,20 +829,9 @@ body .menu-wrapper nav .items-wrapper a.item.link.mobile{
 
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) {
-    a.link.primary-link.arrow, a.link.primary-link.plus{
-        padding:0;
-
-        &:after{
-            content: none;
-        }
-    }
 
     body .menu-wrapper nav .items-wrapper{
-        margin-left: 0;
-    }
-
-    body .menu-wrapper nav .brand-logo{
-        display: none;
+        margin-left: 80px;
     }
 
     body .footer .cta-wrapper{
@@ -806,6 +890,7 @@ body .menu-wrapper nav .items-wrapper a.item.link.mobile{
 }
 
 .modal-specialist{
+    padding: 0 40px 40px;
     .main-info {
         border-bottom: 1px solid #27ddd2;
         padding: 0px 0 20px;

@@ -1,3 +1,51 @@
+.header-new {
+  background-image: url("/images/bg-header2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 50px 0;
+  width: 100%;
+}
+.header-new__box {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px 50px;
+  border-radius: 10px;
+}
+@media (max-width: 575.98px) {
+  .header-new__box {
+    padding: 25px;
+  }
+}
+.header-new h1 {
+  font-size: 28px;
+  color: #3f3f3f;
+  font-weight: 600;
+  line-height: 38px;
+}
+@media (max-width: 575.98px) {
+  .header-new h1 {
+    font-size: 22px;
+    line-height: 31px;
+  }
+}
+.header-new h2 {
+  font-size: 18px;
+  margin-top: 25px;
+  color: #3f3f3f;
+  font-weight: 400;
+}
+.header-new p.description {
+  font-size: 14px;
+  font-weight: 400;
+  color: #929396;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+.header-new p.description a {
+  text-decoration: none;
+  color: #27ddd2;
+}
+
 .header-wrapper {
   background-image: url("/images/bg-header.png");
   background-size: contain;
@@ -48,8 +96,12 @@
 }
 
 .profits-wrapper {
-  background-image: linear-gradient(180deg, #ffffff 0%, #f2f9fe 100%);
+  background-color: #ffff;
   padding: 70px 0;
+}
+.profits-wrapper li {
+  font-size: 14px;
+  color: #9f9d9d;
 }
 .profits-wrapper .img-wrapper {
   margin-right: 80px;
@@ -59,9 +111,40 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("/images/profit-woman.png");
+  background-image: url("/images/profit-child.jpg");
 }
 .profits-wrapper h2.text {
+  color: #3f3f3f;
+  font-size: 18px;
+  margin: 20px 0 30px;
+}
+
+.profits-wrapper-new {
+  background-image: linear-gradient(180deg, #ffff 0%, #ffff 100%);
+  padding: 70px 0;
+}
+.profits-wrapper-new p.description {
+  font-size: 14px;
+  color: #9f9d9d;
+}
+.profits-wrapper-new__flexer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+.profits-wrapper-new .img-wrapper {
+  margin-left: 80px;
+  height: 100%;
+  min-height: 480px;
+  width: calc(100% - 80px);
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/images/profit-child1.jpg");
+}
+.profits-wrapper-new h2.text {
   color: #3f3f3f;
   font-size: 18px;
   margin: 20px 0 30px;
@@ -87,8 +170,8 @@
 }
 
 .news-wrapper {
-  padding: 70px 0;
-  background-color: #fff;
+  padding: 70px 0 90px;
+  background-image: linear-gradient(180deg, #ffff 0%, #f6fbff 100%);
 }
 
 @media (max-width: 991.98px) {
@@ -96,8 +179,25 @@
     background-image: none;
   }
 
+  .profits-wrapper {
+    padding: 0 0 70px;
+  }
+
   .profits-wrapper .img-wrapper {
     width: 100%;
+    height: 250px;
+    margin-bottom: 40px;
+  }
+
+  .profits-wrapper-new .img-wrapper {
+    width: 100%;
+    margin-left: 0;
+    min-height: auto;
+    height: 250px;
+    margin-bottom: 40px;
+  }
+  .profits-wrapper-new .img-wrapper img {
+    background-position: top;
   }
 }
 @media (max-width: 1199.98px) {

@@ -1,6 +1,7 @@
 @extends('layouts.page',
 [
     'seo'=> '',
+    'uslugaActive' => false,
     'footerStatus' => false,
     'metaDescription' => 'Blog medyczny na stronie warszawskiego Centrum Medycznego Balumed to miejsce, w którym znajdziesz rzetelne poradniki zdrowotne. Sprawdź sam!',
     'pageTitle' => 'Blog medyczny dla pacjentów i lekarzy. Poradniki zdrowotne | Balumed Warszawa'

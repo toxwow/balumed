@@ -1,5 +1,6 @@
+
 @php
-$stickyMassage = true;
+$stickyMassage = false;
 @endphp
 
 <!doctype html>
@@ -47,46 +48,58 @@ $stickyMassage = true;
     @endif
     <div class="top-bar">
         <div class="container">
+
+            <div class="social-wrapper">
+                <!-- <a href="https://www.facebook.com/przychodniabalumed/" target="_blank"><img src="{{url('images/icons/facebook.png')}}" alt=""></a> -->
+                <!-- <a href="https://www.instagram.com/balumed/" target="_blank"><img src="{{url('images/icons/instagram.png')}}" alt=""></a> -->
+            </div>
             <div class="contact-wrapper">
                 <div class="phone">
 
-                    <span>{{$info->phone_one}}</span><span>, {{$info->phone_two}}</span>
+                    <span><a href="tel:{{$info->phone_one}}">{{$info->phone_one}}</a></span><span>, <a href="tel:{{$info->phone_two}}">{{$info->phone_two}}</a></span>
                 </div>
                 <div class="email">
-                    <span>balumed@balumed.pl</span>
+                    <span><a href="mailto:balumed@balumed.pl">balumed@balumed.pl</a></span>
                 </div>
-            </div>
-            <div class="social-wrapper">
-                <a href="https://www.facebook.com/przychodniabalumed/" target="_blank"><img src="{{url('images/icons/facebook.png')}}" alt=""></a>
-                <a href="https://www.instagram.com/balumed/" target="_blank"><img src="{{url('images/icons/instagram.png')}}" alt=""></a>
-            </div>
-            <div class="hamburger hamburger--elastic" >
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
             </div>
         </div>
     </div>
     <div class="menu-wrapper">
         <div class="container">
+            <div class="menu-wrapper__holder">
+                <div class="brand-logo-mobile">
+                    <a href="{{route('home')}}"><img src="{{url('images/logo-bg.png')}}" alt=""></a>
+                </div>
+                <div class="hamburger hamburger--elastic" >
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </div>
+
+            </div>
             <nav>
                 <div class="brand-logo">
                     <a href="{{route('home')}}"><img src="{{url('images/logo-bg.png')}}" alt=""></a>
                 </div>
                 <div class="items-wrapper">
                     <a href="{{route('aktualnosci.index')}}" class="item link {{ (request()->is('aktualnosci*')) ? 'active' : '' }}">Aktualności</a>
-                    <div class="item dropdown">
+                    <!-- <div class="item dropdown">
                         Nasze usługi
-                    </div>
-                    <a href="{{route('home')}}" class="item link mobile {{ (request()->is('/')) ? 'active' : '' }}" >Strona główna</a>
-                    <a href="{{route('uslugi.index')}}" class="item link mobile ">Nasze usługi</a>
+                    </div> -->
+                    @if($uslugaActive === true)
+                        <a href="/neonantologia" class="item link active">Nasze usługi</a>
+                    @else
+                        <a href="/neonantologia" class="item link">Nasze usługi</a>
+                    @endif
                     <a href="{{route('specjalisci.index')}}" class="item link {{ (request()->is('specjalisci')) ? 'active' : '' }}">Nasi specjaliści</a>
                     <!-- <a href="{{route('blog.index')}}" class="item link {{ (request()->is('blog*')) ? 'active' : '' }}">Blog</a> -->
-                    <a href="{{route('galery')}}" class="item link {{ (request()->is('galeria')) ? 'active' : '' }}">Galeria</a>
+                    <!-- <a href="{{route('galery')}}" class="item link {{ (request()->is('galeria')) ? 'active' : '' }}">Galeria</a> -->
                     <a href="{{route('contact')}}" class="item link {{ (request()->is('kontakt')) ? 'active' : '' }}">Kontakt</a>
-                    <a href="{{route('contact')}}" class="item btn btn-primary btn-outline"><img src="{{url('images/icons/calendar.png')}}">Umów wizytę</a>
+                    <!-- <a href="{{route('contact')}}" class="item btn btn-primary btn-outline"><img src="{{url('images/icons/calendar.png')}}">Umów wizytę</a> -->
                 </div>
             </nav>
+
+
         </div>
         <div class="second-nav">
             <div class="container">
@@ -111,20 +124,20 @@ $stickyMassage = true;
                     <div class="cta-wrapper">
                         <div class="left-contact">
                             <div class="avatar-wrapper">
-                                <img src="{{url('images/icons/phone-person.png')}}" alt="">
+                                <img src="{{url('images/icons/phone-person1.png')}}" alt="">
                             </div>
                             <div class="text-wrapper">
                                 <p>Masz pytania? Chciałbyś umówić się na wizytę?</p>
                                 <p>Skontaktuj się z nami pod numerem <strong>{{$info->phone_one}}</strong></p>
                             </div>
                         </div>
-                        <div class="right-social">
+                        <!-- <div class="right-social">
                             <div class="btn-wrapper">
                                 <a href="https://www.facebook.com/przychodniabalumed/" target="_blank" class="btn btn-grey"><img src="{{url('images/icons/facebook.png')}}" alt=""></a>
                                 <a href="https://www.instagram.com/balumed/" class="btn btn-grey" target="_blank"><img src="{{url('images/icons/instagram.png')}}" alt=""></a>
                                 <a href="{{route('contact')}}" class="btn btn-primary">umów się na wizytę</a>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 @if($footerStatus === true)
@@ -153,9 +166,9 @@ $stickyMassage = true;
                     <div class="link-footer">
                         <div class="title">Kontakt</div>
                         <div class="info">
-                            tel: {{$info->phone_one}}<br>
-                            tel: {{$info->phone_two}}<br>
-                            email: balumed@balumed.pl
+                            tel: <a href="tel:{{$info->phone_one}}">{{$info->phone_one}}</a><br>
+                            tel: <a href="tel:{{$info->phone_two}}">{{$info->phone_two}}</a><br>
+                            email: <a href="mailto: balumed@balumed.pl">balumed@balumed.pl</a>
                         </div>
                     </div>
                 </div>

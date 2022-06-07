@@ -1,10 +1,12 @@
 @extends('layouts.page',
 [
     'seo'=> '',
+    'uslugaActive' => true,
     'footerStatus' => true,
     'metaDescription' => $service -> metaDescriptionService,
     'pageTitle' => $service -> pageTitleService
 ])
+
 @push('css')
     <link href="{{ asset('css/page/_sub_page.css') }}" rel="stylesheet">
 
