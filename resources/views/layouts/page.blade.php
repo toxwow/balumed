@@ -128,7 +128,7 @@ $stickyMassage = false;
                             </div>
                             <div class="text-wrapper">
                                 <p>Masz pytania? Chciałbyś umówić się na wizytę?</p>
-                                <p>Skontaktuj się z nami pod numerem <strong>{{$info->phone_one}}</strong></p>
+                                <p>Skontaktuj się z nami pod numerem <strong><a href="tel:{{$info->phone_one}}">{{$info->phone_one}}</a></strong></p>
                             </div>
                         </div>
                         <!-- <div class="right-social">

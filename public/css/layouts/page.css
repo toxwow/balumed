@@ -4990,10 +4990,15 @@ a.link.primary-link:hover {
   color: #10afa6;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   background-color: #fff;
   color: #3f3f3f;
+  overflow-x: hidden;
 }
 body .top-bar {
   padding: 20px 0;
@@ -5357,7 +5362,7 @@ body .footer .cta-wrapper .left-contact .avatar-wrapper {
 }
 body .footer .cta-wrapper .left-contact .avatar-wrapper img {
   max-height: 60px;
-  width: 100%;
+  width: auto;
 }
 body .footer .cta-wrapper .left-contact .text-wrapper p {
   color: #3f3f3f;
@@ -5365,6 +5370,9 @@ body .footer .cta-wrapper .left-contact .text-wrapper p {
 }
 body .footer .cta-wrapper .left-contact .text-wrapper p:first-of-type {
   color: #27ddd2;
+}
+body .footer .cta-wrapper .left-contact .text-wrapper p a {
+  color: #3f3f3f;
 }
 body .footer .cta-wrapper .right-social .btn-wrapper img {
   filter: brightness(0) invert(1);

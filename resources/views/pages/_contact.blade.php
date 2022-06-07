@@ -209,7 +209,7 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-6 col-lg-4 mt-4  d-lg-flex justify-content-lg-start">
+                <div class="col-12 col-lg-4 mt-4  d-lg-flex justify-content-lg-start">
                     <div class="link-footer">
                         <h2 class="title">Adres</h2>
                         <div class="info">
@@ -220,7 +220,7 @@
                         <a href="https://goo.gl/maps/cRBA1K8QbMAcj45c9" class="link primary-link arrow">prowadź</a>
                     </div>
                 </div>
-                <div class="col-6 col-lg-4 mt-4  d-lg-flex  justify-content-lg-center">
+                <div class="col-12 col-lg-4 mt-4  d-lg-flex  justify-content-lg-center">
                     <div class="link-footer">
                         <h2 class="title">Godziny otwarcia</h2>
                         <div class="info">
@@ -230,7 +230,7 @@
                     </div>
                 </div>
 
-                <div class="col-6 col-lg-4 mt-4 d-lg-flex justify-content-lg-end">
+                <div class="col-12 col-lg-4 mt-4 d-lg-flex justify-content-lg-end">
                     <div class="link-footer">
                         <h2 class="title">Kontakt</h2>
                         <div class="info">
