@@ -1,15 +1,13 @@
-@extends('layouts.page',
-[
-    'seo'=> '',
+@extends('layouts.page', [
+    'seo' => '',
     'uslugaActive' => true,
     'footerStatus' => true,
-    'metaDescription' => $service -> metaDescriptionService,
-    'pageTitle' => $service -> pageTitleService
+    'metaDescription' => $service->metaDescriptionService,
+    'pageTitle' => $service->pageTitleService,
 ])
 
 @push('css')
     <link href="{{ asset('css/page/_sub_page.css') }}" rel="stylesheet">
-
 @endpush
 @section('content')
     <div class="content-wrapper">
@@ -28,20 +26,22 @@
                         <div class="mobile-service-text">Zobacz pozostałe usługi:</div>
                         <ul>
 
-                            @foreach($services as $element)
-
-                                @if($element->id === $service->id)
-                                @else
-                                <li>
-
-
-
-                                    <a href="{{route('uslugi.show', $element->slug)}}">
-                                        <img class="icon" src="{{asset('storage/files/shares/uslugi/icon/'.$element->icon)}}" alt="" class="icon">
-                                        <span>{{$element->name}}</span>
-                                    </a>
-                                </li>
+                            @foreach ($services as $element)
+                                @if ($element->id === $service->id)
+                                    <li class="active">
+                                    @else
+                                    <li>
                                 @endif
+
+
+
+                                <a href="{{ route('uslugi.show', $element->slug) }}">
+                                    <img class="icon"
+                                        src="{{ asset('storage/files/shares/uslugi/icon/' . $element->icon) }}" alt=""
+                                        class="icon">
+                                    <span>{{ $element->name }}</span>
+                                </a>
+                                </li>
                             @endforeach
                         </ul>
                     </div>
@@ -54,5 +54,4 @@
             </div>
         </div>
     </div>
-
 @endsection
