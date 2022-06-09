@@ -39,7 +39,8 @@ label {
   border-bottom: 1px solid #e3eef6;
 }
 
-.table th, .table td {
+.table th,
+.table td {
   font-size: 14px;
   vertical-align: middle;
   color: #223345;
@@ -210,4 +211,12 @@ body {
 }
 .page .main .page-content .box-wrapper i.lni {
   color: #486f88;
+}
+
+tr.inactive-tr {
+  background: #5a5a5a17;
+}
+
+tr.active-tr {
+  background: #09f47a17;
 }

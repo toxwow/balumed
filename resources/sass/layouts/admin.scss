@@ -1,97 +1,95 @@
-
 //Reset style form admin
 
-.btn > i.lni{
+.btn > i.lni {
     margin-right: 5px;
 }
 
 .alert.alert-danger > ul {
     margin: 0;
 }
-.form-group.note-form-group.note-group-select-from-files{
+.form-group.note-form-group.note-group-select-from-files {
     display: none;
 }
 
-label.error{
+label.error {
     font-size: 11px;
     color: indianred;
     font-weight: 400;
     text-transform: none;
 }
 
-label{
+label {
     font-size: 11px;
     color: #7d9eb5;
     font-weight: 600;
     text-transform: uppercase;
 }
 
-
-.table .form-control{
+.table .form-control {
     width: auto;
     height: auto;
 }
 
-.btn-primary{
+.btn-primary {
     background-color: #11a1fd;
 }
 
-.table thead th{
+.table thead th {
     font-size: 14px;
     color: #7d9eb5;
     border-bottom: 1px solid #e3eef6;
 }
-.table th, .table td{
-     font-size: 14px;
+.table th,
+.table td {
+    font-size: 14px;
     vertical-align: middle;
-     color: #223345;
-     border-top: 1px solid #e3eef6;
+    color: #223345;
+    border-top: 1px solid #e3eef6;
 }
 
-body{
+body {
     background-color: #e3eef6;
 }
 
-.page{
+.page {
     display: flex;
 
-    .sidebar{
+    .sidebar {
         width: 250px;
         min-height: 100vh;
         background-color: #0c2556;
 
-        .elements{
+        .elements {
             width: 250px;
             position: fixed;
             top: 0;
-            bottom:0;
-            position:fixed;
-            overflow-y:auto;
-            overflow-x:hidden;
+            bottom: 0;
+            position: fixed;
+            overflow-y: auto;
+            overflow-x: hidden;
 
-            .logo{
+            .logo {
                 display: flex;
                 height: 65px;
                 align-items: center;
                 margin-left: 20px;
 
-                p{
+                p {
                     margin: 0;
                     color: #5a75f8;
                     font-size: 18px;
-                    a{
+                    a {
                         text-decoration: none;
                         color: #5a75f8;
-
                     }
-                    span{
+                    span {
                         color: #fff;
                         font-weight: 600;
                     }
                 }
             }
 
-            p.title{
+            p.title {
                 font-size: 12px;
                 margin-top: 30px;
                 margin-bottom: 10px;
@@ -100,13 +98,13 @@ body{
                 margin-left: 15px;
             }
 
-            .element{
+            .element {
                 list-style: none;
                 margin: 0;
                 padding: 0;
-                li{
+                li {
                     opacity: 0.4;
-                    a{
+                    a {
                         font-weight: 500;
                         font-size: 14px;
                         text-decoration: none;
@@ -115,27 +113,26 @@ body{
                         display: block;
                         line-height: 24px;
 
-                        i{
+                        i {
                             margin-right: 15px;
                             font-size: 18px;
                             line-height: 24px;
-
                         }
                     }
-                    &:hover{
+                    &:hover {
                         opacity: 1;
                         background-color: #0f2e69;
                     }
-                    &.active{
+                    &.active {
                         opacity: 1;
                     }
                 }
             }
         }
     }
-    .main{
+    .main {
         flex: 1;
-        .header{
+        .header {
             background-color: #ffffff;
             padding: 0 50px;
             height: 65px;
@@ -144,69 +141,67 @@ body{
             align-items: center;
             justify-content: flex-end;
 
-            .actions{
+            .actions {
                 display: flex;
                 align-items: center;
-                img{
+                img {
                     width: 35px;
-
                 }
-                p{
+                p {
                     margin: 0 10px;
                     color: #223345;
                     font-size: 14px;
                     font-weight: 600;
 
-                    i{
+                    i {
                         font-weight: 600;
                         font-size: 12px;
                     }
                 }
-
             }
         }
 
-        .page-content{
+        .page-content {
             margin: 40px;
-            .title-header{
+            .title-header {
                 display: flex;
                 justify-content: space-between;
 
-                h3{
+                h3 {
                     color: #223345;
                     font-size: 24px;
                     font-weight: 700;
                 }
             }
-            .two-boxs{
+            .two-boxs {
                 display: flex;
                 align-items: flex-start;
 
-                & > .box-wrapper{
+                & > .box-wrapper {
                     flex: 1;
-                    &:first-of-type{
+                    &:first-of-type {
                         margin-right: 10px;
                     }
-                    &:last-of-type{
+                    &:last-of-type {
                         margin-left: 10px;
                     }
                 }
             }
-            .box-wrapper{
+            .box-wrapper {
                 background-color: #ffffff;
                 box-shadow: 0 5px 20px rgba(176, 195, 211, 0.16);
                 border-radius: 5px;
                 padding: 15px;
-                margin:20px 0;
+                margin: 20px 0;
 
-                .sub-title{
+                .sub-title {
                     font-size: 14px;
                     color: #223345;
                     font-weight: 600;
                     margin-bottom: 10px;
                 }
 
-                table{
+                table {
                     margin: 0;
                 }
                 .page-item .page-link {
@@ -215,11 +210,11 @@ body{
                     font-size: 14px;
                 }
 
-                ul.pagination{
+                ul.pagination {
                     align-items: center;
                 }
 
-                .page-item .page-link.number{
+                .page-item .page-link.number {
                     width: 32px;
                     line-height: 16px;
                     text-align: center;
@@ -227,11 +222,18 @@ body{
                     border-radius: 15px;
                 }
 
-                i.lni{
+                i.lni {
                     color: #486f88;
                 }
             }
         }
-
     }
+}
+
+tr.inactive-tr {
+    background: #5a5a5a17;
+}
+
+tr.active-tr {
+    background: #09f47a17;
 }
