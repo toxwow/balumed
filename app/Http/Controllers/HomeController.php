@@ -20,7 +20,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-//        $this->middleware('auth');
+        //        $this->middleware('auth');
 
     }
 
@@ -31,11 +31,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $services = Service::all()->where('status', '=', '1' )->where('main', '=', '1' );
+        $services = Service::all()->where('status', '=', '1')->where('main', '=', '1')->sortByDesc('priority');
         $specialists = Specialist::with('services')->where('homepage', '=', '1')->get();
-        $articles = Post::all()->where('status', '=', '1' )->where("type", "!=", "2")->sortByDesc('updated_at');
+        $articles = Post::all()->where('status', '=', '1')->where("type", "!=", "2")->sortByDesc('updated_at');
 
-        return view('pages._home', [ 'services' => $services, 'specialists' => $specialists, 'articles' => $articles]);
+        return view('pages._home', ['services' => $services, 'specialists' => $specialists, 'articles' => $articles]);
     }
 
     public function galery()
@@ -48,5 +48,4 @@ class HomeController extends Controller
         $user = Auth::user();
         return view('admin.main');
     }
-
 }

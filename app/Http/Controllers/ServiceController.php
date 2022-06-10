@@ -17,8 +17,8 @@ class ServiceController extends Controller
 
     public function adminService()
     {
-        $services = DB::table('services')->get();
-        return view('admin.service.index', [  'services' => $services]);
+        $services = DB::table('services')->orderByDesc('priority')->get();
+        return view('admin.service.index', ['services' => $services]);
     }
 
     /**
@@ -28,9 +28,9 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $services = Service::all()->where('status', '=', '1' );
+        $services = Service::all()->where('status', '=', '1');
 
-        return view('pages._services', [ 'services' => $services]);
+        return view('pages._services', ['services' => $services]);
     }
 
     /**
@@ -59,7 +59,7 @@ class ServiceController extends Controller
             'metaDescriptionService' => 'required',
             'pageTitleService' => 'required',
             'icon' => 'required|mimes:jpeg,png,bmp,tiff,svg|max:4096',
-        ],[
+        ], [
             'name.required' => 'Pole nazwa jest wymagane',
             'slug.unique' => 'Istnieje już slug o tej nazwie',
             'slug.required' => 'Pole slug jest wymagane',
@@ -86,7 +86,7 @@ class ServiceController extends Controller
             'description' => $request->get('description')
         ]);
         $service->save();
-//        Blog::create($request->all());
+        //        Blog::create($request->all());
 
         return redirect()->route('adminService')->with('status', 'Pomyślnie dodano usługę');
     }
@@ -99,14 +99,13 @@ class ServiceController extends Controller
      */
     public function show($slug)
     {
-        $services = Service::all()->where('status', '=', '1' );
+        $services = Service::all()->where('status', '=', '1')->sortByDesc('priority');
         $service = DB::table('services')->where('slug', $slug)->first();
 
-        if(empty($service)){
+        if (empty($service)) {
             abort(404);
-        }
-        else{
-            return view('pages._single_service', [ 'service' => $service, 'services' => $services]);
+        } else {
+            return view('pages._single_service', ['service' => $service, 'services' => $services]);
         }
     }
 
@@ -119,7 +118,7 @@ class ServiceController extends Controller
     public function edit($id)
     {
         $service = Service::find($id);
-        return view('admin.service.update', ['service'=> $service]);
+        return view('admin.service.update', ['service' => $service]);
     }
 
     /**
@@ -133,6 +132,8 @@ class ServiceController extends Controller
     {
         if ($request->api == 'statusChange') {
             Service::where('id', $request->id)->update(['status' => $request->status]);
+        } elseif ($request->api == 'priorityChange') {
+            Service::where('id', $request->id)->update(['priority' => $request->status]);
         } else {
             $request->validate([
                 'name' => 'required',
@@ -160,20 +161,20 @@ class ServiceController extends Controller
             $service->pageTitleService = $request->get('pageTitleService');
             $service->status = $request->get('status');
             $service->main = $request->get('main');
+            $service->priority = $service->priority;
             $service->description = $request->get('description');
 
             if (!empty($photoImage)) {
                 Storage::delete('public/files/shares/uslugi/icon' . $service->icon);
                 Storage::putFile('public/files/shares/uslugi/icon', $request->file('icon'));
                 $service->icon = $photoImage->hashName();
-
             }
 
 
             $service->save();
-//
-//            $input = $request->all();
-//            $selectBlog->update($input);
+            //
+            //            $input = $request->all();
+            //            $selectBlog->update($input);
             return redirect()->route('adminService')->with('status', 'Pomyślnie zaktualizowno rekord');
         }
     }
@@ -187,7 +188,7 @@ class ServiceController extends Controller
      */
     public function destroy(Request $request, Service $service)
     {
-        if($request->api == 'deleteService') {
+        if ($request->api == 'deleteService') {
             $service = Service::find($request->id);
             $service->delete();
         }

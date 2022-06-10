@@ -23,6 +23,7 @@
                     <th scope="col">id</th>
                     <th scope="col">Nazwa</th>
                     <th scope="col">Status</th>
+                    <th scope="col">Priorytet</th>
                     <th scope="col" style="text-align: center" colspan="2">Akcje</th>
                 </tr>
             </thead>
@@ -41,6 +42,11 @@
                                 <option data-status="1" {{ $service->status === 1 ? 'selected' : '' }}>Widoczny</option>
                                 <option data-status="0" {{ $service->status === 0 ? 'selected' : '' }}>Ukryty</option>
                             </select>
+                        </td>
+                        <td>
+                            <input type="number" value="{{ $service->priority }}" class="form-control priorityChange"
+                                data-attribute="priority" data-id="{{ $service->id }}"
+                                data-slug="{{ $service->slug }}">
                         </td>
                         <td style="text-align: right">
                             <a href="{{ route('uslugi.edit', $service->id) }}"><i class="lni lni-pencil-alt"></i></a>

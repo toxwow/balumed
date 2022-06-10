@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Service extends Model
 {
     protected $fillable = [
-        'name', 'description', 'status', 'icon', 'slug', 'intro', 'pageTitleService', 'metaDescriptionService'
+        'name', 'description', 'status', 'icon', 'slug', 'intro', 'pageTitleService', 'metaDescriptionService', 'priority'
     ];
 
     public function specialists()
