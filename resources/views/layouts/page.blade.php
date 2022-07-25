@@ -217,7 +217,8 @@ $stickyMassage = false;
     </div>
     <div class="copyright">
         <div class="container">
-            copyright © 2021
+            copyright © 2021 <br>
+            wykonanie <a href="https://undefined.com.pl">undefined.com.pl</a>
         </div>
     </div>
         <div>
