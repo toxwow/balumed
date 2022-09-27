@@ -79,10 +79,12 @@ Route::get('/kontakt',  function () {
     return view('pages._contact');
 })->name('contact');
 
+Route::get('/harmonogram-pracy-lekarzy',  function () {
+    return view('pages._shedule');
+})->name('shedule');
+
 Route::get('/{slug}', 'ServiceController@show')->name('uslugi.show');
 
 
 
 Route::post('/setCookie', 'CookiesController@addCookies')->name('test');
-
-

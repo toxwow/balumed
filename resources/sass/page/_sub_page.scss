@@ -7,6 +7,22 @@
         background-color: #f6fbff;
     }
 
+    .table-balumed {
+        font-size: 14px;
+        span {
+            color: #27ddd2;
+        }
+
+        td {
+            vertical-align: middle;
+            min-width: 110px;
+
+            a {
+                color: #212529;
+            }
+        }
+    }
+
     .service-wrapper {
         margin-top: 20px;
 

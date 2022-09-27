@@ -12,6 +12,6 @@
     "/css/layouts/admin.css": "/css/layouts/admin.css",
     "/css/layouts/page.css": "/css/layouts/page.css",
     "/css/page/_home.css": "/css/page/_home.css",
-    "/css/page/_sub_page.css": "/css/page/_sub_page.css",
-    "/js/page/index.js": "/js/page/index.js"
+    "/js/page/index.js": "/js/page/index.js",
+    "/css/page/_sub_page.css": "/css/page/_sub_page.css"
 }

@@ -7,6 +7,19 @@
 .content-wrapper.with-bg-simple {
   background-color: #f6fbff;
 }
+.content-wrapper .table-balumed {
+  font-size: 14px;
+}
+.content-wrapper .table-balumed span {
+  color: #27ddd2;
+}
+.content-wrapper .table-balumed td {
+  vertical-align: middle;
+  min-width: 110px;
+}
+.content-wrapper .table-balumed td a {
+  color: #212529;
+}
 .content-wrapper .service-wrapper {
   margin-top: 20px;
 }

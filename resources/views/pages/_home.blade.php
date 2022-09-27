@@ -37,6 +37,20 @@
         </div>
         <div class="container">
             <div class="row">
+                <div class="col-12 col-sm-6  col-md-4 my-4" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="1000">
+                    <div class="card-secondary">
+                        
+                        <div class="img-wrapper" style="background-image: url({{url('images/bg-shedule.png')}})"></div>
+                        <div class="article-info">
+                            <p class="title">Tygodniowy Harmonogram</p>
+                            <p class="description">Przedstawiamy tygodniowy harmonogram pracy naszych specjalistów. Zapoznaj się terminarzem przyjęć lekarzy w Specjalistycznym Centrum Medycznym w Warszawie - Balumed.</p>
+                        </div>
+                        <div class="action-wrapper">
+                            <a href="{{route('shedule')}}" class="btn btn-primary">więcej</a>
+                        </div>
+                    </div>
+                </div>
                 @foreach($articles->slice(0, 2) as $key => $article)
                     <div class="col-12 col-sm-6  col-md-4 my-4" data-aos="fade-up" data-aos-duration="1000"
                          @if($key == 0)
@@ -57,7 +71,7 @@
                         </div>
                     </div>
                 @endforeach
-                <div class="col-12 col-sm-6  col-md-4 my-4" data-aos="fade-up" data-aos-duration="1000"
+                {{-- <div class="col-12 col-sm-6  col-md-4 my-4" data-aos="fade-up" data-aos-duration="1000"
                 data-aos-delay="1000">
                     <div class="card-secondary">
                         <div class="img-wrapper" style="background-image: url({{asset('storage/files/shares/aktualnosci/MnhQVc0pqVyaXSUngHCIWga64Nibguep2WTLzDzO.png')}})"></div>
@@ -69,7 +83,7 @@
                             <a href="{{route('uslugi.show', 'punkt-szczepien')}}" class="btn btn-primary">więcej</a>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
