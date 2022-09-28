@@ -12,6 +12,15 @@
         span {
             color: #27ddd2;
         }
+        tbody {
+            tr {
+                background-color: #fcfcfc;
+
+                &:nth-of-type(odd) {
+                    background: #f3fffe;
+                }
+            }
+        }
 
         td {
             vertical-align: middle;

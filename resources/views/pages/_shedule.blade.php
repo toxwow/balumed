@@ -27,6 +27,7 @@
                 <div class="col-12 mt-5">
                     <div class="table-responsive">
                         <table class="table table-bordered table-hover table-balumed">
+                            <thead>
                             <tr>
                                 <td>Lekarz</td>
                                 <td>Specjalność</td>
@@ -37,6 +38,8 @@
                                 <td>Pt.</td>
                                 <td>Sob.</td>
                             </tr>
+                            </thead>
+                            <tbody>
                             <tr>
                                 <td>
                                     <span>prof.dr hab.n.med.</span>
@@ -158,7 +161,7 @@
                                 <td><p class="mb-0">16:00-19:00</p></td>
                                 <td></td>
                             </tr>
-                            <tr>
+                            {{-- <tr>
                                 <td>
                                     <span>lek.med.</span>
                                     <h4 class="mb-0">Wojciech Żakiewicz</h4>
@@ -176,7 +179,7 @@
                                     <p class="mb-0">16:00-19:00</p>
                                 </td>
                                 <td></td>
-                            </tr>
+                            </tr> --}}
                             <tr>
                                 <td>
                                     <span>dr hab.n.med.</span>
@@ -275,6 +278,7 @@
                                 <td></td>
                                 <td></td>
                             </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>

@@ -13,6 +13,12 @@
 .content-wrapper .table-balumed span {
   color: #27ddd2;
 }
+.content-wrapper .table-balumed tbody tr {
+  background-color: #fcfcfc;
+}
+.content-wrapper .table-balumed tbody tr:nth-of-type(odd) {
+  background: #f3fffe;
+}
 .content-wrapper .table-balumed td {
   vertical-align: middle;
   min-width: 110px;
