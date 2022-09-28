@@ -161,7 +161,7 @@
                                 <td><p class="mb-0">16:00-19:00</p></td>
                                 <td></td>
                             </tr>
-                            {{-- <tr>
+                            <tr>
                                 <td>
                                     <span>lek.med.</span>
                                     <h4 class="mb-0">Wojciech Żakiewicz</h4>
@@ -175,11 +175,11 @@
                                 <td></td>
                                 <td></td>
                                 <td>
-                                    <p>16:00-19:00</p>
-                                    <p class="mb-0">16:00-19:00</p>
+                                    {{-- <p>16:00-19:00</p>
+                                    <p class="mb-0">16:00-19:00</p> --}}
                                 </td>
                                 <td></td>
-                            </tr> --}}
+                            </tr>
                             <tr>
                                 <td>
                                     <span>dr hab.n.med.</span>
