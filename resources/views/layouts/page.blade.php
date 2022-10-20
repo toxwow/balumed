@@ -87,9 +87,9 @@ $stickyMassage = true;
                         Nasze usługi
                     </div> -->
                     @if($uslugaActive === true)
-                        <a href="/neonantologia" class="item link active">Nasze usługi</a>
+                        <a href="/neonatologia" class="item link active">Nasze usługi</a>
                     @else
-                        <a href="/neonantologia" class="item link">Nasze usługi</a>
+                        <a href="/neonatologia" class="item link">Nasze usługi</a>
                     @endif
                     <a href="{{route('specjalisci.index')}}" class="item link {{ (request()->is('specjalisci')) ? 'active' : '' }}">Nasi specjaliści</a>
                     <!-- <a href="{{route('blog.index')}}" class="item link {{ (request()->is('blog*')) ? 'active' : '' }}">Blog</a> -->
