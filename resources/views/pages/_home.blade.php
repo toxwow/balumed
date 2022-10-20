@@ -38,7 +38,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-6  col-md-4 my-4" data-aos="fade-up" data-aos-duration="1000"
-                data-aos-delay="1000">
+                data-aos-delay="500">
                     <div class="card-secondary">
                         
                         <div class="img-wrapper" style="background-image: url({{url('images/bg-shedule.png')}})"></div>
@@ -51,7 +51,35 @@
                         </div>
                     </div>
                 </div>
-                @foreach($articles->slice(0, 2) as $key => $article)
+                <div class="col-12 col-sm-6  col-md-4 my-4" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="700">
+                    <div class="card-secondary">
+                        
+                        <div class="img-wrapper" style="background-image: url({{url('images/grypa-article.png')}})"></div>
+                        <div class="article-info">
+                            <p class="title">Grypa sezonowa</p>
+                            <p class="description">Sezon szczepień przeciw grypie sezonowej już trwa. Przeczytaj o szczepionce donosowej w postaci aerozolu, podawanej jako dawka podzielona do obu nozdrzy. </p>
+                        </div>
+                        <div class="action-wrapper">
+                            <a href="{{route('uslugi.show', 'punkt-szczepien')}}" class="btn btn-primary">więcej</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6  col-md-4 my-4" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="1000">
+                    <div class="card-secondary">
+                        
+                        <div class="img-wrapper" style="background-image: url({{url('images/rehabilitacja-article.png')}})"></div>
+                        <div class="article-info">
+                            <p class="title">Rehabilitacja oddechowa</p>
+                            <p class="description">Nowość w Balumed. Rehabilitacja oddechowa poprawi Twój stan fizyczny oraz psychiczny, wspomagając przy tym codzienne funcjonowanie. Zapoznaj się z naszą usługą.</p>
+                        </div>
+                        <div class="action-wrapper">
+                            <a href="{{route('uslugi.show', 'rehabilitacja-oddechowa')}}" class="btn btn-primary">więcej</a>
+                        </div>
+                    </div>
+                </div>
+                {{-- @foreach($articles->slice(0, 2) as $key => $article)
                     <div class="col-12 col-sm-6  col-md-4 my-4" data-aos="fade-up" data-aos-duration="1000"
                          @if($key == 0)
                             data-aos-delay="500"
@@ -70,7 +98,7 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
+                @endforeach --}}
                 {{-- <div class="col-12 col-sm-6  col-md-4 my-4" data-aos="fade-up" data-aos-duration="1000"
                 data-aos-delay="1000">
                     <div class="card-secondary">

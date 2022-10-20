@@ -42,11 +42,13 @@
                             <tbody>
                             <tr>
                                 <td>
-                                    <span>prof.dr hab.n.med.</span>
-                                    <h4 class="mb-0">Bożena Kociszewska- Najman</h4>
+                                    <a href="{{route('specjalista.show', 'bozena-kociszewska-najman')}}">
+                                        <span>prof.dr hab.n.med.</span>
+                                        <h4 class="mb-0">Bożena Kociszewska- Najman</h4>
+                                    </a>
                                 </td>
                                 <td>
-                                    <p> <a href="{{route('uslugi.show', 'neonantologia')}}"> Neonantologia </a></p>
+                                    <p> <a href="{{route('uslugi.show', 'neonatologia')}}"> Neonantologia </a></p>
                                     <p class="mb-0"><a href="{{route('uslugi.show', 'pediatria')}}">Pediatria</a></p>
                                 </td>
                                 <td></td>
@@ -64,8 +66,10 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <span>lek.med.</span>
-                                    <h4 class="mb-0">Anna Komorowska- Piotrowska</h4>
+                                    <a href="{{route('specjalista.show', 'anna-komorowska-piotrowska')}}">
+                                        <span>lek.med.</span>
+                                        <h4 class="mb-0">Anna Komorowska- Piotrowska</h4>
+                                    </a>
                                 </td>
                                 <td>
                                     <p><a href="{{route('uslugi.show', 'pediatria')}}">Pediatria</a></p>
@@ -93,8 +97,10 @@
                             </tr>
                             <tr>
                                 <td>
+                                    <a href="{{route('specjalista.show', 'kacper-gajko')}}">
                                     <span>lek.med.</span>
                                     <h4 class="mb-0">Kacper Gajko</h4>
+                                    </a>
                                 </td>
                                 <td>
                                     <p><a href="{{route('uslugi.show', 'pediatria')}}">Pediatria</a></p>
@@ -118,8 +124,10 @@
                             </tr>
                             <tr>
                                 <td>
+                                    <a href="{{route('specjalista.show', 'ewa-zacharska-kokot')}}">
                                     <span>dr n.med.</span>
                                     <h4 class="mb-0">Ewa Zacharska-Kokot</h4>
+                                    </a>
                                 </td>
                                 <td>
                                     <p class="mb-0"><a href="{{route('uslugi.show', 'echo-serca-dzieci')}}">Echo serca</a></p>
@@ -133,8 +141,10 @@
                             </tr>
                             <tr>
                                 <td>
+                                    <a href="{{route('specjalista.show', 'krystyna-malinowska')}}">
                                     <span>lek.med.</span>
                                     <h4 class="mb-0">Krystyna Malinowska</h4>
+                                    </a>
                                 </td>
                                 <td>
                                     <p class="mb-0"><a href="{{route('uslugi.show', 'neurolog-dzieciecy')}}">Neurologia</a></p>
@@ -148,8 +158,10 @@
                             </tr>
                             <tr>
                                 <td>
+                                    <a href="{{route('specjalista.show', 'hanna-kocon')}}">
                                     <span>dr n.med.</span>
                                     <h4 class="mb-0">Hanna Kocoń</h4>
+                                    </a>
                                 </td>
                                 <td>
                                     <p class="mb-0"><a href="{{route('uslugi.show', 'ortopeda')}}">Ortopedia</a></p>
@@ -163,8 +175,10 @@
                             </tr>
                             <tr>
                                 <td>
+                                    <a href="{{route('specjalista.show', 'wojciech-zakiewicz')}}">
                                     <span>lek.med.</span>
                                     <h4 class="mb-0">Wojciech Żakiewicz</h4>
+                                    </a>
                                 </td>
                                 <td>
                                     <p><a href="{{route('uslugi.show', 'ortopeda')}}">Ortopedia</a></p>
@@ -182,8 +196,10 @@
                             </tr>
                             <tr>
                                 <td>
+                                    <a href="{{route('specjalista.show', 'renata-bokiniec')}}">
                                     <span>dr hab.n.med.</span>
                                     <h4 class="mb-0">Renata Bokiniec</h4>
+                                    </a>
                                 </td>
                                 <td>
                                     <p class="mb-0"><a href="{{route('uslugi.show', 'usg-dorosli')}}">USG</a></p>
@@ -197,8 +213,10 @@
                             </tr>
                             <tr>
                                 <td>
+                                    <a href="{{route('specjalista.show', 'agnieszka-biejat')}}">
                                     <span>dr n.med.</span>
                                     <h4 class="mb-0">Agnieszka Biejat</h4>
+                                    </a>
                                 </td>
                                 <td>
                                     <p class="mb-0"><a href="{{route('uslugi.show', 'usg-dorosli')}}">USG</a></p>
@@ -212,8 +230,10 @@
                             </tr>
                             <tr>
                                 <td>
+                                    <a href="{{route('specjalista.show', 'monika-grabowska')}}">
                                     <span>mgr</span>
                                     <h4 class="mb-0">Monika Grabowska</h4>
+                                    </a>
                                 </td>
                                 <td>
                                     <p class="mb-0"><a href="{{route('uslugi.show', 'rehabilitacja-dzieci-i-doroslych')}}">Rehabilitacja</a></p>
@@ -227,8 +247,10 @@
                             </tr>
                             <tr>
                                 <td>
+                                    <a href="{{route('specjalista.show', 'justyna-konopczynska')}}">
                                     <span>mgr</span>
                                     <h4 class="mb-0">Justyna Konopczyńska - Brodzik</h4>
+                                    </a>
                                 </td>
                                 <td>
                                     <p class="mb-0"><a href="{{route('uslugi.show', 'rehabilitacja-oddechowa')}}">Fizjoterapia oddechowa</a></p>
@@ -242,8 +264,10 @@
                             </tr>
                             <tr>
                                 <td>
+                                    <a href="{{route('specjalista.show', 'agnieszka-osinska')}}">
                                     <span>mgr</span>
                                     <h4 class="mb-0">Agnieszka Osińska</h4>
+                                    </a>
                                 </td>
                                 <td>
                                     <p><a href="{{route('uslugi.show', 'badania-laboratoryjne')}}">Pobieranie krwi</a></p>
@@ -261,8 +285,10 @@
                             </tr>
                             <tr>
                                 <td>
+                                    <a href="{{route('specjalista.show', 'magdalena-bednarczyk')}}">
                                     <span>mgr</span>
                                     <h4 class="mb-0">Magdalena Bednarczyk</h4>
+                                    </a>
                                 </td>
                                 <td>
                                     <p><a href="{{route('uslugi.show', 'neurologopeda')}}">Neurologopedia</a></p>

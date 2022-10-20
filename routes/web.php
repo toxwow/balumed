@@ -84,6 +84,7 @@ Route::get('/harmonogram-pracy-lekarzy',  function () {
 })->name('shedule');
 
 Route::get('/{slug}', 'ServiceController@show')->name('uslugi.show');
+Route::get('/specjalista/{slug}', 'SpecialistController@show')->name('specjalista.show');
 
 
 

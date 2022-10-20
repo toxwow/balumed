@@ -1,6 +1,6 @@
 
 @php
-$stickyMassage = false;
+$stickyMassage = true;
 @endphp
 
 <!doctype html>
@@ -31,7 +31,6 @@ $stickyMassage = false;
 
     <!-- Styles -->
     <link href="{{ asset('css/layouts/page.css') }}" rel="stylesheet">
-{{--    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">--}}
 
     @stack('css')
     @stack('script')
@@ -42,7 +41,7 @@ $stickyMassage = false;
     @if($stickyMassage === true)
         <div class="massage-wrapper">
             <div class="container">
-                <a href="{{route('uslugi.show', 'punkt-szczepien')}}">SZCZEPIENIA COVID-19</a>
+                <a href="{{route('uslugi.show', 'punkt-szczepien')}}">Zobacz szczepienia na grype sezonową</a>
             </div>
         </div>
     @endif

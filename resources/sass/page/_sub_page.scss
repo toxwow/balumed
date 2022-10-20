@@ -240,3 +240,34 @@ a[data-fancybox] img {
     /* Prevent opacity change when dragging up/down */
     --fancybox-opacity: 1;
 }
+
+.specialist-page {
+    &__titles {
+        color: #27ddd2;
+        margin-bottom: 0;
+    }
+
+    article {
+        text-align: justify;
+    }
+
+    &__services {
+        margin-top: 30px;
+        padding-top: 30px;
+        border-top: 1px solid #e2e2e2;
+
+        p {
+            font-weight: 600;
+        }
+
+        span {
+            background: #27ddd214;
+            padding: 3px 6px;
+            color: #34dfd4;
+            margin-right: 10px;
+            a {
+                color: #1ac4b9;
+            }
+        }
+    }
+}

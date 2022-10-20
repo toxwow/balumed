@@ -19,7 +19,7 @@ class SpecialistController extends Controller
     {
 
         $specialists = Specialist::with('services')->get();
-        return view('admin.specialist.index', [  'specialists' => $specialists]);
+        return view('admin.specialist.index', ['specialists' => $specialists]);
     }
 
     /**
@@ -31,7 +31,7 @@ class SpecialistController extends Controller
     {
         $specialists = Specialist::with('services')->orderBy('sort')->where('status', '=', '1')->get();
 
-        return view('pages._specialists', [ 'specialists' => $specialists]);
+        return view('pages._specialists', ['specialists' => $specialists]);
     }
 
     /**
@@ -52,15 +52,14 @@ class SpecialistController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        {
+    { {
             $request->validate([
                 'name' => 'required',
                 'slug' => 'required|unique:specialists',
                 'description' => 'required',
                 'titlePerson' => 'required',
                 'photo' => 'required|mimes:jpeg,png,bmp,tiff|max:4096',
-            ],[
+            ], [
                 'name.required' => 'Pole nazwa jest wymagane',
                 'slug.unique' => 'Istnieje już slug o tej nazwie',
                 'slug.required' => 'Pole slug jest wymagane',
@@ -94,9 +93,16 @@ class SpecialistController extends Controller
      * @param  \App\Specialist  $specialist
      * @return \Illuminate\Http\Response
      */
-    public function show(Specialist $specialist)
+    public function show($slug)
     {
-        //
+        $services = Service::all()->where('status', '=', '1')->sortByDesc('priority');
+        $specialist = Specialist::with('services')->orderBy('sort')->where('slug', $slug)->first();;
+        if (empty($specialist)) {
+            abort(404);
+        } else {
+
+            return view('pages._single_specialist', ['specialist' => $specialist, 'services' => $services]);
+        }
     }
 
     /**
@@ -105,11 +111,11 @@ class SpecialistController extends Controller
      * @param  \App\Specialist  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit( $id)
+    public function edit($id)
     {
         $specialist = Specialist::find($id);
         $services = Service::all();
-        return view('admin.specialist.update', ['specialist'=> $specialist, 'services' => $services]);
+        return view('admin.specialist.update', ['specialist' => $specialist, 'services' => $services]);
     }
 
     /**
@@ -123,7 +129,7 @@ class SpecialistController extends Controller
     {
         if ($request->api == 'statusChange') {
             Specialist::where('id', $request->id)->update(['status' => $request->status]);
-        }else {
+        } else {
             $request->validate([
                 'name' => 'required',
                 'slug' => 'required',
@@ -166,7 +172,7 @@ class SpecialistController extends Controller
      */
     public function destroy(Request  $request, Specialist $specialist)
     {
-        if($request->api == 'deleteService') {
+        if ($request->api == 'deleteService') {
             $specialist = Specialist::find($request->id);
             $specialist->services()->detach();
             $specialist->delete();
