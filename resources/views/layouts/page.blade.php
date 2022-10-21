@@ -41,7 +41,7 @@ $stickyMassage = true;
     @if($stickyMassage === true)
         <div class="massage-wrapper">
             <div class="container">
-                <a href="{{route('uslugi.show', 'punkt-szczepien')}}">Zobacz szczepienia na grype sezonową</a>
+                <a href="{{route('uslugi.show', 'punkt-szczepien')}}">Szczepienia rzeciw grypie sezonowej 2022/2023</a>
             </div>
         </div>
     @endif
@@ -49,8 +49,8 @@ $stickyMassage = true;
         <div class="container">
 
             <div class="social-wrapper">
-                <!-- <a href="https://www.facebook.com/przychodniabalumed/" target="_blank"><img src="{{url('images/icons/facebook.png')}}" alt=""></a> -->
-                <!-- <a href="https://www.instagram.com/balumed/" target="_blank"><img src="{{url('images/icons/instagram.png')}}" alt=""></a> -->
+                <a href="https://www.facebook.com/przychodniabalumed/" target="_blank"><img src="{{url('images/icons/facebook.png')}}" alt=""></a>
+                {{-- <a href="https://www.instagram.com/balumed/" target="_blank"><img src="{{url('images/icons/instagram.png')}}" alt=""></a> --}}
             </div>
             <div class="contact-wrapper">
                 <div class="phone">
@@ -145,7 +145,7 @@ $stickyMassage = true;
                     <div class="link-footer">
                         <div class="title">Adres</div>
                         <div class="info">
-                            ul. Sarmacka 18 lok 93<br>
+                            ul. Sarmacka 18<br>
                             02-972 Warszawa, Wilanów <br>
                             (wejście od ul. Herbu Szreniawa)
                         </div>
@@ -291,6 +291,35 @@ $stickyMassage = true;
         </div>
 </div>
 {{--    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer ></script>--}}
+<!-- Messenger Wtyczka czatu Code -->
+    <div id="fb-root"></div>
 
+    <!-- Your Wtyczka czatu code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "234037293425042");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v15.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/pl_PL/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 </body>
 </html>

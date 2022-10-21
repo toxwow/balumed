@@ -209,35 +209,43 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-4 mt-4  d-lg-flex justify-content-lg-start">
-                    <div class="link-footer">
-                        <h2 class="title">Adres</h2>
-                        <div class="info">
-                            ul. Sarmacka 18 lok 93<br>
-                            02-972 Warszawa, Wilanów <br>
-                            (wejście od ul. Herbu Szreniawa)
+                <div class="col-12 col-lg-6">
+                    <div class="row">
+                        <div class="col-12 mt-4  d-lg-flex ">
+                            <div class="link-footer">
+                                <h2 class="title">Adres</h2>
+                                <div class="info">
+                                    ul. Sarmacka 18<br>
+                                    02-972 Warszawa, Wilanów <br>
+                                    (wejście od ul. Herbu Szreniawa)
+                                </div>
+                                <a href="https://goo.gl/maps/cRBA1K8QbMAcj45c9" class="link primary-link arrow">prowadź</a>
+                            </div>
                         </div>
-                        <a href="https://goo.gl/maps/cRBA1K8QbMAcj45c9" class="link primary-link arrow">prowadź</a>
+                        <div class="col-12 mt-4  d-lg-flex">
+                            <div class="link-footer">
+                                <h2 class="title">Godziny otwarcia</h2>
+                                <div class="info">
+                                    <b>Pon - Pt:</b> {{$info->working_days}}<br>
+                                    <b>Sb: </b> {{$info->holiday_days}}<br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-4 d-lg-flex">
+                            <div class="link-footer">
+                                <h2 class="title">Kontakt</h2>
+                                <div class="info">
+                                    tel: {{$info->phone_one}}<br>
+                                    tel: {{$info->phone_two}}<br>
+                                    email: balumed@balumed.pl
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4 mt-4  d-lg-flex  justify-content-lg-center">
-                    <div class="link-footer">
-                        <h2 class="title">Godziny otwarcia</h2>
-                        <div class="info">
-                            <b>Pon - Pt:</b> {{$info->working_days}}<br>
-                            <b>Sb: </b> {{$info->holiday_days}}<br>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-lg-4 mt-4 d-lg-flex justify-content-lg-end">
-                    <div class="link-footer">
-                        <h2 class="title">Kontakt</h2>
-                        <div class="info">
-                            tel: {{$info->phone_one}}<br>
-                            tel: {{$info->phone_two}}<br>
-                            email: balumed@balumed.pl
-                        </div>
+                <div class="col-12 col-lg-6 mt-4">
+                    <div class="contact-page__image">
+                        <img src="{{url('images/contact-page-img.jpg')}}" alt="">
                     </div>
                 </div>
             </div>
