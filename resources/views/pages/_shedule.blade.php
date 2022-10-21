@@ -202,6 +202,7 @@
                                     </a>
                                 </td>
                                 <td>
+                                    <p> <a href="{{route('uslugi.show', 'neonatologia')}}"> Neonantologia </a></p>
                                     <p class="mb-0"><a href="{{route('uslugi.show', 'usg-dorosli')}}">USG</a></p>
                                 </td>
                                 <td></td>
@@ -219,7 +220,12 @@
                                     </a>
                                 </td>
                                 <td>
-                                    <p class="mb-0"><a href="{{route('uslugi.show', 'usg-dorosli')}}">USG</a></p>
+                                    <p>
+                                        <a href=""> Radiolog dziecięcy</a>
+                                    </p>
+                                    <p class="mb-0">
+                                        <a href="{{route('uslugi.show', 'usg-dorosli')}}">USG</a>
+                                    </p>
                                 </td>
                                 <td></td>
                                 <td></td>

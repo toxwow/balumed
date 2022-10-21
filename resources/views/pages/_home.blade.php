@@ -16,7 +16,7 @@
             <div class="col-12 col-lg-8">
                 <div class="header-new__box">
                     <h1>Balumed - Specjalistyczne Centrum Medyczne w Warszawie</h1>
-                        <p class="description">Specjalistyczne Centrum Medyczne Profilaktyki, Diagnostyki i Terapii Małego Dziecka powstało z myślą o zapewnieniu pełnej i wysokospecjalistycznej opieki zdrowotnej najmłodszym pacjentom już od momentu ich poczęcia. Nasza działalność skupiona jest na takich dziedzinach medycyny jak <a href="/pediatria">pediatria</a>, <a href="/neonantologia">neonatologia</a>.</p>
+                        <p class="description">Specjalistyczne Centrum Medyczne Profilaktyki, Diagnostyki i Terapii Małego Dziecka powstało z myślą o zapewnieniu pełnej i wysokospecjalistycznej opieki zdrowotnej najmłodszym pacjentom już od momentu ich poczęcia. Nasza działalność skupiona jest na takich dziedzinach medycyny jak <a href="/pediatria">pediatria</a>, <a href="/neonatologia">neonatologia</a>.</p>
                         <div class="btn-wrapper">
                             <a href="{{route('contact')}}" class="btn btn-primary">Skontaktuj się z nami</a>
                         </div>
