@@ -41,7 +41,7 @@ $stickyMassage = true;
     @if($stickyMassage === true)
         <div class="massage-wrapper">
             <div class="container">
-                <a href="{{route('uslugi.show', 'punkt-szczepien')}}">Szczepienia rzeciw grypie sezonowej 2022/2023</a>
+                <a href="{{route('uslugi.show', 'punkt-szczepien')}}">Szczepienia przeciw grypie sezonowej 2022/2023</a>
             </div>
         </div>
     @endif
