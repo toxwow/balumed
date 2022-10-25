@@ -245,7 +245,7 @@
                 </div>
                 <div class="col-12 col-lg-6 mt-4">
                     <div class="contact-page__image">
-                        <img src="{{url('images/contact-page-img.jpg')}}" alt="">
+                        <img src="{{url('images/contact-page-img1.jpg')}}" alt="">
                     </div>
                 </div>
             </div>
