@@ -37,7 +37,7 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-6  my-4" data-aos="fade-up" data-aos-duration="1000"
+                <div class="col-12 col-lg-4  my-4" data-aos="fade-up" data-aos-duration="1000"
                 data-aos-delay="200">
                     <div class="card-secondary">
                         
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-6  my-4" data-aos="fade-up" data-aos-duration="1000"
+                <div class="col-12 col-lg-4  my-4" data-aos="fade-up" data-aos-duration="1000"
                 data-aos-delay="500">
                     <div class="card-secondary">
                         
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-6 my-4" data-aos="fade-up" data-aos-duration="1000"
+                <div class="col-12 col-lg-4 my-4" data-aos="fade-up" data-aos-duration="1000"
                 data-aos-delay="700">
                     <div class="card-secondary">
                         
