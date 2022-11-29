@@ -68,7 +68,7 @@ $stickyMassage = true;
                         </g>
                       </svg>
                     <span>
-                        Whatsapp
+                        WhatsApp
                     </span>  
                 </a>
                 
