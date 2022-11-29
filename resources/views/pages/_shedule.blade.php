@@ -170,7 +170,7 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td><p class="mb-0">16:00-19:00</p></td>
+                                <td><p class="mb-0">15:00-17:00</p></td>
                                 <td></td>
                             </tr>
                             <tr>
@@ -186,11 +186,12 @@
                                 </td>
                                 <td></td>
                                 <td></td>
-                                <td></td>
+                                <td>
+                                    <p class="mb-0">16:00-18:00</p>
+                                </td>
                                 <td></td>
                                 <td>
-                                    {{-- <p>16:00-19:00</p>
-                                    <p class="mb-0">16:00-19:00</p> --}}
+                                    
                                 </td>
                                 <td></td>
                             </tr>

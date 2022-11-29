@@ -49,8 +49,29 @@ $stickyMassage = true;
         <div class="container">
 
             <div class="social-wrapper">
-                <a href="https://www.facebook.com/przychodniabalumed/" target="_blank"><img src="{{url('images/icons/facebook.png')}}" alt=""></a>
-                {{-- <a href="https://www.instagram.com/balumed/" target="_blank"><img src="{{url('images/icons/instagram.png')}}" alt=""></a> --}}
+                <a href="https://www.facebook.com/przychodniabalumed/" target="_blank" class="social-wrapper-fb">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="23.855" viewBox="0 0 24 23.855">
+                        <g id="facebook_1_" data-name="facebook (1)" transform="translate(0 -0.073)">
+                          <path id="Path_9266" data-name="Path 9266" d="M24,12.073A12.01,12.01,0,0,1,13.87,23.928V15.565h2.789l.531-3.46H13.87V9.86a1.73,1.73,0,0,1,1.95-1.869h1.509V5.045a18.392,18.392,0,0,0-2.679-.234c-2.734,0-4.52,1.657-4.52,4.656V12.1H7.091v3.46H10.13v8.363A12,12,0,1,1,24,12.073Z" fill="#fff"/>
+                        </g>
+                      </svg>                      
+                    <span>
+                        Facebook
+                    </span>                      
+                </a>
+                <a href="https://wa.me/787655660" target="_blank" class="social-wrapper-whats">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23.885" height="24" viewBox="0 0 23.885 24">
+                        <g id="WA_Logo" transform="translate(-0.057)">
+                          <g id="Group_1077" data-name="Group 1077">
+                            <path id="Path_9265" data-name="Path 9265" d="M20.463,3.488A11.9,11.9,0,0,0,1.745,17.838L.057,24l6.3-1.654a11.88,11.88,0,0,0,5.683,1.448h.005A11.9,11.9,0,0,0,20.463,3.488Zm-8.413,18.3h0a9.859,9.859,0,0,1-5.031-1.378l-.361-.214-3.741.981,1-3.648-.235-.374a9.884,9.884,0,1,1,8.373,4.633Zm5.422-7.4c-.3-.149-1.758-.868-2.031-.967s-.47-.149-.669.148-.767.967-.941,1.166-.347.223-.644.074a8.111,8.111,0,0,1-2.39-1.475,8.945,8.945,0,0,1-1.653-2.059c-.173-.3-.018-.458.13-.606s.3-.347.446-.521a1.975,1.975,0,0,0,.3-.495.546.546,0,0,0-.025-.521c-.075-.148-.669-1.611-.916-2.206s-.486-.5-.669-.51-.371-.01-.57-.01a1.089,1.089,0,0,0-.792.372,3.337,3.337,0,0,0-1.04,2.479A5.783,5.783,0,0,0,7.22,12.325,13.24,13.24,0,0,0,12.3,16.812a17.194,17.194,0,0,0,1.694.626,4.085,4.085,0,0,0,1.872.118,3.061,3.061,0,0,0,2.006-1.413,2.472,2.472,0,0,0,.173-1.413C17.967,14.6,17.769,14.531,17.472,14.382Z" fill="#fff" fill-rule="evenodd"/>
+                          </g>
+                        </g>
+                      </svg>
+                    <span>
+                        Whatsapp
+                    </span>  
+                </a>
+                
             </div>
             <div class="contact-wrapper">
                 <div class="phone">

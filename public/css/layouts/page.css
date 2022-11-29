@@ -5373,8 +5373,49 @@ body .top-bar .container .contact-wrapper > div.email {
 body .top-bar .container .contact-wrapper > div.email:before {
   background-image: url("/images/icons/email.png");
 }
-body .top-bar .container .social-wrapper a > img {
-  height: 20px;
+body .top-bar .container .social-wrapper {
+  display: flex;
+  gap: 10px;
+}
+body .top-bar .container .social-wrapper .social-wrapper-fb {
+  border-radius: 50px;
+  background-color: #4267B2;
+  color: #fff;
+  padding: 4px 11px;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+body .top-bar .container .social-wrapper .social-wrapper-fb svg {
+  margin-right: 8px;
+  height: 16px;
+}
+body .top-bar .container .social-wrapper .social-wrapper-fb:hover {
+  text-decoration: none;
+  background-color: #34518d;
+}
+body .top-bar .container .social-wrapper .social-wrapper-whats {
+  border-radius: 50px;
+  background-color: #25D366;
+  color: #fff;
+  padding: 4px 11px;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+body .top-bar .container .social-wrapper .social-wrapper-whats svg {
+  margin-right: 8px;
+  height: 16px;
+}
+body .top-bar .container .social-wrapper .social-wrapper-whats:hover {
+  text-decoration: none;
+  background-color: #1da851;
 }
 body .menu-wrapper {
   border-top: 1px solid #f2fafe;
@@ -5897,6 +5938,18 @@ body .menu-wrapper nav .items-wrapper a.item.link.mobile {
 
   .right-social {
     margin-top: 40px;
+  }
+
+  body .menu-wrapper nav .items-wrapper a.item.link {
+    font-size: 14px;
+  }
+
+  body .top-bar > .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
   }
 }
 @-webkit-keyframes menu {

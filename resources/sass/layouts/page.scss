@@ -279,8 +279,48 @@ body {
                 }
             }
             .social-wrapper {
-                a > img {
-                    height: 20px;
+                display: flex;
+                gap: 10px;
+                
+                .social-wrapper-fb{
+                    border-radius: 50px;
+                    background-color: #4267B2;
+                    color: $white;
+                    padding: 4px 11px;
+                    @include font-size(14px);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    transition: all 0.5s ease;
+                    svg{
+                        margin-right: 8px;
+                        height: 16px;
+                    }
+                    &:hover{
+                        text-decoration: none;
+                        background-color: darken(#4267B2, 10%);
+                    }
+                }
+                .social-wrapper-whats{
+                    border-radius: 50px;
+                    background-color: #25D366;
+                    color: $white;
+                    padding: 4px 11px;
+                    @include font-size(14px);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    transition: all 0.5s ease;
+                    svg{
+                        margin-right: 8px;
+                        height: 16px;
+                    }
+                    &:hover{
+                        text-decoration: none;
+                        background-color: darken(#25D366, 10%);
+                    }
                 }
             }
         }
@@ -865,6 +905,17 @@ body .menu-wrapper nav .items-wrapper a.item.link.mobile {
 
     .right-social {
         margin-top: 40px;
+    }
+    body .menu-wrapper nav .items-wrapper a.item.link{
+        font-size: 14px;
+    }
+
+    body .top-bar > .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 25px;
     }
 }
 

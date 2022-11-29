@@ -38,20 +38,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-4  my-4" data-aos="fade-up" data-aos-duration="1000"
-                data-aos-delay="200">
-                    <div class="card-secondary">
-                        
-                        <div class="img-wrapper" style="background-image: url({{url('images/plakat-wczesniaka.jpg')}})"></div>
-                        <div class="article-info">
-                            <p class="title">Światowy dzień wcześniaka</p>
-                            <p class="description">Wszystkie wcześniaki mają swoje święto 17-go listopada. Z tej okazji w Klinice Neonatologii i Chorób Rzadkich WUM pod kierownictwem prof. dr hab.n.med. Kociszewskiej- Najman odbędzie się dzień edukacji dla rodziców wcześniaka.</p>
-                        </div>
-                        <div class="action-wrapper">
-                            <a target="_blank" href="https://www.facebook.com/przychodniabalumed/posts/pfbid0s8Kyt6yfHiBftCMd5WNxLALTU3bG6rcS7MtQjvpAmaFX57yAkA2ZshMpDXQz1U7vl" class="btn btn-primary">więcej</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-4  my-4" data-aos="fade-up" data-aos-duration="1000"
                 data-aos-delay="500">
                     <div class="card-secondary">
                         
@@ -79,7 +65,7 @@
                         </div>
                     </div>
                 </div>
-                {{-- <div class="col-12 col-sm-6 my-4" data-aos="fade-up" data-aos-duration="1000"
+                <div class="col-12 col-lg-4 my-4" data-aos="fade-up" data-aos-duration="1000"
                 data-aos-delay="1000">
                     <div class="card-secondary">
                         
@@ -92,7 +78,7 @@
                             <a href="{{route('uslugi.show', 'rehabilitacja-oddechowa')}}" class="btn btn-primary">więcej</a>
                         </div>
                     </div>
-                </div> --}}
+                </div>
                 {{-- @foreach($articles->slice(0, 2) as $key => $article)
                     <div class="col-12 col-sm-6  col-md-4 my-4" data-aos="fade-up" data-aos-duration="1000"
                          @if($key == 0)
