@@ -79,9 +79,9 @@ Route::resource('partnerzy', 'PartnerController')->only(['update'])->middleware(
 
 
 
-Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['auth']], function () {
-    \UniSharp\LaravelFilemanager\Lfm::routes();
-});
+// Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['auth']], function () {
+//     \UniSharp\LaravelFilemanager\Lfm::routes();
+// });
 Route::get('/admin/pliki', function () {
     return view('admin.files.index');
 })->name('adminFiles')->middleware('auth');
