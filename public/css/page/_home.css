@@ -1,5 +1,5 @@
 .header-new {
-  background-image: url("/images/bg-header2.jpg");
+  background-image: url("/images/bg-header4.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -175,7 +175,8 @@
 }
 
 @media (max-width: 991.98px) {
-  .header-wrapper, .promotion-wrapper {
+  .header-wrapper,
+.promotion-wrapper {
     background-image: none;
   }
 
@@ -201,7 +202,8 @@
   }
 }
 @media (max-width: 1199.98px) {
-  .header-wrapper, .promotion-wrapper {
+  .header-wrapper,
+.promotion-wrapper {
     background-position: 150%;
   }
 }

@@ -1,12 +1,13 @@
-.header-new{
-    background-image: url('/images/bg-header2.jpg');
+.header-new {
+    // background-image: url('/images/bg-header2.jpg');
+    background-image: url("/images/bg-header4.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     padding: 50px 0;
     width: 100%;
-    &__box{
-        background: rgba(#fff , 0.95);
+    &__box {
+        background: rgba(#fff, 0.95);
         padding: 40px 50px;
         border-radius: 10px;
         @media (max-width: 575.98px) {
@@ -14,7 +15,7 @@
         }
     }
 
-    h1{
+    h1 {
         font-size: 28px;
         color: #3f3f3f;
         font-weight: 600;
@@ -26,29 +27,27 @@
         }
     }
 
-    h2{
+    h2 {
         font-size: 18px;
         margin-top: 25px;
         color: #3f3f3f;
         font-weight: 400;
     }
-    p.description{
+    p.description {
         font-size: 14px;
         font-weight: 400;
         color: #929396;
         margin-top: 15px;
         margin-bottom: 30px;
 
-        a{
+        a {
             text-decoration: none;
             color: #27ddd2;
         }
     }
-
-
 }
-.header-wrapper{
-    background-image: url('/images/bg-header.png');
+.header-wrapper {
+    background-image: url("/images/bg-header.png");
     background-size: contain;
     z-index: 2;
     position: relative;
@@ -56,42 +55,42 @@
     background-position: top right;
     padding: 70px 0 140px;
 
-    h1{
+    h1 {
         font-size: 32px;
         color: #3f3f3f;
         font-weight: 700;
         line-height: 38px;
     }
 
-    h2{
+    h2 {
         font-size: 18px;
         margin-top: 25px;
         color: #3f3f3f;
         font-weight: 400;
     }
-    p.description{
+    p.description {
         font-size: 14px;
         font-weight: 300;
         color: #929396;
         margin-top: 15px;
 
-        a{
+        a {
             text-decoration: none;
             color: #27ddd2;
         }
     }
 
-    .btn-wrapper{
-       &>a:last-of-type{
-            img{
+    .btn-wrapper {
+        & > a:last-of-type {
+            img {
                 height: 15px;
                 margin-right: 10px;
             }
             margin-left: 20px;
             transition: all 0.25s ease-in;
 
-            &:hover{
-                img{
+            &:hover {
+                img {
                     filter: brightness(0) invert(1);
                 }
             }
@@ -99,22 +98,22 @@
     }
 }
 
-.services-wrapper{
+.services-wrapper {
     padding: 70px 0;
     margin-top: -70px;
     background-image: linear-gradient(180deg, #f6fbff 0%, #ffffff 100%);
 }
 
-.profits-wrapper{
+.profits-wrapper {
     background-color: #ffff;
     padding: 70px 0;
 
-    li{
+    li {
         font-size: 14px;
         color: #9f9d9d;
     }
 
-    .img-wrapper{
+    .img-wrapper {
         margin-right: 80px;
         height: 100%;
         width: 80%;
@@ -124,29 +123,29 @@
         background-repeat: no-repeat;
         background-image: url("/images/profit-child.jpg");
     }
-    h2.text{
+    h2.text {
         color: #3f3f3f;
         font-size: 18px;
         margin: 20px 0 30px;
     }
 }
 
-.profits-wrapper-new{
+.profits-wrapper-new {
     background-image: linear-gradient(180deg, #ffff 0%, #ffff 100%);
     padding: 70px 0;
 
-    p.description{
+    p.description {
         font-size: 14px;
         color: #9f9d9d;
     }
 
-    &__flexer{
+    &__flexer {
         display: flex;
         justify-content: center;
         flex-direction: column;
         height: 100%;
     }
-    .img-wrapper{
+    .img-wrapper {
         margin-left: 80px;
         height: 100%;
         min-height: 480px;
@@ -157,19 +156,19 @@
         background-repeat: no-repeat;
         background-image: url("/images/profit-child1.jpg");
     }
-    h2.text{
+    h2.text {
         color: #3f3f3f;
         font-size: 18px;
         margin: 20px 0 30px;
     }
 }
 
-.specialist-wrapper{
+.specialist-wrapper {
     padding: 70px 0;
     background-image: linear-gradient(180deg, #f2f9fe 0%, #ffffff 100%);
 }
 
-.promotion-wrapper{
+.promotion-wrapper {
     padding: 70px 0;
     background-color: #f6fbfe;
     background-image: url("/images/promotion-bg.png");
@@ -177,54 +176,51 @@
     background-repeat: no-repeat;
     background-size: contain;
 
-    p.description{
+    p.description {
         color: #9f9d9d;
         font-size: 14px;
         margin-bottom: 25px;
-
-
     }
 }
 
-.news-wrapper{
+.news-wrapper {
     padding: 70px 0 90px;
     background-image: linear-gradient(180deg, #ffff 0%, #f6fbff 100%);
 }
 
 // X-Small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
-
 }
 
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
-
 }
 
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) {
-    .header-wrapper, .promotion-wrapper {
+    .header-wrapper,
+    .promotion-wrapper {
         background-image: none;
     }
 
-    .profits-wrapper{
+    .profits-wrapper {
         padding: 0 0 70px;
     }
 
-    .profits-wrapper .img-wrapper{
+    .profits-wrapper .img-wrapper {
         width: 100%;
         height: 250px;
         margin-bottom: 40px;
     }
 
-    .profits-wrapper-new .img-wrapper{
+    .profits-wrapper-new .img-wrapper {
         width: 100%;
         margin-left: 0;
         min-height: auto;
         height: 250px;
         margin-bottom: 40px;
 
-        img{
+        img {
             background-position: top;
         }
     }
@@ -232,12 +228,12 @@
 
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199.98px) {
-    .header-wrapper, .promotion-wrapper {
+    .header-wrapper,
+    .promotion-wrapper {
         background-position: 150%;
     }
 }
 
 // X-Large devices (large desktops, less than 1400px)
 @media (max-width: 1399.98px) {
-
 }
