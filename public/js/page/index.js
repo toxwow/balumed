@@ -41110,6 +41110,7 @@ __webpack_require__(/*! ./../bootstrap */ "./resources/js/bootstrap.js");
 
 
 $(document).ready(function () {
+  console.log("test");
   $(".js-toggle").on("click", function () {
     $(this).parent().parent().children('.card-description').children('p').toggleClass('active');
     $(this).toggleClass('active');
@@ -41234,7 +41235,7 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/Shared/Previously Relocated Items/Security/Praca 2020/Balumed/balumed-dev/resources/js/page/index.js */"./resources/js/page/index.js");
+module.exports = __webpack_require__(/*! /Users/Shared/Previously Relocated Items/Security/Praca 2020/balumed-dev/resources/js/page/index.js */"./resources/js/page/index.js");
 
 
 /***/ })

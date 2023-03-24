@@ -54144,13 +54144,13 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/Shared/Previously Relocated Items/Security/Praca 2020/Balumed/balumed-dev/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /Users/Shared/Previously Relocated Items/Security/Praca 2020/Balumed/balumed-dev/resources/sass/app.scss */"./resources/sass/app.scss");
-__webpack_require__(/*! /Users/Shared/Previously Relocated Items/Security/Praca 2020/Balumed/balumed-dev/resources/sass/login.scss */"./resources/sass/login.scss");
-__webpack_require__(/*! /Users/Shared/Previously Relocated Items/Security/Praca 2020/Balumed/balumed-dev/resources/sass/layouts/admin.scss */"./resources/sass/layouts/admin.scss");
-__webpack_require__(/*! /Users/Shared/Previously Relocated Items/Security/Praca 2020/Balumed/balumed-dev/resources/sass/layouts/page.scss */"./resources/sass/layouts/page.scss");
-__webpack_require__(/*! /Users/Shared/Previously Relocated Items/Security/Praca 2020/Balumed/balumed-dev/resources/sass/page/_home.scss */"./resources/sass/page/_home.scss");
-module.exports = __webpack_require__(/*! /Users/Shared/Previously Relocated Items/Security/Praca 2020/Balumed/balumed-dev/resources/sass/page/_sub_page.scss */"./resources/sass/page/_sub_page.scss");
+__webpack_require__(/*! /Users/Shared/Previously Relocated Items/Security/Praca 2020/balumed-dev/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /Users/Shared/Previously Relocated Items/Security/Praca 2020/balumed-dev/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/Shared/Previously Relocated Items/Security/Praca 2020/balumed-dev/resources/sass/login.scss */"./resources/sass/login.scss");
+__webpack_require__(/*! /Users/Shared/Previously Relocated Items/Security/Praca 2020/balumed-dev/resources/sass/layouts/admin.scss */"./resources/sass/layouts/admin.scss");
+__webpack_require__(/*! /Users/Shared/Previously Relocated Items/Security/Praca 2020/balumed-dev/resources/sass/layouts/page.scss */"./resources/sass/layouts/page.scss");
+__webpack_require__(/*! /Users/Shared/Previously Relocated Items/Security/Praca 2020/balumed-dev/resources/sass/page/_home.scss */"./resources/sass/page/_home.scss");
+module.exports = __webpack_require__(/*! /Users/Shared/Previously Relocated Items/Security/Praca 2020/balumed-dev/resources/sass/page/_sub_page.scss */"./resources/sass/page/_sub_page.scss");
 
 
 /***/ })
