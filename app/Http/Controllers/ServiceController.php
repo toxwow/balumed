@@ -101,11 +101,15 @@ class ServiceController extends Controller
     {
         $services = Service::all()->where('status', '=', '1')->sortByDesc('priority');
         $service = DB::table('services')->where('slug', $slug)->first();
-
+        $specialists = DB::table('service_specialist')->where('service_id', '=', $service->id)->get();
+        $specialistArray = array();
+        foreach ($specialists as $specialist){
+            array_push($specialistArray, Specialist::where('id', $specialist->specialist_id)->get());
+        }
         if (empty($service)) {
             abort(404);
         } else {
-            return view('pages._single_service', ['service' => $service, 'services' => $services]);
+            return view('pages._single_service', ['service' => $service, 'services' => $services, 'specialists' => $specialistArray]);
         }
     }
 

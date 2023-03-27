@@ -55,7 +55,6 @@
                                 </span>
                             @endforeach
                             </div>
-
                         @endif
                     </div>
 

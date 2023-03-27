@@ -6,7 +6,6 @@ import { Fancybox, Carousel, Panzoom } from "@fancyapps/ui";
 
 
 $( document ).ready(function() {
-    console.log("test");
     $(".js-toggle").on("click", function(){
         $(this).parent().parent().children('.card-description').children('p').toggleClass('active');
         $(this).toggleClass('active');

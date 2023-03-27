@@ -96,7 +96,7 @@ class SpecialistController extends Controller
     public function show($slug)
     {
         $services = Service::all()->where('status', '=', '1')->sortByDesc('priority');
-        $specialist = Specialist::with('services')->orderBy('sort')->where('slug', $slug)->first();;
+        $specialist = Specialist::with('services')->orderBy('sort')->where('slug', $slug)->first();
         if (empty($specialist)) {
             abort(404);
         } else {

@@ -183,7 +183,8 @@ a.link {
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: contain;
-                top: 0;
+                top: 50%;
+                transform: translateY(-50%);
                 width: 15px;
                 height: 15px;
                 background-image: url("/images/icons/right-arrow.png");

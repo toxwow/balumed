@@ -46,10 +46,30 @@
                         </ul>
                     </div>
                     <div class="col-12 col-md-8 order-1 order-md-2">
-
                         {!! $service->description !!}
+                        @if($specialists)
+                            <div class="specialist-page__services">
+                                    <p>Sprawdź lekarzy świadczących usługę {{$service->name}}</p>
+                                <div class="row">
+                                    @foreach($specialists as $item)
+                                        @if($item->first()->status == 1)
+                                            <div class="col-12 col-md-6 mb-3">
+                                                <div class="card-secondary">
+                                                    <div class="person-name">
+                                                        <p class="titles">{{$item->first()->titlePerson}}</p>
+                                                        <h2 class="name">{{$item->first()->name}}</h2>
+                                                    </div>
+                                                    <a href="{{route('specjalisci.show', $item->first()->slug)}}" class="link primary-link arrow mt-2">
+                                                        zobacz
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        @endif
+                                    @endforeach
+                                </div>
+                            </div>
+                        @endif
                     </div>
-
                 </div>
             </div>
         </div>
