@@ -48,7 +48,7 @@
                             {{$specialist->description}}
                         </article>
                         @if((!$specialist->services->isEmpty()))
-                            <div class="specialist-page__services">
+                            <div class="specialist-page__services mb-3">
                                 <p>Usługi jakie świadczy {{$specialist->name}}: </p>
                                 @foreach($specialist->services as $key => $service)
                                     <span class="services"><a href="{{route('uslugi.show', $service->slug)}}">{{$service->name}}</a>
