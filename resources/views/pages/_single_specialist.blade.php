@@ -3,7 +3,7 @@
     'uslugaActive' => true,
     'footerStatus' => true,
     'metaDescription' => $specialist->description,
-    'pageTitle' => $specialist->name,
+    'pageTitle' => $specialist->name . " | Balumed Warszawa",
 ])
 
 @push('css')
