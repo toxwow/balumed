@@ -53,10 +53,7 @@
                                 </td>
                                 <td></td>
                                 <td></td>
-                                <td>
-                                    <p>16:00-18:00</p>
-                                    <p class="mb-0">16:00-18:00</p>
-                                </td>
+                                <td></td>
                                 <td></td>
                                 <td></td>
                                 <td>
@@ -91,6 +88,32 @@
                                     <p>10:00-18:00</p>
                                     <p>10:00-18:00</p>
                                     <p class="mb-0">10:00-18:00</p>
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="{{route('specjalista.show', 'joanna-jaworska')}}">
+                                        <span>dr n.med.</span>
+                                        <h4 class="mb-0">Joanna Jaworska</h4>
+                                    </a>
+                                </td>
+                                <td>
+                                    <p><a href="{{route('uslugi.show', 'pediatria')}}">Pediatria</a></p>
+                                    <p><a href="{{route('uslugi.show', 'pulmonolog-dzieciecy')}}">Pulmonologia</a></p>
+                                    <p class="mb-0"><a href="{{route('uslugi.show', 'usg-pluc-dzieci')}}">USG płuc</a></p>
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                    <p>10:00-14:00</p>
+                                    <p>10:00-14:00</p>
+                                    <p class="mb-0">10:00-16:00</p>
+                                </td>
+                                <td>
                                 </td>
                                 <td></td>
                                 <td></td>
@@ -263,7 +286,7 @@
                                     <p class="mb-0"><a href="{{route('uslugi.show', 'rehabilitacja-oddechowa')}}">Fizjoterapia oddechowa</a></p>
                                 </td>
                                 <td><p class="mb-0">16:00-18:00</p></td>
-                                <td><p class="mb-0">16:00-18:00</p></td>
+                                <td></td>
                                 <td></td>
                                 <td><p class="mb-0">16:00-18:00</p></td>
                                 <td></td>
@@ -289,6 +312,30 @@
                                     <p>09:00-12:00</p>
                                     <p class="mb-0">09:00-12:00</p>
                                 </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="{{route('specjalista.show', 'katarzyna-raczek-pakula')}}">
+                                        <span>lek.med.</span>
+                                        <h4 class="mb-0">Katarzyna Raczek-Pakuła</h4>
+                                    </a>
+                                </td>
+                                <td>
+                                    <p><a href="{{route('uslugi.show', 'pediatria')}}">Pediatria</a></p>
+                                    <p class="mb-0"> <a href="{{route('uslugi.show', 'doradca-laktacyjny')}}">Doradztwo laktacyjne</a></p>
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <p>17:00-20:00</p>
+                                    <p class="mb-0">17:00-20:00</p>
+                                </td>
+                                <td>
+                                    <p>08:00-10:00</p>
+                                    <p class="mb-0">08:00-10:00</p>
+                                </td>
+                                <td></td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <td>
