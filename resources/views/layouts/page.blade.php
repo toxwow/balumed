@@ -41,7 +41,10 @@ $stickyMassage = true;
     @if($stickyMassage === true)
         <div class="massage-wrapper">
             <div class="container">
-                <a href="{{route('uslugi.show', 'punkt-szczepien')}}">Szczepienia przeciw grypie sezonowej 2022/2023</a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18.082" height="18.086" viewBox="0 0 18.082 18.086">
+                    <path id="diamond-exclamation" d="M16.983,6.374,11.709,1.1a3.768,3.768,0,0,0-5.329,0L1.106,6.374a3.771,3.771,0,0,0,0,5.327L6.38,16.976a3.768,3.768,0,0,0,5.329,0L16.983,11.7a3.767,3.767,0,0,0,0-5.327ZM8.29,5.274a.754.754,0,1,1,1.507,0V9.418a.754.754,0,0,1-1.507,0Zm.754,8.289a1.13,1.13,0,1,1,1.13-1.13A1.131,1.131,0,0,1,9.044,13.563Z" transform="translate(-0.004 0.006)" fill="#fff"/>
+                </svg>
+                <span>Przypominami o obowiązku noszenia maseczek w naszej przychodni</span>
             </div>
         </div>
     @endif
@@ -152,13 +155,14 @@ $stickyMassage = true;
                                 <p>Skontaktuj się z nami pod numerem <strong><a href="tel:{{$info->phone_one}}">{{$info->phone_one}}</a></strong></p>
                             </div>
                         </div>
-                        <!-- <div class="right-social">
-                            <div class="btn-wrapper">
-                                <a href="https://www.facebook.com/przychodniabalumed/" target="_blank" class="btn btn-grey"><img src="{{url('images/icons/facebook.png')}}" alt=""></a>
-                                <a href="https://www.instagram.com/balumed/" class="btn btn-grey" target="_blank"><img src="{{url('images/icons/instagram.png')}}" alt=""></a>
-                                <a href="{{route('contact')}}" class="btn btn-primary">umów się na wizytę</a>
+                        <div class="right-social">
+                            <p>Akceptujemy płatności:</p>
+                            <div class="box">
+                                <img src="{{url('images/icons/Blik.svg')}}" alt="">
+                                <img src="{{url('images/icons/Mastercard.svg')}}" alt="">
+                                <img src="{{url('images/icons/Visa.svg')}}" alt="">
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                 </div>
                 @if($footerStatus === true)
@@ -238,8 +242,8 @@ $stickyMassage = true;
     </div>
     <div class="copyright">
         <div class="container">
-            copyright © 2021 <br>
-            wykonanie <a href="https://undefined.com.pl">undefined.com.pl</a>
+            copyright © 2023 <br>
+            wykonanie <a  target="_blank" href="https://tomzynski.eu">tomzynski.eu</a>
         </div>
     </div>
         <div>

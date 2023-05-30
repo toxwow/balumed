@@ -12,14 +12,24 @@
 .massage-wrapper {
     background-color: #27ddd2;
     text-align: center;
-
-    a {
-        width: 100%;
+    padding: 10px 0;
+    & > div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    svg{
+        margin-right: 20px;
+        @media (max-width: 575.98px) {
+            display: none;
+            margin-right: 0;
+        }
+    }
+    a, span {
         display: inline-block;
-        padding: 10px 0;
-        font-size: 18px;
+        font-size: 14px;
         text-decoration: none;
-        font-weight: 600;
+        font-weight: 500;
         color: #fff;
     }
 }
@@ -699,13 +709,15 @@ body {
                 }
             }
             .right-social {
-                .btn-wrapper {
-                    img {
-                        filter: brightness(0) invert(1);
-                    }
-                    & > a:nth-of-type(even) {
-                        margin: 0 10px;
-                    }
+                p{
+                    font-size: 14px;
+                    margin-bottom: 0;
+                    color: gray;
+                }
+                .box{
+                    margin-top: 15px;
+                    display: flex;
+                    gap: 25px;
                 }
             }
         }
@@ -902,6 +914,7 @@ body .menu-wrapper nav .items-wrapper a.item.link.mobile {
 
     body .footer .cta-wrapper {
         flex-direction: column;
+        align-items: flex-start;
     }
 
     .right-social {
