@@ -8,6 +8,40 @@
     RewriteCond %{HTTP_HOST} ^www\. [NC]
     RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
     RewriteRule ^ https://%1%{REQUEST_URI} [L,NE,R=301]
+    Redirect 301 /english https://www.balumed.pl/
+    Redirect 301 /russian https://www.balumed.pl/
+    Redirect 301 /o-nas https://www.balumed.pl/
+    Redirect 301 /nasze-uslugi https://www.balumed.pl/uslugi
+    Redirect 301 /nasi-specjalisci https://www.balumed.pl/specjalisci
+    Redirect 301 /przezklatkowe-usg-pluc-dzieci-2 https://www.balumed.pl/usg-dzieciece-i-echo-serca
+    Redirect 301 /uslugi/pediatria-i-neonatologia/neonatologia https://www.balumed.pl/neonantologia
+    Redirect 301 /uslugi/ginekologia-i-poloznictwo/ginekologia https://www.balumed.pl/ginekologia
+    Redirect 301 /uslugi/pracownia-usg-echo-serca https://www.balumed.pl/usg-dzieciece-i-echo-serca
+    Redirect 301 /uslugi/rehabilitacja-fizjoterapia/rehabilitacja https://www.balumed.pl/uslugi
+    Redirect 301 /uslugi/fototerapia-w-domu https://www.balumed.pl/fototerapia-w-domu
+    Redirect 301 /uslugi/punkt-szczepien-i-laboratorium/punkt-pobran-materialu-do-badan-laboratoryjnych https://www.balumed.pl/badania-laboratoryjne
+    Redirect 301 /uslugi/poradnia-laktacyjna-i-dietetyczna/poradnia-laktacyjna https://www.balumed.pl/uslugi
+    Redirect 301 /uslugi/szkolenia-dla-rodzicow https://www.balumed.pl/uslugi
+    Redirect 301 /uslugi/pediatria-i-neonatologia/pediatria https://www.balumed.pl/pediatria
+    Redirect 301 /uslugi/ginekologia-i-poloznictwo/poloznictwo https://www.balumed.pl/ginekologia
+    Redirect 301 /uslugi/rehabilitacja-fizjoterapia/fizjoterapia https://www.balumed.pl/uslugi
+    Redirect 301 /uslugi/punkt-szczepien-i-laboratorium/punkt-szczepien-dla-dzieci-i-doroslych https://www.balumed.pl/punkt-szczepien
+    Redirect 301 /uslugi/poradnia-laktacyjna-i-dietetyczna/poradnia-dietetyczna https://www.balumed.pl/poradnia-dietetyczna
+    Redirect 301 /specjalizacje/alergolog https://www.balumed.pl/uslugi
+    Redirect 301 /specjalizacje/chirurg-dzieciecy https://www.balumed.pl/uslugi
+    Redirect 301 /specjalizacje/dermatolog https://www.balumed.pl/uslugi
+    Redirect 301 /specjalizacje/dietetyk https://www.balumed.pl/poradnia-dietetyczna
+    Redirect 301 /specjalizacje/fizjoterapeuta https://www.balumed.pl/uslugi
+    Redirect 301 /specjalizacje/ginekolog https://www.balumed.pl/ginekologia
+    Redirect 301 /specjalizacje/kardiolog-dzieciecy https://www.balumed.pl/usg-dzieciece-i-echo-serca
+    Redirect 301 /specjalizacje/logopeda-neurologopeda https://www.balumed.pl/uslugi
+    Redirect 301 /specjalizacje/neonatolog https://www.balumed.pl/neonantologia
+    Redirect 301 /specjalizacje/neurolog-dzieciecy https://www.balumed.pl/uslugi
+    Redirect 301 /specjalizacje/ortopeda-dorosli-i-dzieci https://www.balumed.pl/uslugi
+    Redirect 301 /specjalizacje/pediatra https://www.balumed.pl/pediatria
+    Redirect 301 /specjalizacje/pielegniarki-i-polozne https://www.balumed.pl/uslugi
+    Redirect 301 /specjalizacje/pulmonolog https://www.balumed.pl/uslugi
+    Redirect 301 /specjalizacje/radiolog https://www.balumed.pl/uslugi
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
