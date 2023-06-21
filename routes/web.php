@@ -97,6 +97,8 @@ Route::get('/harmonogram-pracy-lekarzy', function () {
 Route::get('/{slug}', 'ServiceController@show')->name('uslugi.show');
 Route::get('/specjalista/{slug}', 'SpecialistController@show')->name('specjalista.show');
 
-
+Route::get('/register', function () {
+    return redirect('/');
+});
 
 Route::post('/setCookie', 'CookiesController@addCookies')->name('test');
