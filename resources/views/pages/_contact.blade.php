@@ -233,9 +233,17 @@
                                     02-972 Warszawa, Wilanów <br>
                                     (wejście od ul. Herbu Szreniawa)
                                 </div>
-                                <a href="https://goo.gl/maps/cRBA1K8QbMAcj45c9" class="link primary-link" target="_blank">Prowadź do Balumed</a> <br>
+                                <a href="https://goo.gl/maps/cRBA1K8QbMAcj45c9" class="link primary-link" target="_blank">Prowadź do Balumed</a>
 
-                                <a href="https://goo.gl/maps/cRBA1K8QbMAcj45c9" class="link primary-link" target="_blank" style="color: #1d88e5">Zobacz gdzie zaprakować</a>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-4  d-lg-flex ">
+                            <div class="link-footer">
+                                <h2 class="title">Parking</h2>
+                                <div class="info small">
+                                    W całym miasteczku Wilanów parkowanie może być dość trudne, dlatego jeśli nie znajdziecie Państwo miejsca, można udać się na płatny parking znajdujący się przy Royal Wilanów, oddalony o zaledwie 600 metrów od przychodni.
+                                </div>
+                                <a href="https://goo.gl/maps/2WB95ZLkd2TYrJAM8" class="link primary-link" target="_blank" style="color: #1d88e5">Zobacz gdzie zaprakować</a>
 
                             </div>
                         </div>
