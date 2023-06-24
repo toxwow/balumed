@@ -12,9 +12,10 @@
         var map;
         function initMap() {
             var myLatLng = {lat: 52.160405, lng: 21.078106};
+            var myParking = {lat: 52.1633728, lng: 21.0824737};
             map = new google.maps.Map(document.getElementById('map'), {
-                center: myLatLng,
-                zoom: 16,
+                center: {lat: 52.160405, lng: 21.078106},
+                zoom: 15,
                 styles: [
                     {
                         "elementType": "geometry",
@@ -179,7 +180,20 @@
             var marker = new google.maps.Marker({
                 position: myLatLng,
                 map: map,
+                title: 'Balumed',
                 icon: "{{asset('images/icons/pin-map.png')}}"
+            });
+            var marker1 = new google.maps.Marker({
+                position: myParking,
+                map: map,
+                title: 'Parking',
+                icon: "{{asset('images/icons/pin-parking.png')}}"
+            });
+
+            marker1.addListener("click", () => {
+                infoWindow.close();
+                infoWindow.setContent(marker1.getTitle());
+                infoWindow.open(marker1.getMap(), marker1);
             });
         }
     </script>
@@ -219,7 +233,10 @@
                                     02-972 Warszawa, Wilanów <br>
                                     (wejście od ul. Herbu Szreniawa)
                                 </div>
-                                <a href="https://goo.gl/maps/cRBA1K8QbMAcj45c9" class="link primary-link arrow">prowadź</a>
+                                <a href="https://goo.gl/maps/cRBA1K8QbMAcj45c9" class="link primary-link" target="_blank">Prowadź do Balumed</a> <br>
+
+                                <a href="https://goo.gl/maps/cRBA1K8QbMAcj45c9" class="link primary-link" target="_blank" style="color: #1d88e5">Zobacz gdzie zaprakować</a>
+
                             </div>
                         </div>
                         <div class="col-12 mt-4  d-lg-flex">
