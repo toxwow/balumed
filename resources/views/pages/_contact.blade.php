@@ -241,7 +241,7 @@
                             <div class="link-footer">
                                 <h2 class="title">Parking</h2>
                                 <div class="info small">
-                                    W całym miasteczku Wilanów parkowanie może być dość trudne, dlatego jeśli nie znajdziecie Państwo miejsca, można udać się na płatny parking znajdujący się przy Royal Wilanów, oddalony o zaledwie 600 metrów od przychodni.
+                                    Szanowni Państwo,  niestety w całym miasteczku Wilanów parkowanie jest dość trudne. Jeżeli nie znajdziecie Państwo  miejsca parkingowego blisko Balumed, to polecamy skorzystanie z  parkingu w Royal Wilanów, oddalonego kilka minut (600m) od przychodni.
                                 </div>
                                 <a href="https://goo.gl/maps/2WB95ZLkd2TYrJAM8" class="link primary-link" target="_blank" style="color: #1d88e5">Zobacz gdzie zaprakować</a>
 
