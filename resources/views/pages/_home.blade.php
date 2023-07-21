@@ -40,7 +40,7 @@
                 <div class="col-12 col-lg-4  my-4" data-aos="fade-up" data-aos-duration="1000"
                 data-aos-delay="500">
                     <div class="card-secondary">
-                        
+
                         <div class="img-wrapper" style="background-image: url({{url('images/bg-shedule.png')}})"></div>
                         <div class="article-info">
                             <p class="title">Tygodniowy Harmonogram</p>
@@ -51,24 +51,36 @@
                         </div>
                     </div>
                 </div>
+{{--                <div class="col-12 col-lg-4 my-4" data-aos="fade-up" data-aos-duration="1000"--}}
+{{--                data-aos-delay="700">--}}
+{{--                    <div class="card-secondary">--}}
+{{--                        <div class="img-wrapper" style="background-image: url({{url('images/grypa-article.png')}})"></div>--}}
+{{--                        <div class="article-info">--}}
+{{--                            <p class="title">Grypa sezonowa</p>--}}
+{{--                            <p class="description">Sezon szczepień przeciw grypie sezonowej już trwa. Przeczytaj o szczepionce donosowej w postaci aerozolu, podawanej jako dawka podzielona do obu nozdrzy. </p>--}}
+{{--                        </div>--}}
+{{--                        <div class="action-wrapper">--}}
+{{--                            <a href="{{route('uslugi.show', 'punkt-szczepien')}}" class="btn btn-primary">więcej</a>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
                 <div class="col-12 col-lg-4 my-4" data-aos="fade-up" data-aos-duration="1000"
                 data-aos-delay="700">
                     <div class="card-secondary">
-                        
-                        <div class="img-wrapper" style="background-image: url({{url('images/grypa-article.png')}})"></div>
+                        <div class="img-wrapper" style="background-image: url({{url('images/laktacja-article.png')}})"></div>
                         <div class="article-info">
-                            <p class="title">Grypa sezonowa</p>
-                            <p class="description">Sezon szczepień przeciw grypie sezonowej już trwa. Przeczytaj o szczepionce donosowej w postaci aerozolu, podawanej jako dawka podzielona do obu nozdrzy. </p>
+                            <p class="title">Poradnia Laktacyjna</p>
+                            <p class="description">Karmienie piersią jest niezwykle ważnym czynnikiem w programowaniu zdrowia dziecka. Wiele trudności pojawiających się w laktacji może być przezwyciężonych dzięki profesjonalnej poradzie laktacyjnej.</p>
                         </div>
                         <div class="action-wrapper">
-                            <a href="{{route('uslugi.show', 'punkt-szczepien')}}" class="btn btn-primary">więcej</a>
+                            <a href="{{route('uslugi.show', 'doradca-laktacyjny')}}" class="btn btn-primary">więcej</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-4 my-4" data-aos="fade-up" data-aos-duration="1000"
                 data-aos-delay="1000">
                     <div class="card-secondary">
-                        
+
                         <div class="img-wrapper" style="background-image: url({{url('images/rehabilitacja-article.png')}})"></div>
                         <div class="article-info">
                             <p class="title">Rehabilitacja oddechowa</p>
