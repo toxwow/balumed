@@ -140,7 +140,7 @@
             <div class="row">
 
                 @foreach($services as $service)
-                    <div class="col-12 col-sm-6 col-md-4 mt-4">
+                    <div class="col-12 col-md-6 col-lg-4 mt-4">
                         <div class="card">
                             <img class="icon" src="{{asset('storage/files/shares/uslugi/icon/'.$service->icon)}}" alt="" class="icon">
                             <h2 class="name">{{$service->name}}</h2>
@@ -155,10 +155,10 @@
     <div class="profits-wrapper">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-lg-5">
                     <div class="img-wrapper"></div>
                 </div>
-                <div class="col-12 col-md-7">
+                <div class="col-12 col-lg-7">
                     <div class="wrapper-title">
                         <div>
                             <p class="title">Dlaczego my?</p>
@@ -240,7 +240,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-12 col-md-6 order-2 order-md-1">
+                <div class="col-12 col-lg-6 order-2 order-lg-1">
                     <div class="profits-wrapper-new__flexer">
                         <div class="wrapper-title">
                             <div>
@@ -258,8 +258,36 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 order-1 order-md-2">
+                <div class="col-12 col-lg-6 order-1 order-lg-2">
                     <div class="img-wrapper"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="profits-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-5">
+                    <div class="img-wrapper" style="background-image: url('https://balumed.pl/images/bg-poradnia.jpg'); background-position: left center;"></div>
+                </div>
+                <div class="col-12 col-lg-7">
+                    <div class="wrapper-title">
+                        <div>
+                            <p class="title">Centrum Nauki o Laktacji</p>
+                            <p class="description">im. Anny Oslislo to niepubliczna placówka edukacyjna</p>
+                        </div>
+                    </div>
+                    <h5 class="text">Kształcenie w zakresie opieki nad matkami i dziećmi, opieki okołoporodowej, zwłaszcza poradnictwa laktacyjnego oraz żywienia.</h5>
+                    <ul class="primary-list">
+                        <li data-aos="fade-left" data-aos-delay="750" data-aos-duration="1000">Spotkanie z doświadczonymi praktykami</li>
+                        <li data-aos="fade-left" data-aos-delay="1000" data-aos-duration="1000">Skuteczne rozwiązania oparte na EBM</li>
+                        <li data-aos="fade-left" data-aos-delay="1250" data-aos-duration="1000">Praktyka kliniczna dla personelu pracującego z mamą i dzieckiem</li>
+                        <li data-aos="fade-left" data-aos-delay="1500" data-aos-duration="1000">Interwencja medyczna i profilaktyka</li>
+                        <li data-aos="fade-left" data-aos-delay="1750" data-aos-duration="1000">Kursy podnoszące kwalifikacje medyków</li>
+                    </ul>
+                    <div class="btn-wrapper">
+                        <a href="{{route('uslugi.show', 'doradca-laktacyjny')}}" class="btn btn-primary">Umów się do specjalisty</a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -41,9 +41,13 @@
                                 @endif
                             </div>
                             <div class="person-description">
-                                <p class="description">{{substrwords($specialist->description, 200)}}</p>
+                                {{-- <p class="description">{{substrwords($specialist->description, 100)}}</p> --}}
+                                <p class="description">{{$specialist->intro_description}}</p>
                             </div>
-                            <a  class="link primary-link arrow" data-toggle="modal" data-target="#exampleModal{{$keyMain}}" style="cursor: pointer">
+                            {{-- <a  class="link primary-link arrow" data-toggle="modal" data-target="#exampleModal{{$keyMain}}" style="cursor: pointer">
+                                zobacz więcej
+                            </a> --}}
+                            <a  href="{{route('specjalisci.show', $specialist->slug)}}" class="link primary-link arrow">
                                 zobacz więcej
                             </a>
 
@@ -73,7 +77,7 @@
                                                 </div>
                                             </div>
                                             <div class="description">
-                                                <p>{{$specialist->description}}</p>
+                                                <p>{!! $specialist->description !!}</p>
                                             </div>
                                         </div>
                                     </div>

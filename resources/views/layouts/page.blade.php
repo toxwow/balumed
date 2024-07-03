@@ -242,8 +242,7 @@ $stickyMassage = true;
     </div>
     <div class="copyright">
         <div class="container">
-            copyright © 2023 <br>
-            wykonanie <a  target="_blank" href="https://tomzynski.eu">tomzynski.eu</a>
+            copyright © 2024
         </div>
     </div>
         <div>

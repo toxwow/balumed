@@ -45,7 +45,7 @@
                         <p class="specialist-page__titles">{{$specialist->titlePerson}}</p>
                         <h1 class="specialist-page__name">{{$specialist->name}}</h1>
                         <article>
-                            {{$specialist->description}}
+                            {!! $specialist->description !!}
                         </article>
                         @if((!$specialist->services->isEmpty()))
                             <div class="specialist-page__services mb-3">
@@ -57,7 +57,7 @@
                             </div>
                         @endif
                     </div>
-
+                    <p style="display: none;">{{ asset('images/krp.jpg') }}</p>
                 </div>
             </div>
         </div>
